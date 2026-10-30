@@ -13,7 +13,7 @@
       "Time": "6 months",
       "Team": "Individual",
       "CGPA": "8.6",
-      "Tools": "Figma, Charticulator, d3.js, Claude Code"
+      "Tools": "Figma, React/Next.js, D3.js / Observable, Claude Code"
     },
     "accent": "#2b35e6",
     "tint": "#f5f0e8",
@@ -37,7 +37,7 @@
       "Role": "UX designer",
       "Time": "2 months",
       "Team": "Cross-functional: developers, AI engineers, product managers",
-      "Tools": "Figma, Claude Code"
+      "Tools": "Figma, FigJam, Miro, Custom Web Portal, Enterprise Design Systems, Claude Code"
     },
     "accent": "#b52f20",
     "tint": "#fdf6cd",
@@ -80,7 +80,7 @@
       "Role": "UX designer & researcher",
       "Time": "2 months",
       "Team": "Solo designer and researcher in a cross-functional team",
-      "Tools": "Figma, Power BI, Excel"
+      "Tools": "Microsoft Power BI, Figma, Data Dictionaries"
     },
     "accent": "#2f5f9e",
     "tint": "#e9f0f8",
@@ -131,7 +131,7 @@
       "Role": "UX designer",
       "Time": "2 months",
       "Team": "Individual",
-      "Tools": "Figma"
+      "Tools": "Figma, React Data Grids, Custom Web Portal, Enterprise Design Systems"
     },
     "accent": "#0e3b22",
     "tint": "#e5ddf1",
@@ -178,7 +178,7 @@
       "Context": "Academic project, NID Bengaluru, with a Noah collaboration",
       "Time": "2 months",
       "Team": "Team of 4",
-      "Tools": "Figma, Procreate, Photoshop, Illustrator, Charticulator"
+      "Tools": "Adobe Illustrator, Figma, D3.js, Excel/Data Scripts"
     },
     "accent": "#c8454c",
     "tint": "#fde9e6",
@@ -217,7 +217,7 @@
       "Role": "UX designer",
       "Time": "2 weeks",
       "Team": "Individual",
-      "Tools": "Figma, Excel, Flourish"
+      "Tools": "Figma, D3.js / React, Excel/Data Scripts"
     },
     "accent": "#27546b",
     "tint": "#fcf9cb",
@@ -255,7 +255,7 @@
     "meta": {
       "Time": "2 weeks",
       "Team": "Individual",
-      "Tools": "Figma, Excel, Flourish"
+      "Tools": "Figma, D3.js, Excel/Data Scripts, QGIS"
     },
     "accent": "#2c6074",
     "tint": "#fdf0c4",
@@ -279,7 +279,7 @@
     "meta": {
       "Time": "1 week",
       "Team": "Individual",
-      "Tools": "Claude, Excel, Flourish, Figma, Procreate"
+      "Tools": "QGIS, Mapbox / D3.js, Figma, Python/Data Scripts, Adobe Creative Suite"
     },
     "accent": "#3730A3",
     "tint": "#F7F4EC",
@@ -287,8 +287,8 @@
     "dark": "#3730A3",
     "progress": false,
     "media": {
-      "video": "/f/assets/climate-story.mp4",
-      "poster": "/f/images/climate-story-poster.png",
+      "video": "/f/assets/climate-story-v2.mp4",
+      "poster": "/f/images/climate-story-poster-v2.png",
       "ar": "2866 / 1314"
     }
   },
@@ -324,7 +324,7 @@
       "Role": "UX designer (intern)",
       "Time": "4 months",
       "Team": "Solo designer and researcher in a cross-functional team",
-      "Tools": "Figma, Power BI, Excel, Flourish"
+      "Tools": "Microsoft Power BI, Figma, Enterprise Design Systems, Data Dictionaries"
     },
     "accent": "#00497a",
     "tint": "#e4effa",
@@ -373,7 +373,7 @@
     "meta": {
       "Time": "4 weeks",
       "Team": "Individual",
-      "Tools": "Figma, Miro, Procreate"
+      "Tools": "Figma, Unity3D / Blender, Arduino (Hardware Prototyping), Mobile Design System"
     },
     "accent": "#0a1d3a",
     "tint": "#fdf3e9",
@@ -397,7 +397,7 @@
       "Time": "2 weeks",
       "Team": "Individual",
       "CGPA": "9.4",
-      "Tools": "p5.js, Figma"
+      "Tools": "Processing, P5.js, Figma, Creative Suite"
     },
     "accent": "#0b1f3a",
     "tint": "#fdfb9d",
@@ -422,6 +422,40 @@
     "tint": "#e9f4f7",
     "video": false,
     "dark": "#173039",
+    "progress": true
+  },
+  {
+    "slug": "kapsy-ai",
+    "title": "AI platform for asynchronous coaching & practice",
+    "desc": "Connecting learners and coaches through craft-specific mobile practice labs and automated class management tools to close the feedback loop between sessions.",
+    "tags": [
+      "Multi-Platform Product (Web & Mobile)",
+      "EdTech & Creator Economy"
+    ],
+    "meta": {
+      "Tools": "Figma, Flutter / React Native (Mobile), Next.js / Tailwind (Desktop Web), Claude Code"
+    },
+    "accent": "#2a2a2a",
+    "tint": "#f4f3ef",
+    "video": false,
+    "dark": "#2a2a2a",
+    "progress": true
+  },
+  {
+    "slug": "philips",
+    "title": "Predictive operations dashboard for medical devices",
+    "desc": "Consolidating multi-stream machine telemetry and AI-driven root-cause analytics into a proactive operational workspace for hospital equipment managers.",
+    "tags": [
+      "Predictive Health Operations",
+      "HealthTech & MedTech"
+    ],
+    "meta": {
+      "Tools": "Figma, Custom Web Portal, Enterprise Design Systems, Data Dictionaries, Claude Code"
+    },
+    "accent": "#2a2a2a",
+    "tint": "#f4f3ef",
+    "video": false,
+    "dark": "#2a2a2a",
     "progress": true
   }
 ]
