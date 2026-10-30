@@ -1,0 +1,7 @@
+# source files the site never loads (the built pages use the compressed copies in f/, img/ and media/<project>/)
+/src-img/
+/media/*.mp4
+/kenvue/*.mp4
+/scripts/
+/content/
+/_ref/
