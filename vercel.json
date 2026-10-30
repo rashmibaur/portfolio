@@ -1,4 +1,5 @@
 {
-  "buildCommand": null,
+  "buildCommand": "echo 'site is pre-built and committed'",
+  "installCommand": "echo 'no dependencies to install'",
   "outputDirectory": "."
 }
