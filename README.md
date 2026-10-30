@@ -6,7 +6,7 @@ Experience designer (Master's in Information Design, NID Bengaluru) with 3+ year
 
 | Type | Name | Link |
 |------|------|------|
-| Portfolio | Main site (Vercel) | https://portfolio-beryl-kappa-76.vercel.app |
+| Portfolio | Main site (Vercel) | https://rashmibaur-portfolio.vercel.app |
 | Portfolio | Original Framer site | https://rashmibaurportfolio.framer.website/ |
 | Resume | PDF | https://drive.google.com/file/d/1c3bw4qWuCrdBbuEQocOg_G4aHqj9MGNv/view?usp=sharing |
 | Prototype | Unveiling Biases in AI: interactive product | `https://<bias-ai-demo>.vercel.app` _(placeholder)_ |
