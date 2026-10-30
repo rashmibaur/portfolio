@@ -61,6 +61,7 @@ const fixes = `<style>.bar{position:static}</style>
   };
   document.fonts.ready.then(refresh);
   window.addEventListener("load", refresh);
+  new ResizeObserver(refresh).observe(document.body); // late layout shifts, e.g. the typed-out quote growing
 })();
 </script>`;
 fs.writeFileSync(path.join(root, "content/climate-vulnerability.html"),
