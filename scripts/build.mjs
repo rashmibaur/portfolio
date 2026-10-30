@@ -77,7 +77,7 @@ function page(p, body, next) {
   // hero media: the same video the homepage card plays, or an auto-advancing slider of the card's images; otherwise a blank slot to fill later
   const m = p.media;
   const video = m?.video
-    ? `<div class="hero-media"><video src="${m.video}"${m.poster ? ` poster="${m.poster}"` : ""} autoplay muted loop playsinline preload="metadata" aria-label="${esc(p.title)} preview"></video></div>`
+    ? `<div class="hero-media"${m.ar ? ` style="aspect-ratio:${m.ar}"` : ""}><video src="${m.video}"${m.poster ? ` poster="${m.poster}"` : ""} autoplay muted loop playsinline preload="metadata" aria-label="${esc(p.title)} preview"></video></div>`
     : m?.slides
       ? `<div class="hero-media slider" data-slider role="img" aria-label="${esc(p.title)} preview">${m.slides.map((s, i) => `<img src="${s}" alt=""${i ? ` loading="lazy"` : ""}${i ? "" : ` class="on"`}>`).join("")}</div>
 <script>(()=>{const s=document.querySelector("[data-slider]");if(!s||matchMedia("(prefers-reduced-motion: reduce)").matches)return;const i=[...s.children];let n=0;setInterval(()=>{i[n].classList.remove("on");n=(n+1)%i.length;i[n].classList.add("on")},3500)})()</script>`

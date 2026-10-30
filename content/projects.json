@@ -283,9 +283,14 @@
     },
     "accent": "#3730A3",
     "tint": "#F7F4EC",
-    "video": true,
+    "video": false,
     "dark": "#3730A3",
-    "progress": false
+    "progress": false,
+    "media": {
+      "video": "/f/assets/climate-story.mp4",
+      "poster": "/f/images/climate-story-poster.png",
+      "ar": "2866 / 1314"
+    }
   },
   {
     "slug": "farming-futures",
