@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime.Dh6celcD.mjs";var t,n=e((()=>{t=e=>({description:`Made with Framer`,title:`My Framer Site`})}));export{t as n,n as t};
+//# sourceMappingURL=shared-lib.BcXamERa.mjs.map

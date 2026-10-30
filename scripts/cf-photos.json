@@ -1,0 +1,147 @@
+{
+ "model": {
+  "left": {
+   "Gender - Female": [
+    "3ed0f9db1618",
+    "57b10cf399d7",
+    "f13ba8b69c41",
+    "eb367cb27efb",
+    "46617a2525e7",
+    "bf322f1717ab",
+    "5e537b39cdaa",
+    "8ced67ea365d",
+    "6778b5f4bdc0"
+   ],
+   "Gender - Male": [
+    "836c91b5b367",
+    "288f1f7df872",
+    "f9e67cc4ddb7",
+    "7379728c7fb5",
+    "35030b7d1d97",
+    "e91c550fa223",
+    "e4db9ee1fcb0",
+    "c04aea19c549",
+    "ac5e82f23db6",
+    "4a222934a750"
+   ],
+   "Gender - Non - binary": [
+    "e07b0f6741b3",
+    "1c7e00b7de0d",
+    "28c2a965dec7",
+    "dc3a0452e6dc",
+    "0b21b4e1cc54",
+    "4a222934a750",
+    "57b10cf399d7",
+    "c04aea19c549",
+    "f13ba8b69c41",
+    "eb367cb27efb"
+   ]
+  },
+  "right": {
+   "Gender - Female > Race - Black": [
+    "3ed0f9db1618",
+    "57b10cf399d7",
+    "f13ba8b69c41",
+    "8ced67ea365d",
+    "6cb6b391d112",
+    "d6b44127e13a",
+    "eb367cb27efb",
+    "46617a2525e7",
+    "8a70d192550e",
+    "e4faa489ac7c",
+    "cf75cc394c52"
+   ],
+   "Gender - Female > Race - Hispanic": [
+    "bf322f1717ab",
+    "dd24e54979a6",
+    "92498654aab7",
+    "a2ac5a0386c4",
+    "72bb9f439b27",
+    "324630cbe513",
+    "84aa27fb3d44",
+    "c05654521896",
+    "01a971ba0b31",
+    "46e1c2b92990",
+    "3ed0f9db1618",
+    "59e78f89de5e"
+   ],
+   "Gender - Female > Race - Others": [
+    "5e537b39cdaa",
+    "d560507d7b0e",
+    "e9b90d910dcd",
+    "46e1c2b92990",
+    "3ed0f9db1618",
+    "59e78f89de5e"
+   ]
+  }
+ },
+ "dataset": {
+  "left": {
+   "Gender - Female": [
+    "bee0484f76ed",
+    "156d02dae086",
+    "2468a5af8fe2",
+    "3cc000059425",
+    "92b5b2088c12",
+    "562f35729b3f",
+    "45d9af17c420",
+    "876df75d38bd",
+    "ed4d7de8e7b0",
+    "2150b7cdace5",
+    "2666b415a823",
+    "8db05dd01bfa",
+    "033e8b676961",
+    "37aea4bbb3e4",
+    "0998154d3185"
+   ],
+   "Gender - Male": [
+    "76dd649b5156",
+    "35561d8ef4ed",
+    "bbc27d80e82b",
+    "a5e70ce43db5",
+    "609f206e2ec4",
+    "5f40d3da316d",
+    "ab47ef34702f",
+    "877c7cc3416f",
+    "534033ac4eb9",
+    "e2181d01d62b"
+   ]
+  },
+  "right": {
+   "Gender - Female > Race - White": [
+    "156d02dae086",
+    "2468a5af8fe2",
+    "0998154d3185",
+    "ed7df843d31d",
+    "d207b9f3034f",
+    "2150b7cdace5",
+    "92b5b2088c12",
+    "ed4d7de8e7b0",
+    "725f72ae76a6",
+    "562f35729b3f",
+    "45d9af17c420",
+    "3cc000059425"
+   ],
+   "Gender - Female > Race - Asian": [
+    "bee0484f76ed",
+    "5ae8d193ebd0",
+    "2741a9351bfe"
+   ],
+   "Gender - Male > Race - White": [
+    "e2181d01d62b",
+    "877c7cc3416f",
+    "ab47ef34702f",
+    "609f206e2ec4",
+    "76dd649b5156",
+    "e416c7fe4828"
+   ],
+   "Gender - Male > Race - Black": [
+    "e1e3fdd3e2f9",
+    "a5e70ce43db5",
+    "bbc27d80e82b",
+    "35561d8ef4ed",
+    "987771ac43ce"
+   ]
+  }
+ }
+}

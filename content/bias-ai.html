@@ -1,0 +1,363 @@
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Overview</p>
+    <h2>Unveiling biases: a visual exploration of bias in generative AI systems</h2>
+    <p class="intro">An investigation into how training data shapes the outputs &ndash; and the worldview &ndash; of modern AI systems.</p>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Live prototype</p>
+    <h2>Try the product</h2>
+    <p class="intro">The working dashboard this case study describes. Explore it here, or open it in its own tab for the full screen.</p>
+    <div class="embed proto tall"><iframe src="https://bias-ai-rosy.vercel.app/" title="Bias audit dashboard prototype" loading="lazy"></iframe></div>
+    <p style="margin-top:14px"><a class="btn-link" href="https://bias-ai-rosy.vercel.app/" target="_blank" rel="noopener">Open the prototype in a new tab &nearr;</a></p>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Context</p>
+    <h2>From Google search to ChatGPT</h2>
+    <p class="intro">genAI is the &ldquo;new internet search&rdquo;.</p>
+    <ul class="list">
+      <li>Generative AI has become part of our daily lives &ndash; from Google Search to ChatGPT, we rely on AI like never before.</li>
+      <li>Just as search results can vary, AI outputs can also show discrepancies and biases.</li>
+      <li>These biases stem from the data used to train AI models, affecting the fairness and accuracy of results.</li>
+    </ul>
+    <div class="figs same">
+      <figure><img data-src="03" data-crop="80,490,820,494" alt="The classic Google search home page"><figcaption>Google Search, 2017</figcaption></figure>
+      <figure><img data-src="03" data-crop="1000,468,880,516" alt="The ChatGPT start screen showing examples, capabilities and limitations"><figcaption>ChatGPT, Jan 9 version</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Ideal vs real</p>
+    <h2>What we expect often differs from what AI actually produces</h2>
+    <p class="intro">What should be the ideal output for a prompt &ldquo;A scientist working in a lab&rdquo;?</p>
+    <div class="grid" style="--n:3">
+      <div class="cell">
+        <h3>The prompt</h3>
+        <p>&ldquo;A scientist working in a lab&rdquo; &ndash; a simple prompt, yet AI systems encode implicit assumptions about who a scientist looks like. The gap between intent and output reveals systemic bias.</p>
+      </div>
+      <div class="cell">
+        <h3>Ideal outcome</h3>
+        <h4>Diverse representation</h4>
+        <img data-src="04" data-crop="680,650,552,268" alt="Six images of scientists of different genders, races and ages">
+        <p style="margin-top:12px">Diverse representation across gender, race, and age.</p>
+      </div>
+      <div class="cell">
+        <h3>Real outcome</h3>
+        <h4>AI bias</h4>
+        <img data-src="04" data-crop="1320,650,542,268" alt="Six AI-generated images of scientists, mostly white men">
+        <p style="margin-top:12px">Predominantly male, white, limited diversity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Fundamentals</p>
+    <h2>Understanding Artificial Intelligence</h2>
+    <p class="intro">A structured overview of what artificial intelligence is &ndash; and what it is not. Task-specific systems vs. theoretical general intelligence.</p>
+    <div class="vs">
+      <div class="vs-a">
+        <span class="vs-tag">What is AI?</span>
+        <p class="vs-sub">Task-specific intelligence.</p>
+        <ul class="vs-l yes"><li>Generative AI refers to artificial intelligence systems that can create new content, including text, images, audio, video, and code.</li><li>GenAI learns patterns from vast amounts of training data and generates outputs based on user prompts.</li><li>Designed to perform specific functions or solve particular problems.</li><li>Excels in defined domains but cannot transfer knowledge across different tasks.</li></ul>
+      </div>
+      <div class="vs-mid" aria-hidden="true"><i>vs</i></div>
+      <div class="vs-b">
+        <span class="vs-tag">What is not AI?</span>
+        <p class="vs-sub">Human-like, general-purpose intelligence (still theoretical).</p>
+        <p class="vs-agi">Artificial General Intelligence (AGI)</p>
+        <ul class="vs-l no"><li>Ability to understand, learn, and apply knowledge across any domain.</li><li>Can reason, plan, solve problems, think abstractly, and learn from experience like humans.</li><li>Can transfer learning from one context to another seamlessly.</li></ul>
+        <dl class="vs-kv"><div><dt>Current state</dt><dd>Theoretical concept, not yet achieved.</dd></div><div><dt>Timeline</dt><dd>Experts debate whether AGI is decades or centuries away.</dd></div></dl>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Overview</p>
+    <h2>How are genAI models trained</h2>
+    <p class="tr-lead">Models learn patterns from large datasets by adjusting internal weights to reduce prediction error.</p>
+    <div class="tr-top">
+      <div class="tr-types">
+        <div><small>Language models</small><p>Predict the next token based on given context.</p></div>
+        <div><small>Diffusion models</small><p>Denoise images step-by-step, from noise to image.</p></div>
+      </div>
+      <figure class="tr-fig"><svg class="nn" viewBox="0 0 640 300" role="img" aria-label="Neural network: an input layer of 3 nodes, two hidden layers of 4 nodes each, and an output layer of 1 node, fully connected">
+<g class="nn-l"><line x1="90" y1="73" x2="250" y2="47"/><line x1="90" y1="73" x2="250" y2="99"/><line x1="90" y1="73" x2="250" y2="151"/><line x1="90" y1="73" x2="250" y2="203"/><line x1="90" y1="125" x2="250" y2="47"/><line x1="90" y1="125" x2="250" y2="99"/><line x1="90" y1="125" x2="250" y2="151"/><line x1="90" y1="125" x2="250" y2="203"/><line x1="90" y1="177" x2="250" y2="47"/><line x1="90" y1="177" x2="250" y2="99"/><line x1="90" y1="177" x2="250" y2="151"/><line x1="90" y1="177" x2="250" y2="203"/><line x1="250" y1="47" x2="410" y2="47"/><line x1="250" y1="47" x2="410" y2="99"/><line x1="250" y1="47" x2="410" y2="151"/><line x1="250" y1="47" x2="410" y2="203"/><line x1="250" y1="99" x2="410" y2="47"/><line x1="250" y1="99" x2="410" y2="99"/><line x1="250" y1="99" x2="410" y2="151"/><line x1="250" y1="99" x2="410" y2="203"/><line x1="250" y1="151" x2="410" y2="47"/><line x1="250" y1="151" x2="410" y2="99"/><line x1="250" y1="151" x2="410" y2="151"/><line x1="250" y1="151" x2="410" y2="203"/><line x1="250" y1="203" x2="410" y2="47"/><line x1="250" y1="203" x2="410" y2="99"/><line x1="250" y1="203" x2="410" y2="151"/><line x1="250" y1="203" x2="410" y2="203"/><line x1="410" y1="47" x2="560" y2="125"/><line x1="410" y1="99" x2="560" y2="125"/><line x1="410" y1="151" x2="560" y2="125"/><line x1="410" y1="203" x2="560" y2="125"/></g><rect x="60" y="39" width="60" height="172" rx="16" fill="var(--n-in)" opacity=".22"/><rect x="220" y="13" width="60" height="224" rx="16" fill="var(--n-hid)" opacity=".22"/><rect x="380" y="13" width="60" height="224" rx="16" fill="var(--n-hid)" opacity=".22"/><rect x="530" y="91" width="60" height="68" rx="16" fill="var(--n-out)" opacity=".22"/><circle cx="90" cy="73" r="17" fill="#fff" stroke="var(--n-in)" stroke-width="3"/><circle cx="90" cy="125" r="17" fill="#fff" stroke="var(--n-in)" stroke-width="3"/><circle cx="90" cy="177" r="17" fill="#fff" stroke="var(--n-in)" stroke-width="3"/><circle cx="250" cy="47" r="17" fill="#fff" stroke="var(--n-hid)" stroke-width="3"/><circle cx="250" cy="99" r="17" fill="#fff" stroke="var(--n-hid)" stroke-width="3"/><circle cx="250" cy="151" r="17" fill="#fff" stroke="var(--n-hid)" stroke-width="3"/><circle cx="250" cy="203" r="17" fill="#fff" stroke="var(--n-hid)" stroke-width="3"/><circle cx="410" cy="47" r="17" fill="#fff" stroke="var(--n-hid)" stroke-width="3"/><circle cx="410" cy="99" r="17" fill="#fff" stroke="var(--n-hid)" stroke-width="3"/><circle cx="410" cy="151" r="17" fill="#fff" stroke="var(--n-hid)" stroke-width="3"/><circle cx="410" cy="203" r="17" fill="#fff" stroke="var(--n-hid)" stroke-width="3"/><circle cx="560" cy="125" r="17" fill="#fff" stroke="var(--n-out)" stroke-width="3"/><text x="90" y="286" text-anchor="middle" fill="var(--n-in)">Input layer</text><text x="330" y="286" text-anchor="middle" fill="var(--n-hid)">Hidden layers</text><text x="560" y="286" text-anchor="middle" fill="var(--n-out)">Output layer</text></svg></figure>
+    </div>
+    <div class="tr-st">
+      <div class="in"><span class="tr-fig-n">3</span><h3>Input layer <em>Layer types</em></h3><p>Input layer: ingests data &ndash; text is tokenized sequences, images are pixels/patches.</p></div>
+      <div class="hid"><span class="tr-fig-n">N&times;</span><h3>Hidden layers</h3><p>Multiple neural layers extract features. Forward pass: compute activations through the network.</p></div>
+      <div class="out"><span class="tr-fig-n">100B+</span><h3>Output layer <em>Output types</em></h3><p>Output layer: produces a prediction &ndash; next token (LLMs), pixel/latent prediction (TTI), class score, etc.</p></div>
+    </div>
+    <div class="callout">
+      <h4>What is not AI</h4>
+      <h3>AGI remains theoretical</h3>
+      <p>Artificial General Intelligence (AGI) &ndash; the ability to understand, learn, and apply knowledge across any domain &ndash; remains purely theoretical.</p>
+      <p>Unlike the task-specific models shown here, AGI does not yet exist. Current &ldquo;AI&rdquo; excels only at narrow, well-defined tasks it was explicitly trained for.</p>
+    </div>
+  </div>
+</section>
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Taxonomy</p>
+    <h2>Types of biases</h2>
+    <p class="intro">AI systems can exhibit various forms of bias, reflecting inequalities present in society and training data.</p>
+    <ul class="bz-types"><li><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg></span><div><h3>Racial / ethnic bias</h3><p>Misidentification and stereotyping in facial recognition, hiring, and loan applications.</p></div><span class="bz-n">01</span></li><li><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4v-5H4zM10 20h4v-9h-4zM16 20h4V6h-4z"/></svg></span><div><h3>Socioeconomic bias</h3><p>Reinforces inequalities by favoring higher-income individuals in loan approvals, education, and targeted advertising.</p></div><span class="bz-n">02</span></li><li><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><h3>Geographic / location bias</h3><p>Poor performance for underrepresented regions, affecting navigation apps and disaster response systems.</p></div><span class="bz-n">03</span></li><li><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9s8 4 8 9"/></svg></span><div><h3>Age bias</h3><p>Discrimination against older or younger individuals in credit scoring, job applications, and healthcare recommendations.</p></div><span class="bz-n">04</span></li><li><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 9h14M12 9v6l-3 6M12 15l3 6"/></svg></span><div><h3>Disability bias</h3><p>Exclusion through inaccessible interfaces, biased hiring algorithms, and medical tools that don't account for diverse health conditions.</p></div><span class="bz-n">05</span></li><li><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span><div><h3>Cultural bias</h3><p>Struggles with non-dominant cultures, leading to misinterpretations and offensive outputs in language models and image generators.</p></div><span class="bz-n">06</span></li></ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">AI fairness &middot; strategies for equitable systems</p>
+    <h2>Bias mitigation strategies</h2>
+    <p class="intro">Bias can be addressed at three points in a model's life: in the data, while it learns, and in what it outputs. This project focuses on pre-processing.</p>
+    <div class="pl"><div class="pl-st s1 focus"><div class="pl-node">1</div><p class="pl-when">Before training</p><h3>Pre-processing</h3><p class="pl-what">Address bias in the data before model training begins.</p><ul class="pl-t"><li><b>Diverse data collection</b><span>ensure representation across all demographic groups.</span></li><li><b>Bias auditing</b><span>identify underrepresented groups and missing perspectives.</span></li><li><b>Data augmentation</b><span>generate synthetic data to balance representation.</span></li><li><b>Feature selection</b><span>remove features that act as proxies for sensitive attributes.</span></li></ul></div><div class="pl-st s2"><div class="pl-node">2</div><p class="pl-when">During training</p><h3>In-processing</h3><p class="pl-what">Integrate fairness directly into the model training process.</p><ul class="pl-t"><li><b>Fairness constraints</b><span>incorporate fairness metrics into optimization objectives.</span></li><li><b>Adversarial debiasing</b><span>use adversarial networks to remove discriminatory patterns.</span></li><li><b>Multi-task learning</b><span>optimize for both accuracy and fairness simultaneously.</span></li><li><b>Reweighting samples</b><span>balance group representation during training.</span></li></ul></div><div class="pl-st s3"><div class="pl-node">3</div><p class="pl-when">After training</p><h3>Post-processing</h3><p class="pl-what">Adjust model outputs to achieve fairness after development.</p><ul class="pl-t"><li><b>Threshold optimization</b><span>adjust decision thresholds for different groups.</span></li><li><b>Calibration</b><span>ensure prediction reliability across all groups.</span></li><li><b>Output modification</b><span>adjust outputs to satisfy fairness constraints.</span></li></ul></div></div>
+  </div>
+</section>
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Measurement framework</p>
+    <h2>How to measure these biases</h2>
+    <p class="intro">Ten measures, each with the question it answers and a worked example.</p>
+    <ol class="ms"><li><span class="ms-n">01</span><div><h3>Demographic parity</h3><p>Equal outcome rates across groups.</p><p class="ms-ex"><small>Example</small>60% of both men and women are hired.</p></div></li><li><span class="ms-n">02</span><div><h3>Equalized odds</h3><p>Equal accuracy (TPR &amp; FPR) across groups.</p><p class="ms-ex"><small>Example</small>Loan approval correctly identifies 80% of qualified applicants in both male and female groups.</p></div></li><li><span class="ms-n">03</span><div><h3>Equal opportunity</h3><p>Equal true positive rates for qualified individuals.</p><p class="ms-ex"><small>Example</small>90% of qualified students are admitted, regardless of gender.</p></div></li><li><span class="ms-n">04</span><div><h3>Individual fairness</h3><p>Similar individuals receive similar predictions.</p><p class="ms-ex"><small>Example</small>Two people with identical qualifications receive the same loan decision, regardless of race.</p></div></li><li><span class="ms-n">05</span><div><h3>Word weights</h3><p>Shows which words influence model outputs.</p><p class="ms-ex"><small>Example</small>For the prompt &ldquo;a nurse,&rdquo; attention is highest on &ldquo;woman,&rdquo; revealing gender bias.</p></div></li><li><span class="ms-n">06</span><div><h3>Calibration</h3><p>Predicted probabilities match actual outcomes.</p><p class="ms-ex"><small>Example</small>70% predicted disease risk = 70% actual occurrence for all demographics.</p></div></li><li><span class="ms-n">07</span><div><h3>Counterfactual fairness</h3><p>Predictions unchanged if sensitive attributes are altered.</p><p class="ms-ex"><small>Example</small>A female candidate's hiring decision remains the same if gender is changed to male.</p></div></li><li><span class="ms-n">08</span><div><h3>Simpson's diversity index</h3><p>Probability of selecting different categories; higher = more diverse.</p><p class="ms-ex"><small>Example</small>Balanced gender output (D=0.5) vs. male-dominated output (D=0.095).</p></div></li><li><span class="ms-n">09</span><div><h3>Word embeddings</h3><p>Reveals stereotypical word associations in AI models.</p><p class="ms-ex"><small>Example</small>&ldquo;Doctor&rdquo; is closer to &ldquo;man&rdquo; than &ldquo;woman&rdquo; in vector space.</p></div></li><li><span class="ms-n">10</span><div><h3>Shannon entropy</h3><p>Measures diversity in outputs; higher = more diverse.</p><p class="ms-ex"><small>Example</small>50 male/50 female images (H=1.0) vs. 95 male/5 female (H=0.29).</p></div></li></ol>
+  </div>
+</section>
+<section class="sec dark">
+  <div class="wrap">
+    <p class="eyebrow">Secondary research</p>
+    <h2>Research findings</h2>
+    <div class="rf-meta">
+      <div><b>10+</b><span>Studies analyzed<br>peer-reviewed papers</span></div>
+      <div><b>2021&ndash;2024</b><span>Time period<br>recent analysis</span></div>
+      <div><b>3</b><span>Focus areas<br>Text-to-image, VLMs, LMMs</span></div>
+    </div>
+    <ol class="rf"><li><span class="rf-n">01</span><div class="rf-b"><h3>Text-to-image biases</h3><p>Models reflect societal stereotypes &ndash; &lsquo;nurse&rsquo; generated predominantly as female. Prompt modifiers are insufficient for deep-seated biases.</p></div></li><li><span class="rf-n">02</span><div class="rf-b"><h3>Text embedding analysis</h3><p>Models link professions to gender &ndash; &lsquo;CEO&rsquo; associated with male. Bias must be weighed against overall model performance.</p></div></li><li><span class="rf-n">03</span><div class="rf-b"><h3>Gender classification</h3><p>Higher misclassification rates for darker-skinned women and trans people. Implication: discrimination against non-stereotypical appearances.</p></div></li><li><span class="rf-n">04</span><div class="rf-b"><h3>Conversational AI</h3><p>LLMs infer user attributes from context, causing biased recommendations. Creates significant privacy concerns and entrenches stereotyping.</p></div></li><li><span class="rf-n">05</span><div class="rf-b"><h3>Gender activity binding</h3><p>13.2% accuracy drop in VLMs for unexpected gender-activity pairings. Perpetuates harmful stereotypes in hiring decisions and media representation.</p></div><div class="rf-fig"><b>13.2%</b><span>accuracy drop</span></div></li><li><span class="rf-n">06</span><div class="rf-b"><h3>Open-source platforms</h3><p>NSFW content on CivitAI surged from 55% to 73% in 6 months. Reinforces stereotypes and amplifies Western-centric representational bias.</p></div><div class="rf-fig"><b>55% &rarr; 73%</b><span>in 6 months</span></div></li></ol>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Landscape overview</p>
+    <h2>Current landscape of bias detection tools</h2>
+    <div class="mx" style="--r:4;--n:4"><div class="mx-col"><h4>Open-source libraries &amp; toolkits</h4>
+<div class="mx-row"><span class="lab">Key tools</span><ul class="tagl"><li>Fairlearn (Microsoft)</li><li>AI Fairness 360 (IBM)</li><li>Fairness Indicators (Google)</li><li>What-If Tool (Google)</li></ul></div>
+<div class="mx-row"><span class="lab pro">Advantages</span><ul class="lc pro"><li>Free and accessible to all developers</li><li>Comprehensive fairness metrics (70+ in AIF360)</li><li>Integration with popular ML frameworks (scikit-learn, TensorFlow)</li><li>Active community support and regular updates</li></ul></div>
+<div class="mx-row"><span class="lab con">Limitations</span><ul class="lc con"><li>Requires technical expertise to implement</li><li>Limited enterprise-level support</li><li>May need customization for specific use cases</li></ul></div></div><div class="mx-col"><h4>Specialized fairness tools</h4>
+<div class="mx-row"><span class="lab">Key tools</span><ul class="tagl"><li>Aequitas</li><li>FairTest</li><li>Themis</li><li>Themis-ML</li></ul></div>
+<div class="mx-row"><span class="lab pro">Advantages</span><ul class="lc pro"><li>Focused on specific fairness aspects (demographic auditing, individual fairness)</li><li>Automated bias reports and statistical testing</li><li>Easy-to-interpret visualizations</li><li>Research-backed methodologies</li></ul></div>
+<div class="mx-row"><span class="lab con">Limitations</span><ul class="lc con"><li>Narrower scope than general-purpose tools</li><li>May not cover all bias types</li><li>Less frequent updates and smaller communities</li></ul></div></div><div class="mx-col"><h4>Cloud-based &amp; enterprise solutions</h4>
+<div class="mx-row"><span class="lab">Key tools</span><ul class="tagl"><li>Azure ML Fairness</li><li>AWS SageMaker Clarify</li><li>Google Cloud AI Platform</li></ul></div>
+<div class="mx-row"><span class="lab pro">Advantages</span><ul class="lc pro"><li>Seamless integration with cloud ML pipelines</li><li>Scalable for large datasets and production environments</li><li>Automated bias detection and reporting</li><li>Regulatory compliance features</li></ul></div>
+<div class="mx-row"><span class="lab con">Limitations</span><ul class="lc con"><li>Vendor lock-in and subscription costs</li><li>Less flexibility for customization</li><li>Requires cloud infrastructure</li></ul></div></div><div class="mx-col"><h4>Emerging &amp; specialized tools</h4>
+<div class="mx-row"><span class="lab">Key tools</span><ul class="tagl"><li>FairComp</li><li>LinkedIn Fairness Toolkit (LiFT)</li></ul></div>
+<div class="mx-row"><span class="lab pro">Advantages</span><ul class="lc pro"><li>Cutting-edge research implementations</li><li>Big data processing capabilities (LiFT)</li><li>Intersectional bias analysis</li><li>Standardized fairness benchmarking</li></ul></div>
+<div class="mx-row"><span class="lab con">Limitations</span><ul class="lc con"><li>Less mature and may lack documentation</li><li>Smaller user base and community</li><li>Limited support for non-standard datasets</li></ul></div></div></div>
+    <p class="pull">While many tools exist, there's a <strong>need for intuitive, visual dashboards that enable users to detect, understand, and mitigate biases effectively</strong> &ndash; which is the focus of this project.</p>
+  </div>
+</section>
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Users</p>
+    <h2>Understanding our users</h2>
+    <p class="intro">Two primary user archetypes drive the design of this bias detection solution.</p>
+    <div class="pe"><article class="pe-c"><header><div><small>Persona 01</small><h3>AI Model Trainer</h3><p>Data scientist specializing in dataset curation for text-to-image models.</p></div></header><div class="pe-r"><span class="pe-l"><b>01</b>Role &amp; background</span><div><dl class="pe-kv"><div><dt>Role</dt><dd>Data Scientist &amp; AI Model Trainer</dd></div><div><dt>Background</dt><dd>MSc in Data Science; 6+ years; specializes in dataset curation for TTI; worked with LAION, ImageNet</dd></div></dl></div></div><div class="pe-r"><span class="pe-l"><b>02</b>Values</span><div><ul class="tagl"><li>Automated flagging</li><li>Heatmaps, diversity metrics</li><li>Exportable reports</li></ul></div></div><div class="pe-r"><span class="pe-l"><b>03</b>Pain points</span><div><ul class="lc con"><li>Subtle bias detection at scale</li><li>Limited bias visualizations; hard to communicate to stakeholders</li><li>Time-consuming manual annotations</li></ul></div></div><div class="pe-r"><span class="pe-l"><b>04</b>Goals</span><div><ul class="ft-l ok"><li>Build diverse, balanced, bias-minimized datasets</li><li>Analyze demographic representation; flag underrepresented groups</li></ul></div></div></article><article class="pe-c"><header><div><small>Persona 02</small><h3>AI Model Developer</h3><p>AI developer fine-tuning text-to-image models using Python, PyTorch, and Fairlearn.</p></div></header><div class="pe-r"><span class="pe-l"><b>01</b>Role &amp; background</span><div><dl class="pe-kv"><div><dt>Role</dt><dd>AI Developer &amp; Model Engineer</dd></div><div><dt>Background</dt><dd>BSc CS; 4 years; fine-tunes TTI (DALL&middot;E, Stable Diffusion); uses Python, PyTorch, TensorFlow, Fairlearn, AIF360</dd></div></dl></div></div><div class="pe-r"><span class="pe-l"><b>02</b>Values</span><div><ul class="tagl"><li>Prompt suites, bias visualizations</li><li>Trackable fairness metrics over iterations</li></ul></div></div><div class="pe-r"><span class="pe-l"><b>03</b>Pain points</span><div><ul class="lc con"><li>Quantifying intersectional bias</li><li>Lack of standardized bias-test prompts</li><li>Fairness-performance trade-offs</li></ul></div></div><div class="pe-r"><span class="pe-l"><b>04</b>How he uses the solution</span><div><ul class="ft-l ok"><li>Uploads model &rarr; tests with standard and custom prompts</li><li>Reviews embeddings, parity metrics</li><li>Iteratively debiases (adversarial training, counterfactual augmentation)</li></ul></div></div></article></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">How this solution helps</p>
+    <h2>Use case</h2>
+    <h4>Target audience</h4>
+    <ul class="list" style="margin-bottom:36px">
+      <li>AI/ML developers and data scientists</li>
+      <li>Organizations deploying generative AI models</li>
+      <li>Dataset curators and researchers</li>
+      <li>Companies seeking fair and ethical AI solutions</li>
+    </ul>
+    <div class="grid" style="--n:3">
+      <div class="cell">
+        <p class="num">01.</p><h3>Check for biases</h3>
+        <ul class="list"><li>Connect your AI model or upload training datasets</li><li>Run comprehensive bias assessments across multiple dimensions</li><li>Identify which types of biases are present and their severity</li></ul>
+      </div>
+      <div class="cell">
+        <p class="num">02.</p><h3>Improve datasets</h3>
+        <ul class="list"><li>Receive actionable insights on underrepresented groups</li><li>Add diverse representations to balance your data</li><li>Use metrics to track improvement over iterations</li></ul>
+      </div>
+      <div class="cell">
+        <p class="num">03.</p><h3>Retrain models</h3>
+        <ul class="list"><li>Apply bias mitigation strategies based on dashboard insights</li><li>Retrain models with improved, balanced datasets</li><li>Validate fairness improvements through continuous monitoring</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Worked example</p>
+    <h2>Solution using the dashboard</h2>
+    <div class="split">
+      <div>
+        <h4>Problem</h4>
+        <p>A text-to-image model generates images for the prompt &ldquo;software engineer&rdquo;.</p>
+        <h4>Result</h4>
+        <p>88% male, 3% female &ndash; poor gender representation (clear bias).</p>
+      </div>
+      <ol class="steps" style="--n:2">
+        <li><b>Identify bias</b>The dashboard identifies gender bias with metrics (low Shannon entropy, demographic parity violation).</li>
+        <li><b>Augment data</b>The user adds more female representation to the training dataset.</li>
+        <li><b>Retrain model</b>The model is retrained with balanced and representative data.</li>
+        <li><b>Verify results</b>New results: 52% male, 48% female (bias significantly reduced).</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark">
+  <div class="wrap">
+    <p class="eyebrow">A comprehensive toolkit for detecting, analyzing, and mitigating bias in AI systems</p>
+    <h2>Features &amp; functionalities</h2>
+    <h4 style="color:#cfd4ff">Capabilities</h4>
+    <ol class="list" style="padding-left:1.4em;font-size:19px">
+      <li>User &amp; audit management</li>
+      <li>Bias analysis &amp; metrics</li>
+      <li>Prompt management</li>
+      <li>Data &amp; model interaction</li>
+      <li>Collaboration &amp; reporting</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Platform</p>
+    <h2>Core features</h2>
+    <p class="intro">A comprehensive platform for AI auditing, bias detection, and collaborative reporting &ndash; built for teams who care about fair and accountable AI.</p>
+    <div class="bz-feat"><div class="bz-f"><div class="bz-fh"><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg></span><div><small>Feature 01</small><h3>User &amp; audit management</h3></div></div><div class="bz-fb"><ul class="bz-l"><li>Login and user profiles.</li><li>Homepage with recent audits, reports, and uploaded assets.</li><li>Notifications for updates and collaboration.</li><li>Start new audit workflow.</li></ul></div></div><div class="bz-f"><div class="bz-fh"><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><div><small>Feature 02</small><h3>Bias analysis &amp; metrics</h3></div></div><div class="bz-fb"><ul class="tagl"><li>Demographic Parity</li><li>Equalized Odds</li><li>Equal Opportunity</li><li>Calibration</li><li>Counterfactual Fairness</li><li>Individual Fairness</li><li>Shannon Entropy</li><li>Simpson's Diversity Index</li><li>Word Embeddings</li><li>Word Weights</li></ul></div></div><div class="bz-f"><div class="bz-fh"><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><div><small>Feature 03</small><h3>Prompt management</h3></div></div><div class="bz-fb"><ul class="bz-l"><li>Selection from predefined standard prompts.</li><li>Upload custom prompt files.</li><li>Manual prompt entry.</li><li>Editing and managing prompt lists.</li></ul></div></div><div class="bz-f"><div class="bz-fh"><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><div><small>Feature 04</small><h3>Data &amp; model interaction</h3></div></div><div class="bz-fb"><ul class="bz-l"><li>Dataset and model upload/selection.</li><li>Filtering results by demographic attributes.</li><li>Interactive exploration of results.</li></ul></div></div><div class="bz-f"><div class="bz-fh"><span class="bz-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="8" r="2.5"/><path d="M2 19c0-3 2.5-5 6-5s6 2 6 5M14 18c.5-2 2-3.5 5-3.5 1.5 0 3 .7 3 2.5"/></svg></span><div><small>Feature 05</small><h3>Collaboration &amp; reporting</h3></div></div><div class="bz-fb"><ul class="bz-l"><li>Commenting on analysis sections.</li><li>Tagging collaborators.</li><li>Generating and exporting comprehensive reports (PDF, CSV).</li></ul></div></div></div>
+  </div>
+</section>
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Diversity metrics</p>
+    <h2>Diversity index</h2>
+    <p class="intro">Shannon entropy, Simpson's index.</p>
+    <div class="grid" style="--n:3">
+      <div class="cell"><p class="num">01.</p><h3>Bar charts by attribute</h3><p>Bar charts for diversity scores by attribute.</p></div>
+      <div class="cell"><p class="num">02.</p><h3>Heatmaps for intersectionality</h3><p>Heatmaps for intersectionality (e.g., race &times; gender).</p></div>
+      <div class="cell"><p class="num">03.</p><h3>Line charts for trends</h3><p>Line charts for historical trends across model versions.</p></div>
+    </div>
+    <!--chart:diversity--></div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Fairness analysis</p>
+    <h2>Demographic parity</h2>
+    <div class="grid" style="--n:2">
+      <div class="cell"><p class="num">01.</p><h3>Find your metric</h3><p>Treemaps showing group proportions per attribute.</p></div>
+      <div class="cell"><p class="num">02.</p><h3>Compare with data</h3><p>Stacked bar charts for side-by-side prompt comparisons.</p></div>
+    </div>
+    <!--chart:parity-->
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Fairness testing</p>
+    <h2>Counterfactual fairness</h2>
+    <div class="grid" style="--n:2">
+      <div class="cell"><p class="num">01.</p><h3>Attribute grids</h3><p>Image grids per attribute value (e.g., Female, Male, Non-binary).</p></div>
+      <div class="cell"><p class="num">02.</p><h3>Matrix grids</h3><p>Matrix grids for intersectional combinations (Attribute A &times; Attribute B).</p></div>
+    </div>
+    <!--chart:counterfactual-->
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Fairness metrics</p>
+    <h2>Calibration</h2>
+    <div class="grid" style="--n:2">
+      <div class="cell"><p class="num">01.</p><h3>Reliability plots</h3><p>Predicted vs actual with a diagonal reference line.</p></div>
+      <div class="cell"><p class="num">02.</p><h3>Group-wise charts</h3><p>Line charts per attribute and intersectional groups.</p></div>
+    </div>
+    <!--chart:calibration-->
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">NLP analysis</p>
+    <h2>Word weights / embeddings</h2>
+    <div class="grid" style="--n:2">
+      <div class="cell"><p class="num">01.</p><h3>Zoomable relational word clouds</h3><p>Zoomable relational word clouds (clusters, color-coded).</p></div>
+      <div class="cell"><p class="num">02.</p><h3>Co-occurrence heatmaps</h3><p>Co-occurrence heatmaps or chord diagrams.</p></div>
+    </div>
+    <!--chart:words-->
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">AI fairness</p>
+    <h2>Biases in the real world reflect biases in models</h2>
+    <p class="intro">AI models learn from real-world data. When that data reflects societal biases, the AI inherits and amplifies them, leading to skewed and unfair outputs.</p>
+    <div class="rw"><div class="rw-c"><span class="rw-n">001</span><h3>Demographic &amp; identity biases</h3><ul class="rw-l"><li><b>Racial/ethnic</b><span>favoritism in visual and language outputs.</span></li><li><b>Gender</b><span>professions linked to specific genders; misclassification of non-binary individuals.</span></li><li><b>Age</b><span>stereotypical depictions and underrepresentation of age groups.</span></li><li><b>Disability</b><span>limited representation and stereotypical portrayals.</span></li></ul></div><div class="rw-c"><span class="rw-n">002</span><h3>Social &amp; cultural biases</h3><ul class="rw-l"><li><b>Socioeconomic</b><span>bias based on economic status, education, and social class.</span></li><li><b>Geographic</b><span>Western-centric values; underrepresentation of other regions.</span></li><li><b>Cultural</b><span>homogenized visual culture; limited diversity in practices.</span></li><li><b>Appearance</b><span>attractiveness associated with specific physical traits.</span></li></ul></div><div class="rw-c"><span class="rw-n">003</span><h3>Gender activity binding (GAB) bias</h3><p class=rw-lead>AI links activities to gender stereotypes from training data, causing:</p><ul class="rw-l"><li><span>A 13.2% accuracy drop for counter-stereotypical scenarios.</span></li><li><span>Difficulty recognizing multiple genders in the same activity.</span></li><li><span>Perpetuation of harmful stereotypes in hiring and media.</span></li></ul></div></div>
+    <p class="pull"><strong>The result &ndash; biased data creates biased AI, reinforcing existing inequalities.</strong></p>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Structure</p>
+    <h2>Information architecture</h2>
+    <p class="intro">The dashboard is organised around a homepage, a model analysis area and a dataset analysis area. Each analysis area has its own tabs, and each tab its own prompt and attribute selectors.</p>
+    <div class="ia2">
+      <div class="ia2-home">
+        <h3>Homepage</h3>
+        <ul class="ia2-h"><li><b>Recent audits</b><span>Start new</span></li><li><b>Recent reports</b><span>View more</span></li><li><b>Uploaded datasets &amp; models</b><span>View more</span></li><li><b>Top bar</b><span>Notifications &middot; Settings &middot; Account</span></li></ul>
+        <p class="ia2-go">Start new leads into either analysis area</p>
+      </div>
+      <div class="ia2-area">
+        <header><span>A</span><div><h3>Model analysis</h3><p>7 tabs. Each view has its own prompt and attribute selectors.</p></div></header>
+        <div class="ia2-tabs"><div class="ia2-tab"><h4><span>01</span>Image gallery</h4><ul class="ia2-v"><li><b>Prompts</b><ul><li>Edit prompts</li></ul></li><li><b>Prompt image gallery</b></li></ul></div><div class="ia2-tab"><h4><span>02</span>Diversity index</h4><ul class="ia2-v"><li><b>Diversity index – bar chart</b><ul><li>Select prompt</li><li>Select attribute</li></ul></li><li><b>Historical trend – line chart</b></li><li><b>Intersectionality explorer – heatmap</b><ul><li>Select attribute 1</li><li>Select attribute 2</li></ul></li></ul></div><div class="ia2-tab"><h4><span>03</span>Demographic parity</h4><ul class="ia2-v"><li><b>Attribute – heatmap</b><ul><li>Select prompt</li><li>Select attribute</li></ul></li></ul></div><div class="ia2-tab"><h4><span>04</span>Counterfactual fairness</h4><ul class="ia2-v"><li><b>Attribute – image gallery</b><ul><li>Select prompt</li><li>Select attribute</li></ul></li><li><b>Intersectionality explorer – gallery</b><ul><li>Select prompt</li><li>Select attribute 1</li><li>Select attribute 2</li></ul></li></ul></div><div class="ia2-tab"><h4><span>05</span>Calibration</h4><ul class="ia2-v"><li><b>Attribute – multi line chart</b><ul><li>Select prompt</li><li>Select attribute</li></ul></li><li><b>Intersectionality explorer – multi line chart</b><ul><li>Select prompt</li><li>Select attribute 1</li><li>Select attribute 2</li></ul></li></ul></div><div class="ia2-tab"><h4><span>06</span>Word embeddings</h4><ul class="ia2-v"><li><b>Word cloud – pan / zoom</b><ul><li>Select prompt</li><li>Select attribute</li></ul></li></ul></div><div class="ia2-tab"><h4><span>07</span>Word weights</h4><ul class="ia2-v"><li><b>Word cloud – pan / zoom</b><ul><li>Select prompt</li></ul></li></ul></div></div>
+      </div>
+      <div class="ia2-area">
+        <header><span>B</span><div><h3>Dataset analysis</h3><p>5 tabs. Views are driven by attribute, word and category selectors.</p></div></header>
+        <div class="ia2-tabs"><div class="ia2-tab"><h4><span>01</span>Overview</h4><ul class="ia2-v"><li><b>Word cloud</b></li><li><b>Word histogram</b><ul><li>Search word</li></ul></li></ul></div><div class="ia2-tab"><h4><span>02</span>Diversity index</h4><ul class="ia2-v"><li><b>Select attribute</b><ul><li>KPI card</li><li>Frequency – bar chart</li></ul></li><li><b>Intersectionality explorer – heatmap</b><ul><li>Select attribute 1</li><li>Select attribute 2</li></ul></li></ul></div><div class="ia2-tab"><h4><span>03</span>Demographic parity</h4><ul class="ia2-v"><li><b>Select attribute</b><ul><li>Attribute – heatmap</li><li>Attribute baseline vs dataset – grouped bar chart</li></ul></li></ul></div><div class="ia2-tab"><h4><span>04</span>Counterfactual fairness</h4><ul class="ia2-v"><li><b>Attribute – image gallery</b><ul><li>Select prompt</li><li>Search word</li></ul></li><li><b>Intersectionality explorer – gallery</b><ul><li>Search word</li><li>Select attribute 1</li><li>Select attribute 2</li></ul></li></ul></div><div class="ia2-tab"><h4><span>05</span>Word weights</h4><ul class="ia2-v"><li><b>Word associations – bar chart</b><ul><li>Select attribute</li><li>Select category</li></ul></li><li><b>Attribute – category associations – bar chart</b><ul><li>Search word</li></ul></li><li><b>Intersectionality explorer – heatmap</b><ul><li>Select attribute 1</li><li>Select attribute 2</li></ul></li></ul></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Interface</p>
+    <h2>Homescreen &amp; model analysis tabs</h2>
+    <p class="intro">Homescreen with recent audits, recent reports and uploaded datasets &amp; models. Model analysis tabs: image gallery, diversity index, demographic parity, counterfactual fairness, calibration and word embeddings.</p>
+    <div class="cg-grid"><figure class="cg-tile span"><div class="cg-img"><img data-src="sc_home" data-w="1600" data-q="90" data-open alt="Homescreen: Recent audits, recent reports, and uploaded datasets and models."></div><figcaption><b>Homescreen</b><span>Recent audits, recent reports, and uploaded datasets and models.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_gallery" data-w="1600" data-q="90" data-open alt="Image gallery: Generated images grouped by prompt."></div><figcaption><b>Image gallery</b><span>Generated images grouped by prompt.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_m_diversity" data-w="1600" data-q="90" data-open alt="Diversity index: Bar chart by attribute, historical trend and an intersectionality heatmap."></div><figcaption><b>Diversity index</b><span>Bar chart by attribute, historical trend and an intersectionality heatmap.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_m_parity" data-w="1600" data-q="90" data-open alt="Demographic parity: Treemaps of group proportions for each attribute."></div><figcaption><b>Demographic parity</b><span>Treemaps of group proportions for each attribute.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_m_counterfactual" data-w="1600" data-q="90" data-open alt="Counterfactual fairness: Image grids by attribute value and by intersection."></div><figcaption><b>Counterfactual fairness</b><span>Image grids by attribute value and by intersection.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_m_calibration" data-w="1600" data-q="90" data-open alt="Calibration: Reliability curves by group, and for intersectional groups."></div><figcaption><b>Calibration</b><span>Reliability curves by group, and for intersectional groups.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_m_wordemb" data-w="1600" data-q="90" data-open alt="Word embeddings: A word cloud of the descriptive words the model used."></div><figcaption><b>Word embeddings</b><span>A word cloud of the descriptive words the model used.</span></figcaption></figure></div>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Interface</p>
+    <h2>Dataset analysis tabs</h2>
+    <p class="intro">Overview, diversity index, demographic parity, counterfactual fairness and word weights.</p>
+    <div class="cg-grid"><figure class="cg-tile"><div class="cg-img"><img data-src="sc_d_overview" data-w="1600" data-q="90" data-open alt="Overview: A word cloud and a distribution of word frequency across the dataset."></div><figcaption><b>Overview</b><span>A word cloud and a distribution of word frequency across the dataset.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_d_diversity" data-w="1600" data-q="90" data-open alt="Diversity index: Counts by attribute, with the intersectionality heatmap."></div><figcaption><b>Diversity index</b><span>Counts by attribute, with the intersectionality heatmap.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_d_parity" data-w="1600" data-q="90" data-open alt="Demographic parity: Baseline against dataset distribution, by attribute."></div><figcaption><b>Demographic parity</b><span>Baseline against dataset distribution, by attribute.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_d_counterfactual" data-w="1600" data-q="90" data-open alt="Counterfactual fairness: Image grids by attribute value and by intersection."></div><figcaption><b>Counterfactual fairness</b><span>Image grids by attribute value and by intersection.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_d_wordweights" data-w="1600" data-q="90" data-open alt="Word weights: How strongly each word is tied to an attribute or category."></div><figcaption><b>Word weights</b><span>How strongly each word is tied to an attribute or category.</span></figcaption></figure></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Interface</p>
+    <h2>Settings &amp; controls</h2>
+    <p class="intro">Settings, profile, uploading a dataset or connecting a model, prompt library upload, notifications, comments, exporting the analysis document and adding contributors.</p>
+    <div class="cg-grid"><figure class="cg-tile"><div class="cg-img"><img data-src="sc_profile" data-w="1600" data-q="90" data-open alt="Profile and settings: personal details, notifications, sign-in method and account deactivation."></div><figcaption><b>Profile &amp; settings</b><span>Personal details, notifications, sign-in method and account deactivation.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_upload" data-w="1600" data-q="90" data-open alt="Upload dataset or connect a model: Upload files, or connect a model with an endpoint and API key."></div><figcaption><b>Upload dataset or connect a model</b><span>Upload files, or connect a model with an endpoint and API key.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_prompts" data-w="1600" data-q="90" data-open alt="Prompt library: Pick prompts to analyse the model, or upload a prompt file."></div><figcaption><b>Prompt library</b><span>Pick prompts to analyse the model, or upload a prompt file.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_notifications" data-w="1600" data-q="90" data-open alt="Notifications: Updates on audits, reports and collaborators."></div><figcaption><b>Notifications</b><span>Updates on audits, reports and collaborators.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_comments" data-w="1600" data-q="90" data-open alt="Comments: Comment on any analysis and tag collaborators."></div><figcaption><b>Comments</b><span>Comment on any analysis and tag collaborators.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_export" data-w="1600" data-q="90" data-open alt="Export: Export the analysis as a document."></div><figcaption><b>Export</b><span>Export the analysis as a document.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="sc_collab" data-w="1600" data-q="90" data-open alt="Add a collaborator: Invite people by email."></div><figcaption><b>Add a collaborator</b><span>Invite people by email.</span></figcaption></figure></div>
+  </div>
+</section>

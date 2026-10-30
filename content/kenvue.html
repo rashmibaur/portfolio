@@ -1,0 +1,271 @@
+<section class="sec">
+  <div class="wrap">
+    <p class="pull"><strong>A self-service tool that empowers planners with live, flexible, and shareable data views, turning raw supply-chain data into clear insights that elevate decision quality and speed.</strong></p>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">The problem</p>
+    <h2>Fragmented, manual, and stale</h2>
+    <p class="intro">Planners across demand, supply, S&amp;OP, logistics, and replenishment rely on custom tables to plan and collaborate &ndash; yet today's workflow is entirely manual and disconnected.</p>
+    <div class="grid cards" style="--n:4">
+      <div class="cell"><h3>No unified view</h3><p>No consistent way to assemble a table across multiple datasets in one place.</p></div>
+      <div class="cell"><h3>Manual transforms</h3><p>Planners export raw data to Excel, build tables by hand, and email files back and forth.</p></div>
+      <div class="cell"><h3>Lost freshness</h3><p>Data lineage, auditability, and auto-refresh are absent, eroding trust in shared outputs.</p></div>
+      <div class="cell"><h3>No access control</h3><p>Sharing lacks role-appropriate permissions, creating risk and inconsistency across teams.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Responsibilities</p>
+    <h2>My role</h2>
+    <div class="grid cards" style="--n:3">
+      <div class="cell"><h3>End-to-end ownership</h3><p>Owned the complete UX lifecycle from requirements to handoff. Translated business needs into clear problem statements and design opportunities.</p></div>
+      <div class="cell"><h3>Cross-functional collaboration</h3><p>Partnered with Demand, Supply, and Inventory planners, the PM, Design System team, and Product Governance to ensure alignment and scalability.</p></div>
+      <div class="cell"><h3>Design execution</h3><p>Built iteratively using existing UX patterns and component libraries. Identified new scalable patterns to contribute back to the company-wide design system.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Users</p>
+    <h2>Three planners, one tool</h2>
+    <p class="intro">Each planner starts from a different question, but all of them were building the same table by hand.</p>
+    <div class="pf">
+      <div class="pf-row"><div class="pf-who"><span class="pf-no">01</span><div><small>Forecasts demand</small><h3>Demand planner</h3></div><p>Builds accurate forecasts from historical trends, promotions, sales inputs and market intelligence, across SKU and category hierarchies.</p></div>
+        <div class="pf-band"><div class="pf-today"><h4>Today</h4><ul class="pf-l pain"><li>Manual table creation spanning multiple systems</li><li>Hard to track forecast changes across versions</li><li>Needs fast pivots and drill-downs during live meetings</li></ul></div><div class="pf-with"><h4>With the table builder</h4><ul class="pf-l nd"><li>Compare forecast snapshots (Bias %, APE, uplift)</li><li>Live, shareable views for cross-functional alignment</li><li>Auto-refreshing tables for weekly demand reviews</li></ul></div></div></div>
+      <div class="pf-row"><div class="pf-who"><span class="pf-no">02</span><div><small>Balances supply and demand</small><h3>Supply planner</h3></div><p>Balances supply against demand and builds feasible supply plans from ERP, production and planning data.</p></div>
+        <div class="pf-band"><div class="pf-today"><h4>Today</h4><ul class="pf-l pain"><li>Fragmented data across ERP, production and planning tools</li><li>Time-consuming manual consolidation before S&amp;OP</li><li>Slow access to updated supply run snapshots</li></ul></div><div class="pf-with"><h4>With the table builder</h4><ul class="pf-l nd"><li>Merge supply plan, demand and inventory datasets</li><li>Gap calculations (Supply &minus; Net Demand) on the fly</li><li>Snapshot-based comparisons of supply plan runs</li></ul></div></div></div>
+      <div class="pf-row"><div class="pf-who"><span class="pf-no">03</span><div><small>Keeps stock at the right level</small><h3>Inventory planner</h3></div><p>Keeps inventory right across DCs and stores, watching days on hand (DOH) and service levels every day.</p></div>
+        <div class="pf-band"><div class="pf-today"><h4>Today</h4><ul class="pf-l pain"><li>Hard to combine demand, inventory and in-transit data in one view</li><li>Stale data leads to poor replenishment decisions</li><li>Manual conditional formatting to flag risks</li></ul></div><div class="pf-with"><h4>With the table builder</h4><ul class="pf-l nd"><li>Build &ldquo;Inventory Health&rdquo; tables quickly, with conditional formatting</li><li>Real-time on-hand and in-transit metric views</li><li>Easy sharing for daily standups and replenishment calls</li></ul></div></div></div>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Context</p>
+    <h2>Platform context</h2>
+    <p class="intro">The Custom Table Builder sits within a broader end-to-end supply chain planning platform used by FMCG organisations. It acts as a core data exploration and decision-support layer spanning demand, supply, and inventory workflows.</p>
+    <ol class="steps" style="--n:3">
+      <li><b>Structured system data</b>ERP, demand planning, production, and inventory management systems.</li>
+      <li><b>Unified platform</b>Forecasts, supply plans, actuals, and stock levels in one environment.</li>
+      <li><b>Custom table layer</b>Self-service, flexible, scenario-specific views for every planner role.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Data</p>
+    <h2>Understanding the data model</h2>
+    <p class="intro">Four data types define how planners view, slice, compare and track information. Every number in a table is built from all four.</p>
+    <div class="dm-viz" role="img" aria-label="Example table: forecast quantity by brand and region, by month, as of Dec 1st">
+      <div class="dv-snap"><b>Snap</b>Dec 1st</div>
+      <div class="dv-grid">
+        <div class="dv-h dv-corner d"><b>Dimension</b>Brand &middot; Region</div>
+        <div class="dv-h t"><b>Time</b>Jan</div><div class="dv-h t"><b>Time</b>Feb</div><div class="dv-h t"><b>Time</b>Mar</div>
+        <div class="dv-c d">Brand A &middot; APAC</div><div class="dv-c m"><b>Measure</b>1,240</div><div class="dv-c m">1,310</div><div class="dv-c m">1,180</div>
+        <div class="dv-c d">Brand A &middot; EMEA</div><div class="dv-c m">860</div><div class="dv-c m">905</div><div class="dv-c m">940</div>
+        <div class="dv-c d">Brand B &middot; APAC</div><div class="dv-c m">1,020</div><div class="dv-c m">990</div><div class="dv-c m">1,075</div>
+      </div>
+      <p class="dv-cap">Example only. Every number is a <b class="m">measure</b>, sliced by <b class="d">dimensions</b>, placed in <b class="t">time</b>, and stamped with a <b class="s">snap</b>.</p>
+    </div>
+    <div class="dm4">
+      <div class="dm-d s"><h3>Snap</h3><p class="dm-q">When was it captured?</p><p>When a number was captured or predicted. Lets planners compare versions and track forecast accuracy.</p><p class="dm-ex"><small>Examples</small>Jan forecast made Dec 1 vs Dec 15 vs Jan 1 &middot; End of day vs start of planning cycle &middot; Before vs after sales adjustment</p></div>
+      <div class="dm-d m"><h3>Measures</h3><p class="dm-q">What is changing?</p><p>The numbers that move over time and drive decisions.</p><p class="dm-ex"><small>Examples</small>Forecast quantity &middot; Net demand (forecast &minus; inventory) &middot; Actual sales / shipments &middot; Supply quantity</p></div>
+      <div class="dm-d d"><h3>Dimensions</h3><p class="dm-q">How is it sliced?</p><p>The stable categories that slice the data, for filtering, pivoting and rollups.</p><p class="dm-ex"><small>Examples</small>Product (SKU, brand, category, franchise) &middot; Geography (region, country, market, cluster) &middot; Supply node (plant, warehouse, DC) &middot; Customer / channel</p></div>
+      <div class="dm-d t"><h3>Time</h3><p class="dm-q">When is it happening?</p><p>The calendar or fiscal period a number belongs to, from weeks to quarters.</p><p class="dm-ex"><small>Examples</small>Year (FY2024, FY2025) &middot; Quarter (Q1, Q2) &middot; Month (January, February) &middot; Rolling (last 4 weeks, next 3 months)</p></div>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Structure</p>
+    <h2>Information architecture</h2>
+    <p class="intro">Planners build a table in three stages: start, build it, then save it as a view.</p>
+    <div class="ia">
+      <div class="ia-stage">
+        <div class="ia-head"><b>1</b><div><h3>Start</h3><p>Open a blank table.</p></div></div>
+        <div class="ia-body ia-row"><span class="fl-node go">Click Create</span><i>&rarr;</i><span class="fl-node">Build from scratch</span><i>&rarr;</i><span class="fl-node panel">Side panel opens</span></div>
+      </div>
+      <div class="ia-stage">
+        <div class="ia-head"><b>2</b><div><h3>Build the table</h3><p>Add the data, then fine-tune it.</p></div></div>
+        <div class="ia-body">
+          <div class="ia-core">
+            <h4>Add rows &amp; columns <small>Required</small></h4>
+            <div class="ia-fields">
+              <div><b>Measures</b><span>demand, supply, inventory</span></div>
+              <div><b>Dimensions</b><span>franchise, brand, cluster</span></div>
+              <div><b>Time</b><span>month, quarter, year, rolling</span></div>
+            </div>
+            <ol class="ia-steps"><li>Drag &amp; drop fields into rows and columns</li><li>Reorder, group into hierarchies, or remove</li><li>Pivot unlocks once data is on the table</li></ol>
+          </div>
+          <p class="ia-then">Then fine-tune, in any order <small>Optional</small></p>
+          <div class="ia-opts">
+<div class="ia-opt"><h4><span>T</span>Header</h4><p>Name the table.</p><ol><li>Add a title</li><li>Add a subtitle</li></ol></div>
+<div class="ia-opt"><h4><span>F</span>Filters</h4><p>Narrow the data.</p><ol><li>Pick filters and values</li><li>Choose all, single or custom</li><li>Show the filter outside, or not</li></ol></div>
+<div class="ia-opt"><h4><span>&Sigma;</span>Subtotals</h4><p>Add up groups.</p><ol><li>Pick a level and values</li><li>Rename, and choose placement</li></ol></div>
+<div class="ia-opt"><h4><span>&Delta;</span>Deltas</h4><p>Compare two things.</p><ol><li>Pick a comparison type, level and values</li><li>Rename, add %, choose placement</li></ol></div>
+          </div>
+        </div>
+      </div>
+      <div class="ia-stage">
+        <div class="ia-head"><b>3</b><div><h3>Save</h3><p>Keep it as a reusable view.</p></div></div>
+        <ol class="ia-body ia-save"><li>The table updates to match every choice</li><li>Save table</li><li>It appears under Custom view</li><li>Name it and pick a category</li><li class="go">Success message</li></ol>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Design system</p>
+    <h2>Components</h2>
+    <p class="intro">26 components across 7 groups. Planners set the table up in one side panel, and every choice is made in a dialog that follows the same pattern: pick a type on the left, choose values on the right, confirm in green.</p>
+    <div class="cg-group">
+      <header><span class="cg-n">01</span><div><h3>Table</h3><p>The table itself, from empty to a multi-level hierarchy.</p></div><em>4 components</em></header>
+      <div class="cg-grid"><figure class="cg-tile span"><div class="cg-img"><img data-src="c_header" data-w="1400" data-q="90" data-open alt="Table header" style="max-width:720px"></div><figcaption><b>Table header</b><span>Title, subtitle, column drilldown and row hierarchy controls.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_empty" data-w="1100" data-q="90" data-open alt="Empty state"></div><figcaption><b>Empty state</b><span>Shown until the planner adds data.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_table4" data-w="1200" data-q="90" data-open alt="Grouped columns"></div><figcaption><b>Grouped columns</b><span>Columns grouped by plant, measure and month.</span></figcaption></figure><figure class="cg-tile span"><div class="cg-img"><img data-src="c_table6" data-w="2000" data-q="90" data-open alt="Hierarchy with totals"></div><figcaption><b>Hierarchy with totals</b><span>Rows nested as franchise, brand and SKU, with subtotal columns.</span></figcaption></figure></div>
+    </div>
+    <div class="cg-group">
+      <header><span class="cg-n">02</span><div><h3>Side panel</h3><p>Everything used to build the table lives in one panel.</p></div><em>4 components</em></header>
+      <div class="cg-grid"><figure class="cg-tile"><div class="cg-img"><img data-src="c_editpanel" data-w="1100" data-q="90" data-open alt="Setup and Filter tabs"></div><figcaption><b>Setup and Filter tabs</b><span>The panel's two tabs, with every section collapsed.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_headerpanel" data-w="900" data-q="90" data-open alt="Header settings"></div><figcaption><b>Header settings</b><span>Title, subtitle toggle and applied filters.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_columnpanel" data-w="900" data-q="90" data-open alt="Column setup"></div><figcaption><b>Column setup</b><span>Columns as draggable chips, with groups.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_rowpanel" data-w="900" data-q="90" data-open alt="Row setup"></div><figcaption><b>Row setup</b><span>Rows as a nested hierarchy: franchise, brand, SKU.</span></figcaption></figure></div>
+    </div>
+    <div class="cg-group">
+      <header><span class="cg-n">03</span><div><h3>Add row or column</h3><p>A two-pane picker: choose a type, then choose its values.</p></div><em>4 components</em></header>
+      <div class="cg-grid"><figure class="cg-tile"><div class="cg-img"><img data-src="c_addstart" data-w="1100" data-q="90" data-open alt="Start"></div><figcaption><b>Start</b><span>Measure, dimension, time or snap.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_add1" data-w="1100" data-q="90" data-open alt="Time values"></div><figcaption><b>Time values</b><span>Year, quarter, month, week, with a time range.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_add2" data-w="1100" data-q="90" data-open alt="Dimension values"></div><figcaption><b>Dimension values</b><span>Pick individual values, or all.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_add3" data-w="1100" data-q="90" data-open alt="Selection made"></div><figcaption><b>Selection made</b><span>The confirm button turns green once values are chosen.</span></figcaption></figure></div>
+    </div>
+    <div class="cg-group">
+      <header><span class="cg-n">04</span><div><h3>Filters</h3><p>Narrow the data by any field.</p></div><em>3 components</em></header>
+      <div class="cg-grid"><figure class="cg-tile"><div class="cg-img"><img data-src="c_filter1" data-w="1100" data-q="90" data-open alt="Choose a field"></div><figcaption><b>Choose a field</b><span>Regions, months, brands, plant and more.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_filter2" data-w="1100" data-q="90" data-open alt="All or custom"></div><figcaption><b>All or custom</b><span>Apply to all values, or pick some.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_filter3" data-w="1100" data-q="90" data-open alt="Custom value list"></div><figcaption><b>Custom value list</b><span>Tick the exact values to keep.</span></figcaption></figure></div>
+    </div>
+    <div class="cg-group">
+      <header><span class="cg-n">05</span><div><h3>Drilldown and pivot</h3><p>Go deeper into a column, or swap rows and columns.</p></div><em>3 components</em></header>
+      <div class="cg-grid"><figure class="cg-tile"><div class="cg-img"><img data-src="c_drill1" data-w="1000" data-q="90" data-open alt="Drilldown columns"></div><figcaption><b>Drilldown columns</b><span>Pick which columns to drill into.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_drill2" data-w="1000" data-q="90" data-open alt="Drilldown period"></div><figcaption><b>Drilldown period</b><span>Choose the time level: year to week.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_pivot" data-w="900" data-q="90" data-open alt="Pivot confirmation"></div><figcaption><b>Pivot confirmation</b><span>Warns that rows and columns will be swapped.</span></figcaption></figure></div>
+    </div>
+    <div class="cg-group">
+      <header><span class="cg-n">06</span><div><h3>Subtotals</h3><p>Add up values at a level the planner chooses.</p></div><em>4 components</em></header>
+      <div class="cg-grid"><figure class="cg-tile"><div class="cg-img"><img data-src="c_sub1" data-w="800" data-q="90" data-open alt="Choose a level"></div><figcaption><b>Choose a level</b><span>All regions, all plants, all months or custom.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_sub2" data-w="800" data-q="90" data-open alt="Custom select"></div><figcaption><b>Custom select</b><span>Pick the level, then the values to add up.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_sub3" data-w="800" data-q="90" data-open alt="Region values"></div><figcaption><b>Region values</b><span>Select at least two values.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_sub4" data-w="800" data-q="90" data-open alt="Plants listed"></div><figcaption><b>Plants listed</b><span>Values grouped under their region.</span></figcaption></figure></div>
+    </div>
+    <div class="cg-group">
+      <header><span class="cg-n">07</span><div><h3>Deltas</h3><p>Compare two columns or rows.</p></div><em>4 components</em></header>
+      <div class="cg-grid"><figure class="cg-tile"><div class="cg-img"><img data-src="c_delta1" data-w="800" data-q="90" data-open alt="Comparison type"></div><figcaption><b>Comparison type</b><span>One to one, or one to multiple.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_delta2" data-w="800" data-q="90" data-open alt="Level"></div><figcaption><b>Level</b><span>Compare regions, plants or months.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_delta3" data-w="800" data-q="90" data-open alt="Compare against"></div><figcaption><b>Compare against</b><span>Choose the base value.</span></figcaption></figure><figure class="cg-tile"><div class="cg-img"><img data-src="c_delta4" data-w="800" data-q="90" data-open alt="Compare with"></div><figcaption><b>Compare with</b><span>Choose what to compare it with, then add.</span></figcaption></figure></div>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Feature 01 of 06</p>
+    <h2>Field selection (measures, dimensions, time)</h2>
+    <div class="ft">
+      <div class="ft-text">
+        <p class="ft-lead">Allows users to select and configure core data elements measures, dimensions, and time forming the foundation of the table.</p>
+        <div class="ft-cols">
+          <div><h4>Interaction</h4><ul class="ft-l in"><li>Browse categorized Measures (demand, supply, inventory)</li><li>Select Dimensions (brand, region, site, etc.)</li><li>Choose Time formats (monthly, weekly, yearly)</li><li>Switch between standard vs current time</li><li>Select multiple fields</li></ul></div>
+          <div><h4>How it helps users</h4><ul class="ft-l ok"><li>Enables flexible data composition across planning functions</li><li>Supports multi-dimensional analysis</li><li>Reduces dependency on predefined reports</li></ul></div>
+        </div>
+      </div>
+      <div class="ft-shots"><video class="clip" src="/media/kenvue/field-selection.mp4" poster="/media/kenvue/field-selection.webp" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording: choosing measures, dimensions and time in the Select Dimension and Values dialog"></video></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Feature 02 of 06</p>
+    <h2>Drag-and-drop table structuring</h2>
+    <div class="ft">
+      <div class="ft-text">
+        <p class="ft-lead">Interactive table-building where users arrange selected fields into rows and columns.</p>
+        <div class="ft-cols">
+          <div><h4>Interaction</h4><ul class="ft-l in"><li>Drag fields into<span class="ft-sub"><b>Rows</b><b>Columns</b></span></li><li>Reorder hierarchy</li><li>Group dimensions</li></ul></div>
+          <div><h4>How it helps users</h4><ul class="ft-l ok"><li>Makes table creation intuitive and visual</li><li>Enables quick restructuring during analysis</li><li>Supports hierarchical exploration (SKU &rarr; brand &rarr; region)</li></ul></div>
+        </div>
+      </div>
+      <div class="ft-shots"><video class="clip" src="/media/kenvue/drag-drop.mp4" poster="/media/kenvue/drag-drop.webp" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording: dragging fields into rows and columns and reordering them"></video></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Feature 03 of 06</p>
+    <h2>Filter management system</h2>
+    <div class="ft">
+      <div class="ft-text">
+        <p class="ft-lead">A flexible filtering system to refine data based on user-defined criteria.</p>
+        <div class="ft-cols">
+          <div><h4>Interaction</h4><ul class="ft-l in"><li>Add filters via dialog</li><li>Choose<span class="ft-sub"><b>Specific values</b><b>Current values</b></span></li><li>Switch between<span class="ft-sub"><b>Single-select</b><b>Multi-select</b></span></li><li>View filters as chips</li><li>Edit / remove filters</li></ul></div>
+          <div><h4>How it helps users</h4><ul class="ft-l ok"><li>Allows users to focus on relevant data slices</li><li>Supports scenario-based analysis</li><li>Improves readability and reduces clutter</li></ul></div>
+        </div>
+      </div>
+      <div class="ft-shots"><video class="clip" src="/media/kenvue/filter-management.mp4" poster="/media/kenvue/filter-management.webp" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording: adding a filter and choosing its values"></video></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Feature 04 of 06</p>
+    <h2>Subtotals configuration</h2>
+    <div class="ft">
+      <div class="ft-text">
+        <p class="ft-lead">Enables users to add subtotal calculations across rows or columns.</p>
+        <div class="ft-cols">
+          <div><h4>Interaction</h4><ul class="ft-l in"><li>Open subtotal panel</li><li>Choose<span class="ft-sub"><b>Measures</b><b>Selected values</b><b>Standard values</b></span></li><li>Apply at specific hierarchy levels</li></ul></div>
+          <div><h4>How it helps users</h4><ul class="ft-l ok"><li>Provides aggregated insights instantly</li><li>Reduces need for manual calculations</li><li>Helps in summarizing large datasets</li></ul></div>
+        </div>
+      </div>
+      <div class="ft-shots"><video class="clip" src="/media/kenvue/subtotals.mp4" poster="/media/kenvue/subtotals.webp" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording: adding column subtotals from the side panel"></video></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Feature 05 of 06</p>
+    <h2>Delta analysis (comparisons)</h2>
+    <div class="ft">
+      <div class="ft-text">
+        <p class="ft-lead">Allows users to compute differences (delta) between selected rows or columns.</p>
+        <div class="ft-cols">
+          <div><h4>Interaction</h4><ul class="ft-l in"><li>Select fields for comparison</li><li>Define<span class="ft-sub"><b>Value type</b><b>Comparison level</b></span></li><li>Apply delta to rows or columns</li></ul></div>
+          <div><h4>How it helps users</h4><ul class="ft-l ok"><li>Enables quick identification of gaps and trends</li><li>Critical for<span class="ft-sub"><b>Forecast vs actual comparison</b><b>Supply vs demand gap analysis</b></span></li><li>Supports decision-making during reviews</li></ul></div>
+        </div>
+      </div>
+      <div class="ft-shots"><video class="clip" src="/media/kenvue/delta-analysis.mp4" poster="/media/kenvue/delta-analysis.webp" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording: setting up a delta between two columns"></video></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <p class="eyebrow">Feature 06 of 06</p>
+    <h2>Drill down / drill up (time-based)</h2>
+    <div class="ft">
+      <div class="ft-text">
+        <p class="ft-lead">Allows users to navigate across time hierarchies for deeper insights.</p>
+        <div class="ft-cols">
+          <div><h4>Interaction</h4><ul class="ft-l in"><li>Drill from<span class="ft-sub"><b>Year &rarr; Quarter &rarr; Month &rarr; Week</b></span></li><li>Only enabled when time dimension is present</li></ul></div>
+          <div><h4>How it helps users</h4><ul class="ft-l ok"><li>Enables progressive data exploration</li><li>Helps identify patterns across time levels</li><li>Crucial for demand and inventory trend analysis</li></ul></div>
+        </div>
+      </div>
+      <div class="ft-shots"><video class="clip" src="/media/kenvue/drill-down.mp4" poster="/media/kenvue/drill-down.webp" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording: drilling down from year to quarter, month and week"></video></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">In use</p>
+    <h2>Custom tables for each planner</h2>
+    <p class="intro">The same builder, started from different places. A demand planner begins from a waterfall view, a supply planner from a PSI projection, and either can save the result as a custom view.</p>
+    <div class="shots" style="--n:1">
+      <figure class="plate"><img data-src="s_demand" data-w="2000" data-q="88" alt="Custom table from demand: demand waterfall with the setup side panel"><figcaption>From demand: a demand waterfall for the Americas, with the setup panel open</figcaption></figure>
+      <figure class="plate"><img data-src="s_psi" data-w="2000" data-q="88" alt="Custom table from PSI: PSI projection with the setup side panel"><figcaption>From PSI: a projection by measure, SKU, location and region</figcaption></figure>
+      <figure class="plate"><img data-src="s_psiview" data-w="2000" data-q="88" alt="Custom table from PSI, saved as a custom view"><figcaption>Saved as a custom view</figcaption></figure>
+    </div>
+  </div>
+</section>

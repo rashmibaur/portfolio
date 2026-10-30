@@ -1,0 +1,340 @@
+[
+  {
+    "slug": "bias-ai",
+    "title": "Unveiling Biases in AI",
+    "desc": "Translating complex mathematical fairness metrics into interactive visual dashboards to make AI model auditing transparent and actionable.",
+    "tags": [
+      "UX design",
+      "Information design",
+      "AI product"
+    ],
+    "meta": {
+      "Context": "Academic project, NID Bengaluru",
+      "Time": "6 months",
+      "Team": "Individual",
+      "CGPA": "8.6",
+      "Tools": "Figma, Charticulator, d3.js, Claude Code"
+    },
+    "accent": "#2b35e6",
+    "tint": "#f5f0e8",
+    "video": true,
+    "progress": true,
+    "dark": "#3e63bf"
+  },
+  {
+    "slug": "metro",
+    "title": "Intelligence tool for new retail product launch",
+    "desc": "An AI-assisted workspace that helps retail teams collaborate seamlessly and launch products faster.",
+    "tags": [
+      "AI product",
+      "UX design",
+      "SaaS product"
+    ],
+    "meta": {
+      "Role": "UX designer",
+      "Time": "2 months",
+      "Team": "Cross-functional: developers, AI engineers, product managers",
+      "Tools": "Figma, Claude Code"
+    },
+    "accent": "#b52f20",
+    "tint": "#fdf6cd",
+    "dark": "#cf5c5c",
+    "video": true,
+    "impact": [
+      [
+        "80%",
+        "faster new product launch cycle"
+      ],
+      [
+        "50%",
+        "lower inventory costs"
+      ],
+      [
+        "50%",
+        "less revenue loss in the pilot"
+      ],
+      [
+        "10/10",
+        "NPS"
+      ]
+    ],
+    "progress": true
+  },
+  {
+    "slug": "shell",
+    "title": "BI dashboard for B2B churn management",
+    "desc": "Helping businesses look ahead, spot which clients are losing interest, and step in to save the relationship.",
+    "tags": [
+      "AI product",
+      "SaaS product",
+      "UX design"
+    ],
+    "meta": {
+      "Role": "UX designer & researcher",
+      "Time": "2 months",
+      "Team": "Solo designer and researcher in a cross-functional team",
+      "Tools": "Figma, Power BI, Excel"
+    },
+    "accent": "#2f5f9e",
+    "tint": "#e9f0f8",
+    "video": false,
+    "dark": "#3363a0",
+    "impact": [
+      [
+        "80%",
+        "faster decision-making"
+      ],
+      [
+        "40%",
+        "of at-risk customer churn prevented"
+      ],
+      [
+        "100+",
+        "managers across the EU"
+      ],
+      [
+        "1,000+",
+        "data points synthesised"
+      ],
+      [
+        "10/10",
+        "NPS"
+      ]
+    ],
+    "progress": true
+  },
+  {
+    "slug": "kenvue",
+    "title": "Custom table builder for supply chain management",
+    "desc": "A global supply chain dashboard for planners: custom tables built from live data, in place of manual Excel exports.",
+    "tags": [
+      "Product design",
+      "UX design",
+      "SaaS product"
+    ],
+    "meta": {
+      "Role": "UX designer",
+      "Time": "2 months",
+      "Team": "Individual",
+      "Tools": "Figma"
+    },
+    "accent": "#0e3b22",
+    "tint": "#e5ddf1",
+    "video": true,
+    "dark": "#445f52",
+    "impact": [
+      [
+        "1,000+",
+        "international managers across EMEA, LATAM and NA"
+      ],
+      [
+        "50%",
+        "lower cognitive load"
+      ],
+      [
+        "100+",
+        "screens across 50+ user flows"
+      ],
+      [
+        "50+",
+        "stakeholders in 10+ discovery sessions"
+      ],
+      [
+        "9/10",
+        "NPS"
+      ]
+    ],
+    "impact_note": "Figures are for the wider supply chain dashboard that this table builder is part of.",
+    "progress": true
+  },
+  {
+    "slug": "women-in-politics",
+    "title": "Data visualisation - Women in politics",
+    "desc": "An illustrated, storytelling-first infographic series celebrating the history and impact of women leaders in Indian politics.",
+    "tags": [
+      "Data visualisation",
+      "Visual design"
+    ],
+    "meta": {
+      "Context": "Academic project, NID Bengaluru, with a Noah collaboration",
+      "Time": "2 months",
+      "Team": "Team of 4",
+      "Tools": "Figma, Procreate, Photoshop, Illustrator, Charticulator"
+    },
+    "accent": "#c8454c",
+    "tint": "#fde9e6",
+    "video": false,
+    "dark": "#d65a5f",
+    "impact": [
+      [
+        "Top 100",
+        "Information is Beautiful Awards, 2023 and 2024"
+      ],
+      [
+        "100+",
+        "gender equality data sources analysed with Noah"
+      ]
+    ],
+    "progress": true
+  },
+  {
+    "slug": "fx-story",
+    "title": "Data story - people, projects & performance",
+    "desc": "Visualizing a year's worth of company growth, team hours, and revenue metrics into a digestible narrative.",
+    "tags": [
+      "Data visualisation",
+      "Interactive data story",
+      "Data analysis"
+    ],
+    "meta": {
+      "Role": "UX designer",
+      "Time": "2 weeks",
+      "Team": "Individual",
+      "Tools": "Figma, Excel, Flourish"
+    },
+    "accent": "#27546b",
+    "tint": "#fcf9cb",
+    "video": true,
+    "dark": "#27546b",
+    "impact": [
+      [
+        "100+",
+        "company-wide metrics turned into data stories"
+      ],
+      [
+        "50%",
+        "increase in stakeholder engagement"
+      ],
+      [
+        "20%",
+        "faster design timelines with the BI visualisation framework"
+      ]
+    ],
+    "progress": true
+  },
+  {
+    "slug": "electoral-bonds",
+    "title": "Data narrative - Electoral bonds",
+    "desc": "An interactive look into the flow of electoral bonds, breaking down big data into an understandable public story",
+    "tags": [
+      "Data visualisation",
+      "Interactive data story",
+      "Data analysis"
+    ],
+    "meta": {
+      "Time": "2 weeks",
+      "Team": "Individual",
+      "Tools": "Figma, Excel, Flourish"
+    },
+    "accent": "#2c6074",
+    "tint": "#fdf0c4",
+    "video": false,
+    "dark": "#3e6574",
+    "progress": true
+  },
+  {
+    "slug": "farming-futures",
+    "title": "Lorem ipsum dolor sit amet",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "tags": [
+      "Lorem ipsum",
+      "Dolor sit",
+      "Amet elit"
+    ],
+    "meta": {},
+    "accent": "#2a2a2a",
+    "tint": "#f4f3ef",
+    "video": false,
+    "dark": "#2a2a2a",
+    "progress": true
+  },
+  {
+    "slug": "bosch",
+    "title": "BI dashboard for mobility marketing",
+    "desc": "Designing a single source of truth for marketing teams to track, analyze, and optimize automotive campaigns.",
+    "tags": [
+      "SaaS dashboard",
+      "UX design"
+    ],
+    "meta": {
+      "Role": "UX designer (intern)",
+      "Time": "4 months",
+      "Team": "Solo designer and researcher in a cross-functional team",
+      "Tools": "Figma, Power BI, Excel, Flourish"
+    },
+    "accent": "#00497a",
+    "tint": "#e4effa",
+    "video": false,
+    "dark": "#00497a",
+    "impact": [
+      [
+        "40%",
+        "faster decision-making"
+      ],
+      [
+        "100+",
+        "marketing managers nationwide"
+      ],
+      [
+        "500+",
+        "data points synthesised"
+      ]
+    ],
+    "progress": true
+  },
+  {
+    "slug": "kinetrack",
+    "title": "Kinetrack - smart device & application",
+    "desc": "Creating an intuitive digital ecosystem that turns raw motion data into actionable fitness feedback.",
+    "tags": [
+      "Product design",
+      "UX design",
+      "IOT device"
+    ],
+    "meta": {
+      "Time": "4 weeks",
+      "Team": "Individual",
+      "Tools": "Figma, Miro, Procreate"
+    },
+    "accent": "#0a1d3a",
+    "tint": "#fdf3e9",
+    "video": true,
+    "dark": "#0a1d3a",
+    "progress": true
+  },
+  {
+    "slug": "mbti",
+    "title": "MBTI data portrait",
+    "desc": "Using code to challenge personality stereotypes by turning rigid MBTI types into fluid, personalized digital artwork",
+    "tags": [
+      "Interactive data visualisation"
+    ],
+    "meta": {
+      "Context": "Academic project, NID Bengaluru",
+      "Time": "2 weeks",
+      "Team": "Individual",
+      "CGPA": "9.4",
+      "Tools": "p5.js, Figma"
+    },
+    "accent": "#0b1f3a",
+    "tint": "#fdfb9d",
+    "video": true,
+    "dark": "#0b1f3a",
+    "progress": true
+  },
+  {
+    "slug": "smart-bulb",
+    "title": "Lorem ipsum dolor sit amet",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "tags": [
+      "Lorem ipsum",
+      "Dolor sit"
+    ],
+    "meta": {},
+    "accent": "#173039",
+    "tint": "#e9f4f7",
+    "video": false,
+    "dark": "#173039",
+    "progress": true
+  }
+]
