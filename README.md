@@ -9,7 +9,8 @@ Experience designer (Master's in Information Design, NID Bengaluru) with 3+ year
 | Portfolio | Main site (Vercel) | https://rashmibaur-portfolio.vercel.app |
 | Portfolio | Original Framer site | https://rashmibaurportfolio.framer.website/ |
 | Resume | PDF | https://drive.google.com/file/d/1c3bw4qWuCrdBbuEQocOg_G4aHqj9MGNv/view?usp=sharing |
-| Prototype | Unveiling Biases in AI: interactive product | `https://<bias-ai-demo>.vercel.app` _(placeholder)_ |
+| Prototype | Unveiling Biases in AI: audit dashboard ([source](https://github.com/rashmibaur/bias-ai)) | https://rashmibaur-bias-ai.vercel.app |
+| Prototype | StyleIQ: new footwear launch platform ([source](https://github.com/rashmibaur/styleiq)) | https://rashmibaur-styleiq.vercel.app |
 | Prototype | Electoral bonds: interactive data narrative | `https://<electoral-bonds-demo>.vercel.app` _(placeholder)_ |
 | Prototype | MBTI data portrait (p5.js) | `https://<mbti-demo>.vercel.app` _(placeholder)_ |
 | Figma | Case study files | `https://figma.com/design/<file-key>` _(placeholder)_ |
@@ -39,11 +40,7 @@ Each page also carries the project's tags, time, team and tools from `projects.j
 
 ## Embedding Functional Prototypes
 
-No prototypes are embedded yet. The intended pattern for adding one:
-
-- A responsive iframe container with a fixed aspect ratio, so the prototype scales with the page.
-- A device frame (phone, tablet or desktop) around the iframe.
-- A full-screen toggle that opens the prototype at full viewport size.
+Each prototype is its own Next.js repo hosted on Vercel. Its case study page embeds it in a "Live prototype" section (`.embed.proto` in `css/case.css`): a responsive iframe, plus an "Open the prototype in a new tab" link for full screen. Currently embedded: Bias AI and StyleIQ.
 
 ## Local Setup
 

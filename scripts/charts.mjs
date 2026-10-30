@@ -1,5 +1,5 @@
 // Inline-SVG charts for the Intelligence tool case study.
-// Data comes from the StyleIQ prototype (styleiq-umber.vercel.app); colours from the Figma colour swatches.
+// Data comes from the StyleIQ prototype (rashmibaur-styleiq.vercel.app); colours from the Figma colour swatches.
 // Hover behaviour lives in js/charts.js: any [data-tip] element shows a tooltip and dims its siblings.
 
 const C = { brand: "#f0254c", user: "#616161", pos: "#065f46", neu: "#0ea5e9", neg: "#e4002b", bar: "#4d6c7a", grid: "#e5e7eb", axis: "#64748b" };

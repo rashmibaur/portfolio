@@ -1,5 +1,5 @@
 // Interactive inline-SVG charts for the Unveiling Biases case study.
-// Data and formulas are taken from the live dashboard (bias-ai-rosy.vercel.app).
+// Data and formulas are taken from the live dashboard (rashmibaur-bias-ai.vercel.app).
 // Hover tooltips: js/charts.js. Attribute dropdowns: js/charts.js ([data-switch]).
 import fs from "node:fs";
 
