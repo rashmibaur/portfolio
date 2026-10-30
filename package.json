@@ -7,6 +7,8 @@
     "dev": "node scripts/build.mjs && npx --yes serve -l 8000 ."
   },
   "devDependencies": {
+    "postcss": "^8.5.32",
+    "postcss-prefix-selector": "^1.16.1",
     "sharp": "^0.34.0"
   }
 }

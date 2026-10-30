@@ -11,6 +11,7 @@ Experience designer (Master's in Information Design, NID Bengaluru) with 3+ year
 | Resume | PDF | https://drive.google.com/file/d/1c3bw4qWuCrdBbuEQocOg_G4aHqj9MGNv/view?usp=sharing |
 | Prototype | Unveiling Biases in AI: audit dashboard ([source](https://github.com/rashmibaur/bias-ai)) | https://rashmibaur-bias-ai.vercel.app |
 | Prototype | StyleIQ: new footwear launch platform ([source](https://github.com/rashmibaur/styleiq)) | https://rashmibaur-styleiq.vercel.app |
+| Data story | Climate vulnerability & social protection ([source](https://github.com/rashmibaur/climate-vulnerability-story)) | https://rashmibaur-climate-story.vercel.app |
 | Prototype | Electoral bonds: interactive data narrative | `https://<electoral-bonds-demo>.vercel.app` _(placeholder)_ |
 | Prototype | MBTI data portrait (p5.js) | `https://<mbti-demo>.vercel.app` _(placeholder)_ |
 | Figma | Case study files | `https://figma.com/design/<file-key>` _(placeholder)_ |
@@ -41,6 +42,8 @@ Each page also carries the project's tags, time, team and tools from `projects.j
 ## Embedding Functional Prototypes
 
 Each prototype is its own Next.js repo hosted on Vercel. Its case study page embeds it in a "Live prototype" section (`.embed.proto` in `css/case.css`): a responsive iframe, plus an "Open the prototype in a new tab" link for full screen. Currently embedded: Bias AI and StyleIQ.
+
+The climate story is different: it is rendered inline as part of its case study page, not in an iframe. `scripts/sync-climate-story.mjs` copies it from its own repo, scopes its CSS under `#climate-story` and writes `content/climate-vulnerability.html`. Re-run it after changing the story, then `npm run build`.
 
 ## Local Setup
 

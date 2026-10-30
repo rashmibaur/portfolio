@@ -1,0 +1,3637 @@
+/* macOS-native design system: San Francisco system font, macOS neutral
+   background, macOS blue accent, translucent "vibrancy" card materials.
+   Chart data-encoding colors (region palettes, coverage/vulnerability
+   gradients) are intentionally left untouched — they carry data meaning. */
+#climate-story {
+    --bg-color: #F7F4EC;        /* macOS window background (System Preferences / Big Sur+) */
+    --text-color: #1E1B4B;      /* macOS primary label color */
+    --text-secondary: #4F4D7E;  /* macOS secondary label color */
+    --accent-color: #3730A3;    /* macOS/Apple system blue accent */
+    --border-color: rgba(30,27,75,0.35);
+    --card-bg: #FCFAF5;   /* macOS vibrancy/translucent material */
+    --card-shadow: none;
+    --radius-lg: 0;
+    --radius-md: 0;
+    --radius-sm: 0;
+    --font-display: "Fraunces", "Times New Roman", serif;
+    --font-body: "Newsreader", Georgia, "Times New Roman", serif;
+}
+
+#climate-story * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#climate-story {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 3rem 6rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+#climate-story .page-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    /* Block (not flex) layout: a flex ancestor of a GSAP ScrollTrigger-pinned element
+       (chapter 2.3's chart-pin-23) stops the pin-spacer from sizing correctly, since its
+       explicit inline height gets re-collapsed by the flex column algorithm. */
+}
+
+/* Row 1: Title Row */
+#climate-story .title-row {
+    padding: 1.5rem 0;
+}
+
+#climate-story .title-row h1 {
+    font-family: var(--font-body);
+    font-size: 48px;
+    font-weight: 700;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+}
+
+/* Dividers */
+#climate-story .divider {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Match figma Rectangle opacity-20 border */
+    margin: 2.2rem 0;
+}
+
+/* Grid splits for Rows 2 & 3 */
+#climate-story .split-row {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 0;
+    align-items: flex-start;
+}
+
+/* Row 2 Styles */
+#climate-story .row-2 .left-col {
+    padding-bottom: 40px;
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+#climate-story .row-2 .left-col h2 {
+    font-family: var(--font-body);
+    font-size: 36px;
+    font-weight: 700;
+    color: #1E1B4B;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+}
+
+#climate-story .row-2 .left-col .subtitle {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 300;
+    color: #1E1B4B;
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .row-2 .right-col {
+    padding: 0 48px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#climate-story .row-2 .right-col blockquote {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E1B4B;
+    line-height: 1.45;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .row-2 .right-col cite {
+    font-style: normal;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 300;
+    color: #1E1B4B;
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#climate-story .row-2 .right-col cite::before {
+    content: "";
+    width: 16px;
+    height: 1px;
+    background-color: #1E1B4B;
+    opacity: 0.4;
+    display: inline-block;
+}
+
+/* Row 3 Styles */
+#climate-story .row-3 {
+    grid-template-columns: 380px 1fr;
+    gap: 64px;
+}
+
+#climate-story .row-3 .left-col h2 {
+    font-family: var(--font-body);
+    font-size: 36px;
+    font-weight: 700;
+    color: #1E1B4B;
+    line-height: 1.25;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .sectors-card {
+    background-color: #1E1B4B; /* macOS dark "vibrancy" card, e.g. Control Center panel */
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    box-shadow: none;
+}
+
+#climate-story .sectors-card .card-title {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 300;
+    color: #FFFFFF;
+    opacity: 0.6;
+    margin-bottom: 8px;
+}
+
+#climate-story .sectors-card .card-content {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.5;
+}
+
+#climate-story .row-3 .right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#climate-story .row-3 .right-col .narrative-paragraph {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    color: #1E1B4B;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .row-3 .right-col .narrative-paragraph + .narrative-paragraph {
+    border-top: 1px solid rgba(0, 0, 0, 0.12); /* Thin light divider */
+    padding-top: 20px;
+    margin-top: 0;
+}
+
+/* SECTORS SECTION (Image 1.2 & 1.3.x Layout) */
+#climate-story .sectors-section {
+    padding: 1rem 0;
+}
+
+#climate-story .section-title-centered {
+    font-family: var(--font-body);
+    font-size: 26px;
+    font-weight: 700;
+    color: #1E1B4B;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#climate-story .sectors-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+#climate-story .sector-card {
+    background-color: #F7F4EC; /* macOS unselected segmented-control chip */
+    border-radius: var(--radius-md);
+    width: 215px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: none;
+}
+
+#climate-story .sector-card:hover {
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+#climate-story .sector-card.active {
+    background-color: var(--accent-color); /* macOS/Apple system blue selected state */
+    border-color: var(--accent-color);
+    color: #FFFFFF;
+    box-shadow: none;
+}
+
+#climate-story .sector-icon {
+    width: 32px;
+    height: 32px;
+    stroke: var(--text-secondary);
+    stroke-width: 1.75;
+}
+
+#climate-story .sector-card.active .sector-icon {
+    stroke: #FFFFFF; /* White stroke for active tab icon */
+}
+
+#climate-story .sector-card span {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .sector-card.active span {
+    color: #FFFFFF; /* White text for active tab */
+}
+
+#climate-story .click-instructions {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 300;
+    color: #1E1B4B;
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+/* Dynamic Details Container styles matching Figma Node 32:4 */
+#climate-story .sector-details-wrapper {
+    transition: opacity 0.2s ease-in-out;
+}
+
+#climate-story .sector-details-panel {
+    background-color: #F7F4EC;
+    border: 1px solid rgba(85, 78, 78, 0.16);
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Masthead */
+#climate-story .sector-masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px 20px;
+    border-bottom: 1px solid rgba(85, 78, 78, 0.16);
+}
+
+#climate-story .sector-masthead .category-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#climate-story .sector-masthead .badge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #E0A030; /* Figma dot color */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#climate-story .sector-masthead #sector-tag-left {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    color: #1E1B4B;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#climate-story .sector-masthead #sector-tag-right {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    color: #1E1B4B;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 2. Title Section */
+#climate-story .sector-title-section {
+    padding: 32px;
+    border-bottom: 1px solid rgba(85, 78, 78, 0.16);
+}
+
+#climate-story #sector-title {
+    font-family: var(--font-body);
+    font-size: 48px;
+    font-weight: 700;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+    line-height: 1.15;
+}
+
+/* 3. Body Grid Split */
+#climate-story .sector-body-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    min-height: 282px;
+}
+
+#climate-story .sector-body-grid .left-col {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(85, 78, 78, 0.16);
+}
+
+#climate-story .sector-body-grid .left-col .detail-block {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#climate-story .sector-body-grid .left-col .top-block {
+    border-bottom: 1px solid rgba(85, 78, 78, 0.16);
+}
+
+#climate-story .sector-body-grid .left-col .block-label {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    color: #1E1B4B;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#climate-story #hazard-content {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+#climate-story #narrative-content {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    color: #1E1B4B;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+/* Right Col: Standard or Cropped Image */
+#climate-story .sector-body-grid .right-col {
+    width: 320px;
+}
+
+#climate-story .photo-container {
+    width: 320px;
+    height: 100%;
+    min-height: 282px;
+    position: relative;
+    overflow: hidden;
+}
+
+#climate-story .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Fallback crop for Sector 6 (Infrastructure) */
+#climate-story .photo-container.cropped-active img {
+    width: 240%;
+    max-width: none;
+    object-fit: cover;
+    object-position: right center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* 4. Pull Quote Row */
+#climate-story .sector-quote-row {
+    background-color: #F7F4EC;
+    border-top: 1px solid rgba(85, 78, 78, 0.16);
+    padding: 32px 32px 36px;
+}
+
+#climate-story .sector-quote-row .quote-inner {
+    border-left: 4px solid #E0A030; /* Figma amber quote left line */
+    padding-left: 24px;
+}
+
+#climate-story #quote-content {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 500;
+    color: #1E1B4B;
+    line-height: 1.4;
+}
+
+#climate-story #quote-content .font-bold {
+    font-weight: 700;
+}
+
+/* Responsive Rules */
+@media (max-width: 1000px) {
+    #climate-story {
+        padding: 2rem;
+    }
+    
+    #climate-story .split-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    #climate-story .row-3 {
+        gap: 2rem;
+    }
+    
+    #climate-story .sectors-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+    }
+    
+    #climate-story .sector-card {
+        width: 100%;
+    }
+    
+    #climate-story .sector-body-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #climate-story .sector-body-grid .left-col {
+        border-right: 0;
+    }
+    
+    #climate-story .sector-body-grid .right-col {
+        width: 100%;
+        height: 280px;
+    }
+    
+    #climate-story .photo-container {
+        width: 100%;
+        height: 280px;
+    }
+    
+    #climate-story .photo-container.cropped-active img {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        object-position: center;
+    }
+}
+
+@media (max-width: 600px) {
+    #climate-story .sectors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #climate-story #sector-title {
+        font-size: 32px;
+    }
+    
+    #climate-story .sector-masthead {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* CHART SECTION (Frame 1.4: Sector Vulnerability Over Time) */
+#climate-story .chart-section {
+    padding: 2.5rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--bg-color);
+}
+
+#climate-story .chart-section header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#climate-story .chart-section .title {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 36px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+#climate-story .chart-section .subtitle {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.35;
+}
+
+/* Visualization Area */
+#climate-story .chart-section .chart-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+#climate-story .chart-section #chart-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom Timeline Scrubber and Controls Row */
+#climate-story .chart-section .controls-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 16px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    backdrop-filter: blur(8px);
+}
+
+/* Play/Pause Button */
+#climate-story .chart-section .play-btn {
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--bg-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: none;
+    flex-shrink: 0;
+}
+
+#climate-story .chart-section .play-btn:hover {
+    transform: scale(1.08);
+    background-color: #3730A3;
+    box-shadow: none;
+}
+
+#climate-story .chart-section .play-btn:active {
+    transform: scale(0.95);
+}
+
+#climate-story .chart-section .play-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Custom Range Slider */
+#climate-story .chart-section .slider-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+#climate-story .chart-section .timeline-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.15);
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#climate-story .chart-section .timeline-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    border: 2px solid var(--bg-color);
+    box-shadow: none;
+    transition: transform 0.15s;
+}
+
+#climate-story .chart-section .timeline-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+#climate-story .chart-section .timeline-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    border: 2px solid var(--bg-color);
+    box-shadow: none;
+    transition: transform 0.15s;
+}
+
+#climate-story .chart-section .timeline-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Year bubble indicator */
+#climate-story .chart-section .year-indicator {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--text-color);
+    min-width: 60px;
+    text-align: right;
+    letter-spacing: 0.5px;
+}
+
+/* Footnote Caption */
+#climate-story .chart-section .footnote {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+/* Responsive Rules for Chart */
+@media (max-width: 900px) {
+    #climate-story .chart-section .title {
+        font-size: 28px;
+    }
+    #climate-story .chart-section .subtitle {
+        font-size: 18px;
+    }
+    #climate-story .chart-section .chart-wrapper {
+        height: 380px;
+    }
+    #climate-story .chart-section .footnote {
+        font-size: 14px;
+    }
+}
+
+/* SHIELD DEFICIT SECTION (Frame 2.1: The Broken Shield) */
+#climate-story .shield-section {
+    padding: 2.5rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--bg-color);
+}
+
+#climate-story .shield-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#climate-story .shield-tag {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#climate-story .shield-title {
+    font-family: var(--font-body);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .shield-subtitle {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+/* Blue Deficit Banner */
+#climate-story .deficit-banner {
+    background-color: var(--accent-color);
+    border-radius: 0;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+#climate-story .deficit-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#climate-story .deficit-tag {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#climate-story .deficit-value {
+    font-family: var(--font-body);
+    font-size: 72px;
+    font-weight: 800;
+    color: #E0A030; /* Figma gold value text */
+    line-height: 1.0;
+}
+
+#climate-story .deficit-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+/* Quote & Source Row */
+#climate-story .shield-quote-row {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+    padding: 16px 0;
+    align-items: center;
+}
+
+#climate-story .source-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#climate-story .source-label {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-color);
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#climate-story .source-text {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+#climate-story .quote-col {
+    border-left: 1px solid rgba(85, 78, 78, 0.16);
+    padding-left: 32px;
+}
+
+#climate-story .quote-col blockquote {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+/* Inner Section Divider */
+#climate-story .inner-divider {
+    border: 0;
+    border-top: 1px solid rgba(85, 78, 78, 0.16);
+    margin: 8px 0;
+}
+
+/* Bottom Split Row */
+#climate-story .income-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+#climate-story .income-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#climate-story .income-col:last-child {
+    border-left: 1px solid rgba(85, 78, 78, 0.16);
+    padding-left: 48px;
+}
+
+#climate-story .income-tag {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-color);
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#climate-story .income-value {
+    font-family: var(--font-body);
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--text-color);
+    line-height: 1.1;
+}
+
+#climate-story .income-desc {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+/* Responsive Rules for Shield Deficit Block */
+@media (max-width: 900px) {
+    #climate-story .deficit-banner {
+        grid-template-columns: 1fr;
+        padding: 32px;
+        gap: 24px;
+    }
+    
+    #climate-story .deficit-value {
+        font-size: 56px;
+    }
+    
+    #climate-story .shield-quote-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    #climate-story .quote-col {
+        border-left: 0;
+        padding-left: 0;
+        border-top: 1px solid rgba(85, 78, 78, 0.16);
+        padding-top: 16px;
+    }
+    
+    #climate-story .income-split-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    #climate-story .income-col:last-child {
+        border-left: 0;
+        padding-left: 0;
+        border-top: 1px solid rgba(85, 78, 78, 0.16);
+        padding-top: 16px;
+    }
+    
+    #climate-story .income-value {
+        font-size: 48px;
+    }
+}
+
+/* SHIELD COMPARISON SECTION (Frame 2.2: Resilient vs Poverty Loops) */
+#climate-story .comparison-section {
+    padding: 2.5rem 0 1rem;
+    background-color: var(--bg-color);
+}
+
+#climate-story .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+#climate-story .comparison-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#climate-story .poverty-col {
+    border-left: 1px solid rgba(85, 78, 78, 0.16);
+    padding-left: 48px;
+}
+
+#climate-story .col-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#climate-story .col-tag {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.6;
+}
+
+#climate-story .col-title {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+}
+
+#climate-story .col-bullets {
+    list-style-type: square;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#climate-story .col-bullets li {
+    font-family: var(--font-body);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+}
+
+#climate-story .drawing-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#climate-story .drawing-img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    display: block;
+}
+
+#climate-story .col-footer {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+#climate-story .footer-label {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Responsive Rules for Comparison Columns */
+@media (max-width: 900px) {
+    #climate-story .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    #climate-story .poverty-col {
+        border-left: 0;
+        padding-left: 0;
+        border-top: 1px solid rgba(85, 78, 78, 0.16);
+        padding-top: 40px;
+    }
+    
+    #climate-story .col-bullets li {
+        font-size: 18px;
+    }
+    
+    #climate-story .footer-label {
+        font-size: 20px;
+    }
+}
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 2.3 STYLES: Social Protection Coverage  */
+/* Scroll-triggered GSAP MorphSVGPlugin morph: treemap bar chart -> world map. */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-card-23 {
+    margin-bottom: 1rem;
+    /* Block (not flex): a flex ancestor of the pinned .chart-pin-23 element stops
+       ScrollTrigger from sizing its pin-spacer correctly. */
+}
+#climate-story .section-card-23 > * + * {
+    margin-top: 12px;
+}
+
+#climate-story {
+    --chart-header-zone-23: 150px;
+}
+
+/* Chart header card — Figma "Frame 40" styling, shared by both phase captions. */
+#climate-story .chart-header-card-23 {
+    background: linear-gradient(90deg, rgba(245, 245, 247, 0.97) 55%, rgba(245, 245, 247, 0.2) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 28px 36px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: none;
+}
+
+#climate-story .chart-header-card-23 .title-23,
+#climate-story .chart-header-card-23 h1 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: clamp(22px, 3.2vw, 40px);
+    color: var(--text-color);
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+#climate-story .chart-header-card-23 .subtitle-23,
+#climate-story .chart-header-card-23 h2 {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(13px, 1.6vw, 20px);
+    line-height: 1.4;
+    color: var(--text-color);
+    letter-spacing: normal;
+}
+
+/* Income-phase and country-phase captions float in/out of a reserved strip above
+   the chart as the morph plays, so they never overlap the chart below. */
+#climate-story .income-phase-header-23,
+#climate-story .country-phase-header-23 {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    top: 16px;
+    z-index: 8;
+    pointer-events: none;
+}
+
+#climate-story .country-phase-header-23 {
+    opacity: 0;
+}
+
+/* Pinned scroll region — ScrollTrigger pins this element and scrubs the morph
+   timeline as the user scrolls through the reserved distance below it. */
+#climate-story .chart-pin-23 {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+#climate-story .chart-wrapper-23 {
+    width: 100%;
+    height: calc(560px + var(--chart-header-zone-23));
+    position: relative;
+}
+
+#climate-story #treemap-bar-canvas,
+#climate-story #world-map-canvas {
+    width: 100%;
+    height: calc(100% - var(--chart-header-zone-23));
+    position: absolute;
+    top: var(--chart-header-zone-23);
+    left: 0;
+}
+
+#climate-story #world-map-canvas {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* SVG overlay used only while GSAP is morphing treemap rects <-> country shapes */
+#climate-story #morph-overlay-23 {
+    position: absolute;
+    top: var(--chart-header-zone-23);
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--chart-header-zone-23));
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#climate-story .footnote-23 {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    #climate-story .chart-wrapper-23 {
+        height: calc(400px + var(--chart-header-zone-23));
+    }
+}
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 2.5 STYLES: Time to Universal Coverage  */
+/* ═══════════════════════════════════════════════ */
+#climate-story .banner-section-25 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem 0 1rem;
+    background-color: var(--bg-color);
+}
+
+#climate-story .banner-card-25 {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 40px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: none;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+#climate-story .stat-left-25 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+}
+
+#climate-story .stat-number-25 {
+    font-family: var(--font-body);
+    font-size: 130px;
+    font-weight: 800;
+    line-height: 0.9;
+    color: #1E1B4B;
+}
+
+#climate-story .stat-unit-25 {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 700;
+    color: #3730A3;
+    letter-spacing: 4px;
+    margin-top: 8px;
+}
+
+#climate-story .stat-divider-25 {
+    width: 1px;
+    height: 180px;
+    background-color: #1E1B4B;
+    opacity: 0.8;
+}
+
+#climate-story .stat-right-25 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1;
+}
+
+#climate-story .badge-25 {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid #3730A3;
+    border-radius: 0;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    color: #3730A3;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+#climate-story .headline-25 {
+    font-family: var(--font-body);
+    font-size: 42px;
+    font-weight: 700;
+    color: #1E1B4B;
+    line-height: 1.1;
+}
+
+#climate-story .desc-25 {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    color: #1E1B4B;
+    line-height: 1.5;
+    max-width: 700px;
+}
+
+#climate-story .inner-divider-25 {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: 8px;
+}
+
+#climate-story .footnote-25 {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    color: #1E1B4B;
+    opacity: 0.8;
+}
+
+#climate-story .flourish-chart-container-25 {
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    #climate-story .banner-card-25 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 20px;
+    }
+    
+    #climate-story .stat-divider-25 {
+        width: 100%;
+        height: 1px;
+    }
+    
+    #climate-story .stat-number-25 {
+        font-size: 90px;
+    }
+    
+    #climate-story .headline-25 {
+        font-size: 32px;
+    }
+    
+}
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 3.1 STYLES: Ground Zero Intersection    */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-31 {
+    padding: 3rem 0 2rem;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#climate-story .header-31 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#climate-story .category-tag-31 {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    color: #1E1B4B;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#climate-story .blue-square-31 {
+    color: #3730A3;
+    font-size: 14px;
+}
+
+#climate-story .title-31 {
+    font-family: var(--font-body);
+    font-size: 48px;
+    font-weight: 800;
+    color: #1E1B4B;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+#climate-story .subtitle-31 {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    color: #1E1B4B;
+    opacity: 0.8;
+}
+
+#climate-story .divider-31 {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 8px;
+}
+
+#climate-story .grid-31 {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+#climate-story .col-left-31 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#climate-story .desc-top-31 {
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 500;
+    color: #1E1B4B;
+    line-height: 1.6;
+}
+
+#climate-story .inner-divider-31 {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#climate-story .desc-bold-31 {
+    font-family: var(--font-body);
+    font-size: 22px;
+    font-weight: 700;
+    color: #1E1B4B;
+    line-height: 1.35;
+}
+
+#climate-story .col-mid-31, #climate-story .col-right-31 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    padding-left: 36px;
+}
+
+#climate-story .chart-box-31 {
+    width: 100%;
+    height: 280px;
+}
+
+#climate-story .person-box-31 {
+    height: 160px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#climate-story .stat-footer-31 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+#climate-story .stat-number-31 {
+    font-family: var(--font-body);
+    font-size: 56px;
+    font-weight: 800;
+    color: #3730A3;
+    line-height: 1;
+}
+
+#climate-story .stat-number-dark-31 {
+    font-family: var(--font-body);
+    font-size: 56px;
+    font-weight: 800;
+    color: #1E1B4B;
+    line-height: 1;
+}
+
+#climate-story .stat-desc-31 {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    color: #1E1B4B;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    #climate-story .title-31 {
+        font-size: 34px;
+    }
+    
+    #climate-story .grid-31 {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    #climate-story .col-mid-31, #climate-story .col-right-31 {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 3.2 - 3.5 STYLES */
+/* Scroll-triggered GSAP MorphSVGPlugin morph: scatter -> map -> regional treemap -> stacked bar. */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-card-32 {
+    margin-bottom: 1rem;
+    /* Block (not flex): a flex ancestor of the pinned .chart-pin-32 element stops
+       ScrollTrigger from sizing its pin-spacer correctly. */
+}
+
+#climate-story {
+    --chart-header-zone-32: 180px;
+}
+
+#climate-story .chart-header-card-32 {
+    background: linear-gradient(90deg, rgba(245, 245, 247, 0.97) 55%, rgba(245, 245, 247, 0.2) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 28px 36px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: none;
+}
+
+#climate-story .chart-header-card-32 .title-32,
+#climate-story .chart-header-card-32 h1,
+#climate-story .chart-header-card-32 h3 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: clamp(22px, 3.2vw, 40px);
+    color: var(--text-color);
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    white-space: normal;
+}
+
+#climate-story .chart-header-card-32 .subtitle-32,
+#climate-story .chart-header-card-32 h2,
+#climate-story .chart-header-card-32 p {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(13px, 1.6vw, 20px);
+    line-height: 1.4;
+    color: var(--text-color);
+    letter-spacing: normal;
+}
+
+/* Phase captions — GSAP drives opacity/transform in sync with the morph; the CSS
+   default here only matters before JS takes over. */
+#climate-story .scatter-phase-header-32,
+#climate-story .map-phase-header-32,
+#climate-story .treemap-phase-header-32,
+#climate-story .stacked-bar-phase-header-32 {
+    position: absolute;
+    left: 24px;
+    right: 60px;
+    top: 16px;
+    z-index: 8;
+    pointer-events: none;
+}
+
+#climate-story .map-phase-header-32,
+#climate-story .treemap-phase-header-32,
+#climate-story .stacked-bar-phase-header-32 {
+    opacity: 0;
+}
+
+/* Pinned scroll region — ScrollTrigger pins this element and scrubs the morph
+   timeline as the user scrolls through the reserved distance below it. */
+#climate-story .chart-pin-32 {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+#climate-story .chart-wrapper-32 {
+    width: 100%;
+    height: calc(530px + var(--chart-header-zone-32));
+    position: relative;
+}
+
+#climate-story #bubble-chart-32,
+#climate-story #vulnerability-map-canvas-32,
+#climate-story #regional-treemap-bar-canvas-32,
+#climate-story #coverage-stacked-bar-canvas-32 {
+    position: absolute;
+    top: var(--chart-header-zone-32);
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--chart-header-zone-32));
+}
+
+#climate-story #vulnerability-map-canvas-32,
+#climate-story #regional-treemap-bar-canvas-32,
+#climate-story #coverage-stacked-bar-canvas-32 {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* SVG overlay used only while GSAP is morphing scatter points, country shapes,
+   and regional treemap rectangles into one another */
+#climate-story #morph-overlay-32 {
+    position: absolute;
+    top: var(--chart-header-zone-32);
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--chart-header-zone-32));
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Map zoom controls — visibility/pointer-events toggled by JS alongside the map itself.
+   Uniquely scoped (not the generic .map-zoom-controls slider widget used by other
+   chapters via window.addMapZoomControls). */
+#climate-story .map-zoom-controls-32 {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#climate-story .map-zoom-controls-32 button {
+    width: 32px;
+    height: 32px;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    transition: background-color 0.15s ease;
+}
+
+#climate-story .map-zoom-controls-32 button:hover {
+    background: #FCFAF5;
+}
+
+#climate-story .map-zoom-controls-32 #map-zoom-reset-32 {
+    font-size: 15px;
+}
+
+        #climate-story .footnote-32 {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-style: italic;
+            font-size: 16px;
+            color: var(--text-color);
+            letter-spacing: 0.5px;
+            line-height: 1;
+            border-top: 1px solid var(--border-color);
+            padding-top: 16px;
+            margin-top: 12px;
+        }
+
+        /* Modal Overlay & Card Styling */
+        #climate-story .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #climate-story .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #climate-story .modal-card-32 {
+            background-color: #F7F4EC;
+            border: 1px solid var(--border-color);
+            border-radius: 0;
+            box-shadow: none;
+            width: 520px;
+            max-width: 90vw;
+            padding: 24px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        #climate-story .modal-overlay.active .modal-card-32 {
+            transform: scale(1);
+        }
+
+        #climate-story .modal-close-btn-32 {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: background-color 0.2s ease;
+        }
+
+        #climate-story .modal-close-btn-32:hover {
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+
+        #climate-story .modal-header-32 h3 {
+            font-family: var(--font-body);
+            font-weight: 800;
+            font-size: 26px;
+            color: var(--text-color);
+            margin-bottom: 4px;
+        }
+
+        #climate-story .modal-header-32 p {
+            font-family: var(--font-body);
+            font-size: 14px;
+            color: #666;
+        }
+
+        #climate-story .modal-stats-32 {
+            display: flex;
+            gap: 16px;
+            border-y: 1px solid var(--border-color);
+            padding: 8px 0;
+            border-top: 1px dashed var(--border-color);
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        #climate-story .stat-item-32 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #climate-story .stat-label-32 {
+            font-size: 12px;
+            color: #666;
+        }
+
+        #climate-story .stat-val-32 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        #climate-story #radar-chart-canvas-32 {
+            width: 100%;
+            height: 360px;
+        }
+
+        @media (max-width: 900px) {
+            #climate-story .chart-wrapper-32 {
+                height: calc(480px + var(--chart-header-zone-32));
+            }
+            #climate-story .footnote-32 {
+                font-size: 13px;
+            }
+        }
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 4.1: Life-Course Impact / Lifecycle Gaps */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-card-41 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 3rem 0;
+    background-color: var(--bg-color);
+}
+
+#climate-story .header-41 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#climate-story .kicker-row-41 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#climate-story .indicator-41 {
+    width: 4px;
+    height: 16px;
+    background-color: #1E1B4B;
+}
+
+#climate-story .kicker-text-41 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 14px;
+    color: #1E1B4B;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#climate-story .title-41 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+#climate-story .divider-41 {
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+#climate-story .subtitle-41 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 24px;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+#climate-story .cards-grid-41 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+#climate-story .card-41 {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    box-shadow: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#climate-story .card-41:hover {
+    transform: translateY(-3px);
+    box-shadow: none;
+}
+
+#climate-story .card-children-41 {
+    background-color: #F6E3C4;
+}
+
+#climate-story .card-women-41 {
+    background-color: #F7DDD2;
+}
+
+#climate-story .card-informal-41 {
+    background-color: #E1E0F4;
+}
+
+#climate-story .card-header-row-41 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#climate-story .card-tag-41 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    color: #1E1B4B;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#climate-story .card-icon-41 {
+    opacity: 0.85;
+}
+
+#climate-story .card-divider-41 {
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 100%;
+    margin-top: -12px;
+}
+
+#climate-story .stat-block-41 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#climate-story .stat-big-41 {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 72px;
+    color: #1E1B4B;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+#climate-story .stat-sublabel-41 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#climate-story .sublabel-orange-41 {
+    color: #B7791F;
+}
+
+#climate-story .sublabel-rose-41 {
+    color: #A8432A;
+}
+
+#climate-story .sublabel-green-41 {
+    color: #3730A3;
+}
+
+#climate-story .card-desc-41 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: #1E1B4B;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    flex-grow: 1;
+}
+
+#climate-story .sub-callout-41 {
+    background-color: rgba(255, 255, 255, 0.35);
+    border: 1px dashed #1E1B4B;
+    border-radius: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#climate-story .callout-val-41 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 24px;
+    color: #1E1B4B;
+    line-height: 1.1;
+}
+
+#climate-story .callout-label-41 {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 12px;
+    color: #1E1B4B;
+}
+
+@media (max-width: 900px) {
+    #climate-story .title-41 {
+        font-size: 32px;
+    }
+    #climate-story .subtitle-41 {
+        font-size: 18px;
+    }
+    #climate-story .cards-grid-41 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 4.2: Social Protection Across Lifecycle STYLES */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-card-42 {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        #climate-story .header-42 {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        #climate-story .title-42 {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 36px;
+            color: var(--text-color);
+            letter-spacing: 0.5px;
+            line-height: 1;
+        }
+
+        #climate-story .subtitle-42 {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--text-color);
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        #climate-story .instruction-text-42 {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 16px;
+            color: var(--text-color);
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Lifecycle Timeline Navigation ── */
+        #climate-story .lifecycle-container-42 {
+            background-color: var(--bg-color);
+            padding: 24px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        #climate-story .lifecycle-title-42 {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--text-color);
+            letter-spacing: 0.5px;
+        }
+
+        #climate-story .timeline-diagram-42 {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        #climate-story .timeline-line-42 {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+
+        #climate-story .node-item-42 {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            width: 120px;
+        }
+
+        #climate-story .node-icon-circle-42 {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.25s ease;
+        }
+
+        #climate-story .node-item-42:hover .node-icon-circle-42,
+        #climate-story .node-item-42.active .node-icon-circle-42 {
+            background-color: var(--accent-color);
+            box-shadow: none;
+        }
+
+        #climate-story .node-icon-svg-42 {
+            width: 42px;
+            height: 42px;
+            fill: var(--accent-color);
+            transition: fill 0.25s ease;
+        }
+
+        #climate-story .node-item-42:hover .node-icon-svg-42,
+        #climate-story .node-item-42.active .node-icon-svg-42 {
+            fill: #ffffff;
+        }
+
+        #climate-story .connection-dot-42 {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 2px solid var(--bg-color);
+            transition: transform 0.25s ease;
+        }
+
+        #climate-story .node-item-42.active .connection-dot-42 {
+            transform: scale(1.3);
+            background-color: #1E1B4B;
+        }
+
+        #climate-story .node-label-42 {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--text-color);
+            text-align: center;
+            transition: font-weight 0.25s ease;
+        }
+
+        #climate-story .node-item-42.active .node-label-42 {
+            font-weight: 700;
+            color: #111;
+        }
+
+        /* Pictogram Canvas */
+        #climate-story .pictogram-wrapper-42 {
+            width: 100%;
+            height: 250px;
+            position: relative;
+        }
+
+        #climate-story #pictogram-canvas-42 {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Map Canvas */
+        #climate-story .map-wrapper-42 {
+            width: 100%;
+            height: 830px;
+            position: relative;
+        }
+
+        #climate-story #lifecycle-map-canvas-42 {
+            width: 100%;
+            height: 100%;
+        }
+
+        #climate-story .footnote-42 {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-style: italic;
+            font-size: 16px;
+            color: var(--text-color);
+            letter-spacing: 0.5px;
+            line-height: 1;
+            border-top: 1px solid var(--border-color);
+            padding-top: 16px;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 900px) {
+            #climate-story {
+                padding: 1.5rem 1rem;
+            }
+            #climate-story .title-42 {
+                font-size: 24px;
+            }
+            #climate-story .subtitle-42 {
+                font-size: 16px;
+            }
+            #climate-story .map-wrapper-42 {
+                height: 450px;
+            }
+            #climate-story .footnote-42 {
+                font-size: 13px;
+            }
+        }
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 5.1: The Vicious Cycle & $1.4T Gap STYLES */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-card-51 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    background-color: var(--bg-color);
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+#climate-story .header-block-51 {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+}
+
+#climate-story .title-area-51 {
+    flex: 1;
+}
+
+#climate-story .title-51 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+#climate-story .intro-area-51 {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#climate-story .intro-lead-51 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+#climate-story .intro-body-51 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+/* Middle Part: Vicious Cycle Image */
+#climate-story .cycle-image-container-51 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#climate-story .cycle-main-img-51 {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+#climate-story .divider-51 {
+    height: 1px;
+    background-color: #1E1B4B;
+    opacity: 0.15;
+    width: 100%;
+}
+
+/* Stats & Exposition */
+#climate-story .exposition-block-51 {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+#climate-story .narrative-prose-51 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#climate-story .narrative-lead-51 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.35;
+}
+
+#climate-story .narrative-body-51 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+#climate-story .stats-grid-51 {
+    width: 680px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+#climate-story .stat-card-51 {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#climate-story .stat-number-51 {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 72px;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+#climate-story .text-blue-51 {
+    color: #3730A3;
+}
+
+#climate-story .text-dark-51 {
+    color: #1E1B4B;
+}
+
+#climate-story .stat-line-51 {
+    height: 2px;
+    width: 100%;
+}
+
+#climate-story .line-blue-51 {
+    background-color: #3730A3;
+}
+
+#climate-story .line-dark-51 {
+    background-color: #1E1B4B;
+}
+
+#climate-story .stat-heading-51 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.25;
+}
+
+#climate-story .stat-subtext-51 {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    #climate-story .header-block-51 {
+        flex-direction: column;
+        gap: 24px;
+    }
+    #climate-story .intro-area-51 {
+        width: 100%;
+    }
+    #climate-story .title-51 {
+        font-size: 32px;
+    }
+    #climate-story .intro-lead-51 {
+        font-size: 20px;
+    }
+    #climate-story .cycle-main-img-51 {
+        max-width: 100%;
+    }
+    #climate-story .exposition-block-51 {
+        flex-direction: column;
+        gap: 40px;
+    }
+    #climate-story .stats-grid-51 {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    #climate-story .stat-number-51 {
+        font-size: 56px;
+    }
+}
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 5.2 & 5.3: Social Expenditure STYLES   */
+/* Scroll-triggered GSAP MorphSVGPlugin morph: income treemap bar chart -> global spending map. */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-card-52 {
+    margin-top: 40px;
+    /* Block (not flex): a flex ancestor of the pinned .chart-pin-52 element stops
+       ScrollTrigger from sizing its pin-spacer correctly. */
+}
+
+#climate-story {
+    --chart-header-zone-52: 180px;
+}
+
+#climate-story .chart-header-card-52 {
+    background: linear-gradient(90deg, rgba(245, 245, 247, 0.97) 55%, rgba(245, 245, 247, 0.2) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 28px 36px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: none;
+}
+
+#climate-story .chart-header-card-52 .title-52,
+#climate-story .chart-header-card-52 h1 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: clamp(22px, 3.2vw, 40px);
+    color: var(--text-color);
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+#climate-story .chart-header-card-52 .subtitle-52,
+#climate-story .chart-header-card-52 h2 {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(13px, 1.6vw, 20px);
+    line-height: 1.4;
+    color: var(--text-color);
+    letter-spacing: normal;
+}
+
+/* Income-phase and country-phase captions — sit inside the chart canvas itself, in
+   their own reserved strip above the plot. GSAP floats one out and the other in. */
+#climate-story .income-phase-header-52,
+#climate-story .country-phase-header-52 {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    top: 16px;
+    z-index: 8;
+    pointer-events: none;
+}
+
+#climate-story .country-phase-header-52 {
+    opacity: 0;
+}
+
+/* Pinned scroll region — ScrollTrigger pins this element and scrubs the morph
+   timeline as the user scrolls through the reserved distance below it. */
+#climate-story .chart-pin-52 {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+#climate-story .chart-wrapper-52 {
+    width: 100%;
+    height: calc(530px + var(--chart-header-zone-52));
+    position: relative;
+}
+
+#climate-story #income-treemap-bar-canvas-52,
+#climate-story #expenditure-map-canvas-53 {
+    width: 100%;
+    height: calc(100% - var(--chart-header-zone-52));
+    position: absolute;
+    top: var(--chart-header-zone-52);
+    left: 0;
+}
+
+#climate-story #expenditure-map-canvas-53 {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* SVG overlay used only while GSAP is morphing treemap rects <-> country shapes */
+#climate-story #morph-overlay-52 {
+    position: absolute;
+    top: var(--chart-header-zone-52);
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--chart-header-zone-52));
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Map zoom controls — replace mouse-wheel zoom, which is reserved for page scroll.
+   Uniquely scoped (not the generic .map-zoom-controls slider widget used by other
+   chapters via window.addMapZoomControls). */
+#climate-story .map-zoom-controls-52 {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#climate-story .map-zoom-controls-52 button {
+    width: 32px;
+    height: 32px;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    transition: background-color 0.15s ease;
+}
+
+#climate-story .map-zoom-controls-52 button:hover {
+    background: #FCFAF5;
+}
+
+#climate-story .map-zoom-controls-52 #expenditure-map-zoom-reset-52 {
+    font-size: 15px;
+}
+
+@media (max-width: 900px) {
+    #climate-story .chart-wrapper-52 {
+        height: calc(400px + var(--chart-header-zone-52));
+    }
+}
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 6.1: Bridging the Gap STYLES           */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-card-61 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    background-color: var(--bg-color);
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+#climate-story .hero-grid-61 {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+}
+
+#climate-story .main-title-col-61 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#climate-story .title-61 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+#climate-story .lead-quote-container-61 {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+#climate-story .accent-bar-61 {
+    width: 6px;
+    background-color: #F7DDD2;
+    border-radius: 0;
+    flex-shrink: 0;
+}
+
+#climate-story .lead-quote-61 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+#climate-story .intro-col-61 {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#climate-story .intro-text-61 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: #4F4D7E;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+#climate-story .defense-grid-61 {
+    display: flex;
+    gap: 12px;
+    height: 160px;
+    width: 100%;
+}
+
+#climate-story .defense-card-61 {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 0;
+}
+
+#climate-story .bg-prevent-61 {
+    background-color: #D3E5EC;
+}
+
+#climate-story .bg-respond-61 {
+    background-color: #F2E0C4;
+}
+
+#climate-story .bg-adapt-61 {
+    background-color: #CFDAC3;
+}
+
+#climate-story .defense-label-61 {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+#climate-story .defense-num-61 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--text-color);
+    line-height: 1;
+}
+
+#climate-story .divider-61 {
+    height: 1px;
+    background-color: #1E1B4B;
+    opacity: 0.15;
+    width: 100%;
+}
+
+#climate-story .action-flow-container-61 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#climate-story .action-flow-img-61 {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    #climate-story .hero-grid-61 {
+        flex-direction: column;
+        gap: 32px;
+    }
+    #climate-story .intro-col-61 {
+        width: 100%;
+    }
+    #climate-story .title-61 {
+        font-size: 32px;
+    }
+    #climate-story .lead-quote-61 {
+        font-size: 20px;
+    }
+    #climate-story .defense-grid-61 {
+        height: 120px;
+    }
+    #climate-story .defense-num-61 {
+        font-size: 36px;
+    }
+    #climate-story .action-flow-img-61 {
+        max-width: 100%;
+    }
+}
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 6.2: Legal Foundation STYLES            */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-card-62 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    background-color: var(--bg-color);
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+#climate-story .header-block-62 {
+    width: 100%;
+}
+
+#climate-story .title-62 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+#climate-story .divider-62 {
+    height: 1px;
+    background-color: #1E1B4B;
+    opacity: 0.15;
+    width: 100%;
+}
+
+#climate-story .narrative-grid-62 {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+}
+
+#climate-story .left-col-62 {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#climate-story .subtitle-62 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 36px;
+    color: #1E1B4B;
+    line-height: 1.2;
+}
+
+#climate-story .subcaption-62 {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    color: #4F4D7E;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .v-line-62 {
+    width: 1px;
+    height: 160px;
+    background-color: #1E1B4B;
+    opacity: 0.15;
+    flex-shrink: 0;
+}
+
+#climate-story .right-col-62 {
+    flex: 1;
+}
+
+#climate-story .body-lead-62 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 24px;
+    color: #4F4D7E;
+    letter-spacing: 0.5px;
+    line-height: 1.35;
+}
+
+#climate-story .highlight-lead-62 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: #1E1B4B;
+}
+
+#climate-story .metrics-container-62 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+#climate-story .metrics-caption-62 {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .triptych-grid-62 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+#climate-story .metric-card-62 {
+    height: 280px;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: none;
+}
+
+#climate-story .card-blue-62 {
+    background-color: #E1E0F4;
+}
+
+#climate-story .card-green-62 {
+    background-color: #F6E3C4;
+}
+
+#climate-story .card-pink-62 {
+    background-color: #F7DDD2;
+}
+
+#climate-story .card-header-62 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#climate-story .card-tag-62 {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 14px;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .card-line-62 {
+    height: 1px;
+    background-color: #1E1B4B;
+    opacity: 0.2;
+    width: 100%;
+}
+
+#climate-story .card-stat-62 {
+    font-family: var(--font-body);
+    font-weight: 900;
+    font-size: 72px;
+    color: #1E1B4B;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+#climate-story .card-title-62 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 32px;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+#climate-story .card-footer-62 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#climate-story .card-subtext-62 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 15px;
+    color: #4F4D7E;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+    #climate-story .title-62 {
+        font-size: 32px;
+    }
+    #climate-story .narrative-grid-62 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+    #climate-story .left-col-62 {
+        width: 100%;
+    }
+    #climate-story .v-line-62 {
+        display: none;
+    }
+    #climate-story .body-lead-62 {
+        font-size: 18px;
+    }
+    #climate-story .triptych-grid-62 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    #climate-story .metric-card-62 {
+        height: auto;
+        min-height: 220px;
+    }
+    #climate-story .card-stat-62 {
+        font-size: 56px;
+    }
+    #climate-story .card-title-62 {
+        font-size: 24px;
+    }
+}
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 6.3 & 6.4: C102 Ratification STYLES    */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-card-63, #climate-story .section-card-64 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+#climate-story .header-63, #climate-story .header-64 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#climate-story .title-63, #climate-story .title-64 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+#climate-story .subtitle-63, #climate-story .subtitle-64 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+#climate-story .heatmap-wrapper-63 {
+    width: 100%;
+    height: 208px;
+    position: relative;
+}
+
+#climate-story .map-wrapper-64 {
+    width: 100%;
+    height: 830px;
+    position: relative;
+}
+
+#climate-story #heatmap-canvas-63, #climate-story #ratification-map-canvas-64 {
+    width: 100%;
+    height: 100%;
+}
+
+#climate-story .filter-toolbar-64 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    padding: 12px 20px;
+}
+
+#climate-story .filter-label-64 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+#climate-story .score-pills-64 {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+#climate-story .score-pill-64 {
+    background: #F7F4EC;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#climate-story .score-pill-64.active {
+    background: #252080;
+    color: #ffffff;
+    border-color: #252080;
+}
+
+#climate-story .score-pill-64:hover:not(.active) {
+    background: rgba(26, 66, 158, 0.1);
+}
+
+@media (max-width: 900px) {
+    #climate-story .title-63, #climate-story .title-64 {
+        font-size: 24px;
+    }
+    #climate-story .subtitle-63, #climate-story .subtitle-64 {
+        font-size: 16px;
+    }
+    #climate-story .heatmap-wrapper-63 {
+        height: 240px;
+    }
+    #climate-story .map-wrapper-64 {
+        height: 450px;
+    }
+}
+
+/* ═══════════════════════════════════════════════ */
+/* CHAPTER 6.5 & 6.6: SPARC Case Study STYLES     */
+/* ═══════════════════════════════════════════════ */
+#climate-story .section-card-65, #climate-story .section-card-66 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: var(--bg-color);
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+/* Chapter 6.5 Grid */
+#climate-story .case-study-grid-65 {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+}
+
+#climate-story .case-left-col-65 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#climate-story .kicker-wrapper-65 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#climate-story .kicker-dot-65 {
+    font-size: 10px;
+    color: #1E1B4B;
+}
+
+#climate-story .kicker-text-65 {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .divider-65 {
+    height: 1px;
+    background-color: #1E1B4B;
+    opacity: 0.15;
+    width: 100%;
+}
+
+#climate-story .title-65 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+#climate-story .narrative-text-65 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+#climate-story .callout-grid-65 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+}
+
+#climate-story .callout-card-65 {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(30,27,75,0.25);
+    border-radius: 0;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#climate-story .badge-water-65 {
+    background-color: #E1E0F4;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 0;
+    width: fit-content;
+}
+
+#climate-story .badge-food-65 {
+    background-color: #F6E3C4;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 0;
+    width: fit-content;
+}
+
+#climate-story .badge-text-65 {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 14px;
+    color: #1E1B4B;
+    letter-spacing: 0.5px;
+}
+
+#climate-story .card-text-65 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 15px;
+    color: #1E1B4B;
+    line-height: 1.4;
+}
+
+#climate-story .case-right-col-65 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+#climate-story .hero-solar-img-65 {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 0;
+    display: block;
+}
+
+/* Chapter 6.6 SPARC Diagram */
+#climate-story .sparc-diagram-container-66 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#climate-story .sparc-diagram-img-66 {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    #climate-story .case-study-grid-65 {
+        flex-direction: column;
+        gap: 32px;
+    }
+    #climate-story .title-65 {
+        font-size: 32px;
+    }
+    #climate-story .case-right-col-65 {
+        width: 100%;
+        height: 300px;
+    }
+    #climate-story .callout-grid-65 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    #climate-story .sparc-diagram-img-66 {
+        max-width: 100%;
+    }
+}
+
+/* Chapter 2.3 scroll-morph track: ScrollTrigger (JS) pins .chart-pin-23 itself and
+   creates its own pin-spacer for the reserved scroll distance, so no extra CSS
+   padding is needed here — chapter 2.5 follows immediately after. */
+
+/* Custom Zoom Controls Widget (Google Maps Style) */
+#climate-story .map-zoom-controls {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    z-index: 100;
+    background: #F7F4EC;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+    padding: 8px 6px;
+    box-shadow: none;
+}
+#climate-story .map-zoom-controls button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: transparent;
+    color: #1E1B4B;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    transition: background 0.15s ease-in-out;
+}
+#climate-story .map-zoom-controls button:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+#climate-story .zoom-slider-container {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0;
+}
+#climate-story .zoom-slider {
+    -webkit-appearance: slider-vertical;
+    appearance: slider-vertical;
+    width: 8px;
+    height: 70px;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+/* Modern indie online newspaper layer: type, spacing and rules only.
+   No layout, pinning, scroll or chart rules. Sizes use clamp() with the old
+   mobile value as the floor so existing breakpoints keep working. */
+#climate-story {
+    --font-label: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+    --ink: #1E1B4B;
+}
+#climate-story { background-color: var(--bg-color); font-optical-sizing: auto; font-kerning: normal; }
+#climate-story p, #climate-story li { line-height: 1.6; letter-spacing: 0.003em; }
+
+/* Display headlines: Fraunces, tight and confident */
+#climate-story h1, #climate-story h2, #climate-story h3, #climate-story h4, #climate-story .section-title-centered, #climate-story .shield-title, #climate-story .col-title, #climate-story .footer-label, #climate-story .chart-section .title, #climate-story #sector-title, #climate-story [class^="title-"], #climate-story [class*=" title-"], #climate-story .lifecycle-title-42, #climate-story .card-title-62, #climate-story .modal-header-32 h3 {
+    font-family: var(--font-display) !important;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    font-variation-settings: "SOFT" 50;
+}
+
+/* Masthead */
+#climate-story .title-row { text-align: center; padding: 1.8rem 0 1.2rem; }
+#climate-story .title-row h1 { font-size: clamp(34px, 5.2vw, 68px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.02; }
+
+/* Chapter titles */
+#climate-story .title-31, #climate-story .title-41, #climate-story .title-51, #climate-story .title-61, #climate-story .title-62 { font-size: clamp(32px, 4.4vw, 58px); }
+#climate-story .title-42, #climate-story .title-63, #climate-story .title-64, #climate-story .row-2 .left-col h2, #climate-story .row-3 .left-col h2, #climate-story .shield-title, #climate-story .chart-section .title { font-size: clamp(28px, 3.4vw, 44px); }
+
+/* Decks (subtitles): italic serif, sentence case */
+#climate-story .subtitle, #climate-story [class^="subtitle-"], #climate-story [class*=" subtitle-"], #climate-story .shield-subtitle, #climate-story .subcaption-62 {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.002em;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+
+/* Kickers and labels: small tracked sans caps */
+#climate-story [class*="-tag"], #climate-story .kicker-text-41, #climate-story .block-label, #climate-story .source-label, #climate-story .col-tag, #climate-story .filter-label-64, #climate-story .callout-label-41, #climate-story .category-tag-31, #climate-story .defense-label-61, #climate-story .stat-label-32, #climate-story .metrics-caption-62 {
+    font-family: var(--font-label);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+#climate-story [class*="footnote"], #climate-story .source-label { font-family: var(--font-label); letter-spacing: 0.01em; line-height: 1.5; }
+
+/* Big numbers share the display face */
+#climate-story [class*="stat-number"], #climate-story [class*="stat-big"], #climate-story .stat-unit-25 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+/* Body copy */
+#climate-story [class*="desc"], #climate-story .body-lead-62, #climate-story .lead-quote-61 { line-height: 1.55; }
+
+/* Pull quotes */
+#climate-story blockquote, #climate-story .lead-quote-61, #climate-story #quote-content {
+    font-family: var(--font-display) !important;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+    border-color: var(--accent-color);
+}
+#climate-story cite { font-family: var(--font-label); font-style: normal; font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.12em; }
+
+#climate-story .divider { border-top: 1px solid rgba(30,27,75,0.18); }
+
+/* ---- Sector detail card: no photo, scannable "cut-out" layout ---- */
+#climate-story .sector-details-panel { background: transparent; border: 0; overflow: visible; }
+#climate-story .sector-masthead { border: 0; padding: 8px 0 18px; gap: 16px; flex-wrap: wrap; }
+#climate-story .sector-masthead .category-badge {
+    background: var(--accent-color); color: var(--bg-color);
+    padding: 7px 14px; transform: rotate(-1.5deg);
+}
+#climate-story .sector-masthead .badge-dot { background: var(--bg-color); }
+#climate-story .sector-masthead #sector-tag-left { color: var(--bg-color); font-family: var(--font-label); letter-spacing: 0.14em; }
+#climate-story .sector-masthead #sector-tag-right { font-family: var(--font-label); color: var(--text-secondary); opacity: 1; }
+#climate-story .sector-title-section { border: 0; padding: 0 0 28px; }
+#climate-story #sector-title { font-size: clamp(36px, 5vw, 64px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.02; color: var(--text-color); }
+
+#climate-story .sector-body-grid { min-height: 0; }
+#climate-story .sector-body-grid .left-col { display: contents; }
+#climate-story .sector-body-grid .left-col .detail-block { padding: 0; border: 0; gap: 14px; }
+#climate-story .sector-body-grid .left-col .block-label {
+    align-self: flex-start; font-family: var(--font-label); color: var(--accent-color);
+    opacity: 1; letter-spacing: 0.14em; border-bottom: 2px solid var(--accent-color); padding-bottom: 4px;
+}
+/* Hazard: offset "paper cut-out" block, the one thing to read first */
+#climate-story .sector-body-grid .left-col .top-block {
+    background: rgba(55, 48, 163, 0.07); border: 2px solid var(--text-color);
+    box-shadow: 8px 8px 0 var(--accent-color); padding: 24px; transform: rotate(-0.6deg);
+}
+#climate-story #hazard-content { font-family: var(--font-display); font-size: clamp(22px, 2.4vw, 30px); font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; color: var(--text-color); }
+#climate-story #narrative-content { font-family: var(--font-body); font-size: 18px; letter-spacing: 0.003em; line-height: 1.65; opacity: 1; color: var(--text-color); }
+#climate-story #narrative-content::first-letter {
+    font-family: var(--font-display); font-weight: 700; float: left; font-size: 3.4em; line-height: 0.85;
+    padding: 4px 10px 0 0; color: var(--accent-color);
+}
+
+#climate-story .sector-quote-row { background: transparent; border: 0; padding: 40px 0 8px; }
+#climate-story .sector-quote-row .quote-inner { border: 0; padding-left: 0; position: relative; }
+#climate-story .sector-quote-row .quote-inner::before {
+    content: "\201C"; display: block; font-family: var(--font-display); font-size: 96px; line-height: 0.6;
+    height: 40px; color: var(--accent-color);
+}
+#climate-story #quote-content { font-size: clamp(20px, 2.2vw, 28px); font-weight: 400; line-height: 1.35; }
+#climate-story #quote-content .font-bold { font-weight: 700; background: linear-gradient(transparent 62%, rgba(55,48,163,0.18) 62%); }
+
+@media (min-width: 1001px) {
+    #climate-story .sector-body-grid { grid-template-columns: 5fr 7fr; gap: 48px; align-items: start; }
+}
+
+/* ---- Rest of the story: same "cut-out" language, no layout changes ---- */
+#climate-story .card-41, #climate-story .stat-card-51, #climate-story .defense-card-61, #climate-story .metric-card-62, #climate-story .banner-card-25 {
+    border: 2px solid var(--text-color);
+    box-shadow: 6px 6px 0 var(--accent-color);
+}
+#climate-story .sector-card { border-color: var(--text-color); }
+#climate-story .sector-card.active { box-shadow: 4px 4px 0 var(--text-color); }
+#climate-story .kicker-text-41, #climate-story .category-tag-31 {
+    display: inline-block; background: var(--accent-color); color: var(--bg-color);
+    padding: 5px 12px; transform: rotate(-1deg);
+}
+/* Transparent-background illustrations: capped below their native pixel width so they stay crisp */
+#climate-story .drawing-img, #climate-story .cycle-main-img-51, #climate-story .action-flow-img-61, #climate-story .sparc-diagram-img-66, #climate-story .hero-solar-img-65 { image-rendering: auto; }
+
+/* ---- "A Warming World" intro: big headline, lead paragraph, sector chips ---- */
+@media (min-width: 1001px) { #climate-story .row-2, #climate-story .row-3 { grid-template-columns: 5fr 7fr; gap: 56px; } }
+#climate-story .row-3 .left-col h2 { font-size: clamp(38px, 4.6vw, 62px); line-height: 1.02; letter-spacing: -0.03em; margin-bottom: 28px; }
+#climate-story .sectors-card { background: transparent; padding: 0; }
+#climate-story .sectors-card .card-title {
+    font-family: var(--font-label); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent-color); opacity: 1; border-bottom: 2px solid var(--accent-color); display: inline-block; padding-bottom: 4px; margin-bottom: 16px;
+}
+#climate-story .sectors-card .card-content { display: flex; flex-wrap: wrap; gap: 10px; line-height: 1; }
+#climate-story .sector-chip {
+    font-family: var(--font-label); font-size: 15px; font-weight: 700; padding: 9px 14px;
+    border: 2px solid var(--text-color); color: var(--text-color); background: var(--card-bg); box-shadow: 3px 3px 0 var(--text-color);
+}
+#climate-story .sector-chip:nth-child(3n+1) { transform: rotate(-1.5deg); }
+#climate-story .sector-chip:nth-child(3n+2) { transform: rotate(1deg); background: #F6E3C4; }
+#climate-story .sector-chip:nth-child(3n) { transform: rotate(-0.5deg); background: #D5D3F2; }
+
+#climate-story .row-3 .right-col { gap: 32px; }
+#climate-story .row-3 .right-col .narrative-paragraph { font-size: 18px; line-height: 1.65; letter-spacing: 0.003em; }
+#climate-story .row-3 .right-col .narrative-paragraph:first-child { font-family: var(--font-display); font-size: clamp(22px, 2.3vw, 30px); font-weight: 400; line-height: 1.35; letter-spacing: -0.01em; }
+#climate-story .row-3 .right-col .narrative-paragraph + .narrative-paragraph {
+    border-top: 0; border-left: 3px solid var(--accent-color); padding: 0 0 0 24px;
+}
+#climate-story .row-3 .right-col .narrative-paragraph + .narrative-paragraph::before {
+    content: "The definition"; display: block; margin-bottom: 8px; font-family: var(--font-label); font-size: 12px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-color);
+}
+#climate-story .row-3 mark { background: linear-gradient(transparent 60%, rgba(224,160,48,0.45) 60%); color: inherit; padding: 0 2px; }
+
+/* ---- Sector tabs: compact one-line buttons ---- */
+#climate-story .sector-card { flex-direction: row; gap: 10px; padding: 10px 14px; border: 2px solid var(--text-color); }
+#climate-story .sector-card .sector-icon { width: 22px; height: 22px; flex: none; stroke: var(--text-color); stroke-width: 2; }
+#climate-story .sector-card span { font-family: var(--font-label); font-size: 16px; font-weight: 700; letter-spacing: 0.01em; white-space: nowrap; }
+#climate-story .sector-card:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--text-color); }
+#climate-story .sector-card.active { box-shadow: 3px 3px 0 var(--text-color); }
+#climate-story .sector-card.active .sector-icon { stroke: var(--bg-color); }
+#climate-story .sector-card.active span { color: var(--bg-color); }
+
+/* ---- Line-chart chapter: text in the box, chart open ---- */
+#climate-story .chart-section header {
+    border: 1px solid var(--border-color); box-shadow: none;
+    background: var(--card-bg); padding: 24px 28px;
+}
+#climate-story .chart-section .chart-wrapper, #climate-story .chart-section .controls-row {
+    border: 0; background: transparent; backdrop-filter: none;
+}
+#climate-story .chart-section .chart-wrapper { padding: 0; }
+#climate-story .chart-section .controls-row { padding: 12px 0; }
+
+/* ---- Slightly smaller type and wider side margins ---- */
+#climate-story { padding-left: clamp(28px, 9vw, 170px); padding-right: clamp(28px, 9vw, 170px); }
+#climate-story .page-container { max-width: 1100px; }
+#climate-story .title-row h1 { font-size: clamp(30px, 4.4vw, 58px); }
+#climate-story .title-31, #climate-story .title-41, #climate-story .title-51, #climate-story .title-61, #climate-story .title-62 { font-size: clamp(28px, 3.8vw, 50px); }
+#climate-story .title-42, #climate-story .title-63, #climate-story .title-64, #climate-story .row-2 .left-col h2, #climate-story .shield-title, #climate-story .chart-section .title { font-size: clamp(26px, 3vw, 38px); }
+#climate-story .row-3 .left-col h2 { font-size: clamp(32px, 3.9vw, 52px); }
+#climate-story #sector-title { font-size: clamp(32px, 4.2vw, 54px); }
+#climate-story #hazard-content { font-size: clamp(20px, 2vw, 26px); }
+#climate-story #quote-content { font-size: clamp(18px, 1.9vw, 24px); }
+#climate-story #narrative-content, #climate-story .row-3 .right-col .narrative-paragraph { font-size: 17px; }
+#climate-story .row-3 .right-col .narrative-paragraph:first-child { font-size: clamp(20px, 2vw, 26px); }
+#climate-story .sector-card span { font-size: 15px; }
+
+/* ---- Text cards above every chart: same cut-out card as chapter 1.4 ---- */
+#climate-story .header-31, #climate-story .header-41 {
+    background: var(--card-bg); border: 2px solid var(--text-color);
+    box-shadow: 6px 6px 0 var(--accent-color); padding: 24px 28px;
+}
+/* Cards with charts or maps: thin outline, no shadow */
+#climate-story .chart-header-card-23, #climate-story .chart-header-card-32, #climate-story .chart-header-card-52, #climate-story .header-42, #climate-story .header-63, #climate-story .header-64 {
+    background: var(--card-bg); border: 1px solid var(--border-color); box-shadow: none;
+    backdrop-filter: none; -webkit-backdrop-filter: none; padding: 24px 28px;
+}
+#climate-story .chart-header-card-23, #climate-story .chart-header-card-32, #climate-story .chart-header-card-52 { padding: 28px 36px; }
+
+/* Chapter 1.4 header: same padding and type scale as the other chart text cards */
+#climate-story .chart-section header { padding: 28px 36px; gap: 12px; background: var(--card-bg); }
+#climate-story .chart-section .title { font-size: clamp(22px, 3.2vw, 40px); margin: 0; }
+#climate-story .chart-section .subtitle { font-size: clamp(13px, 1.6vw, 20px); margin: 0; }
+
+/* Quote attribution: the text already starts with a dash, so drop the CSS rule line before it */
+#climate-story .row-2 .right-col cite::before { display: none; }
+
+/* ---- Smaller headings and chart-card text ---- */
+#climate-story .title-row h1 { font-size: clamp(28px, 3.6vw, 48px); }
+#climate-story .title-31, #climate-story .title-41, #climate-story .title-51, #climate-story .title-61, #climate-story .title-62 { font-size: clamp(26px, 3.1vw, 40px); }
+#climate-story .title-42, #climate-story .title-63, #climate-story .title-64, #climate-story .row-2 .left-col h2, #climate-story .shield-title { font-size: clamp(22px, 2.5vw, 31px); }
+#climate-story .row-3 .left-col h2 { font-size: clamp(28px, 3.2vw, 42px); }
+#climate-story #sector-title { font-size: clamp(28px, 3.5vw, 44px); }
+#climate-story .card-title-62, #climate-story .title-65, #climate-story .lifecycle-title-42 { font-size: clamp(18px, 2vw, 24px); }
+/* Chart header cards (1.4, 2.3, 3.2, 5.2) and their subtitles */
+#climate-story .chart-header-card-23 h1, #climate-story .chart-header-card-32 h1, #climate-story .chart-header-card-52 h1, #climate-story .chart-header-card-32 h3, #climate-story .chart-section .title { font-size: clamp(20px, 2.4vw, 30px); }
+#climate-story .chart-header-card-23 h2, #climate-story .chart-header-card-32 h2, #climate-story .chart-header-card-52 h2, #climate-story .chart-header-card-32 p, #climate-story .chart-section .subtitle { font-size: clamp(12px, 1.25vw, 16px); }
+#climate-story .subtitle-31, #climate-story .subtitle-41, #climate-story .subtitle-42, #climate-story .subtitle-63, #climate-story .subtitle-64, #climate-story .subtitle-62 { font-size: clamp(14px, 1.5vw, 19px); }
+
+/* ---- Chapter 1.4: compact vertical spacing so header, chart and controls fit one screen ---- */
+#climate-story .chart-section { padding: 0.75rem 0 0.5rem; gap: 10px; }
+#climate-story .chart-section header { padding: 16px 28px; gap: 6px; }
+#climate-story .chart-section .chart-wrapper { height: clamp(260px, calc(100vh - 310px), 480px); }
+#climate-story .chart-section .controls-row { padding: 2px 0; }
+#climate-story .chart-section .footnote { font-size: 14px; line-height: 1.3; }
+
+/* ---- Shield deficit (5.1): existing cut-out card instead of the solid blue block ---- */
+#climate-story .deficit-banner {
+    background: var(--card-bg); border: 2px solid var(--text-color);
+    box-shadow: 6px 6px 0 var(--accent-color); padding: 32px 36px; gap: 32px;
+}
+#climate-story .deficit-tag, #climate-story .income-tag { color: var(--accent-color); opacity: 1; font-family: var(--font-label); letter-spacing: 0.14em; }
+#climate-story .deficit-value, #climate-story .income-value { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; }
+#climate-story .deficit-value { font-size: clamp(44px, 5.4vw, 68px); color: var(--accent-color); }
+#climate-story .deficit-col:last-child .deficit-value { color: #D1603D; }
+#climate-story .deficit-desc { color: var(--text-color); font-family: var(--font-body); font-weight: 400; }
+#climate-story .income-value { font-size: clamp(38px, 4.2vw, 54px); }
+#climate-story .income-split-grid { gap: 28px; }
+#climate-story .income-col { background: var(--card-bg); border: 2px solid var(--text-color); box-shadow: 6px 6px 0 var(--accent-color); padding: 24px 28px; }
+#climate-story .income-col:last-child { border-left: 2px solid var(--text-color); padding-left: 28px; box-shadow: 6px 6px 0 #D1603D; }
+#climate-story .income-col:last-child .income-value { color: #D1603D; }
+
+/* ---- Comparison (2.2): two cut-out cards, scannable lists, sticker captions ---- */
+#climate-story .comparison-grid { gap: 32px; }
+#climate-story .comparison-col {
+    background: var(--card-bg); border: 2px solid var(--text-color); box-shadow: 6px 6px 0 var(--accent-color);
+    padding: 28px; gap: 16px;
+}
+#climate-story .poverty-col { border-left: 2px solid var(--text-color); padding-left: 28px; box-shadow: 6px 6px 0 #D1603D; }
+#climate-story .col-tag { color: var(--accent-color); opacity: 1; font-size: 12px; letter-spacing: 0.14em; }
+#climate-story .poverty-col .col-tag { color: #D1603D; }
+#climate-story .col-title { font-size: clamp(22px, 2.4vw, 30px); letter-spacing: -0.015em; line-height: 1.1; }
+#climate-story .col-bullets { list-style: none; padding-left: 0; gap: 0; }
+#climate-story .col-bullets li {
+    font-size: 19px; font-weight: 600; letter-spacing: 0; padding: 9px 0 9px 30px; position: relative;
+    border-bottom: 1px dashed var(--border-color);
+}
+#climate-story .col-bullets li:last-child { border-bottom: 0; }
+#climate-story .col-bullets li::before { content: "+"; position: absolute; left: 0; font-family: var(--font-label); font-weight: 700; color: var(--accent-color); }
+#climate-story .poverty-col .col-bullets li::before { content: "\00d7"; color: #D1603D; }
+#climate-story .drawing-img { max-width: 300px; }
+#climate-story .col-footer { padding: 4px 0 0; }
+#climate-story .footer-label {
+    font-family: var(--font-label); font-size: 14px; letter-spacing: 0.14em; padding: 7px 14px;
+    background: var(--accent-color); color: var(--bg-color); transform: rotate(-1deg);
+}
+#climate-story .poverty-col .footer-label { background: #D1603D; transform: rotate(1deg); }
+
+/* ---- Pinned chart cards (2.3, 3.2, 5.2): smaller card text and shorter charts so the caption never overlaps ---- */
+#climate-story { --chart-header-zone-23: 170px; --chart-header-zone-32: 170px; --chart-header-zone-52: 170px; }
+#climate-story .chart-header-card-23, #climate-story .chart-header-card-32, #climate-story .chart-header-card-52 { padding: 18px 28px; }
+#climate-story .chart-header-card-23 .title-23, #climate-story .chart-header-card-32 .title-32, #climate-story .chart-header-card-52 .title-52, #climate-story .chart-header-card-32 h3 { font-size: clamp(20px, 2.4vw, 30px); line-height: 1.1; margin-bottom: 6px; }
+#climate-story .chart-header-card-23 .subtitle-23, #climate-story .chart-header-card-32 .subtitle-32, #climate-story .chart-header-card-52 .subtitle-52 {
+    font-size: clamp(12px, 1.25vw, 16px); line-height: 1.35;
+}
+@media (min-width: 901px) {
+    #climate-story .chart-wrapper-23 { height: calc(480px + var(--chart-header-zone-23)); }
+    #climate-story .chart-wrapper-32, #climate-story .chart-wrapper-52 { height: calc(460px + var(--chart-header-zone-32)); }
+}
+
+/* Tighter strip between caption and chart; caption sits clear of the top edge while pinned */
+#climate-story { --chart-header-zone-23: 128px; --chart-header-zone-32: 128px; --chart-header-zone-52: 128px; }
+#climate-story [class*="-phase-header-23"], #climate-story [class*="-phase-header-32"], #climate-story [class*="-phase-header-52"] { top: 24px; }
+
+/* 5.1 stat cards: breathing room inside the outline */
+#climate-story .stat-card-51 { padding: 22px 28px 24px; }
+
+/* Comparison (2.2): open columns, no card box */
+#climate-story .comparison-col, #climate-story .poverty-col { background: transparent; border: 0; box-shadow: none; padding: 0; }
+#climate-story .comparison-grid { gap: 64px; }
+
+/* ---- 4.2 lifecycle timeline: compact ---- */
+#climate-story .timeline-diagram-42 { max-width: 620px; padding: 8px 0; }
+#climate-story .timeline-line-42 { left: 45px; right: 45px; }
+#climate-story .node-item-42 { width: 90px; gap: 6px; }
+#climate-story .node-icon-circle-42 { width: 52px; height: 52px; }
+#climate-story .node-icon-svg-42 { width: 26px; height: 26px; }
+#climate-story .connection-dot-42 { width: 10px; height: 10px; }
+#climate-story .node-label-42 { font-size: 14px; }
+#climate-story .lifecycle-title-42 { font-size: 18px; }
+
+/* 4.2 country map: height follows the map's width instead of a fixed 830px, so no empty band underneath */
+#climate-story .map-wrapper-42 { height: auto; aspect-ratio: 2.1 / 1; }
+
+/* 6.3 score heatmap: compact */
+@media (min-width: 901px) { #climate-story .heatmap-wrapper-63 { height: 110px; } }
+
+/* 6.4 map: size to the map's own proportions, no empty bands */
+@media (min-width: 901px) { #climate-story .map-wrapper-64 { height: auto; aspect-ratio: 2.4 / 1; } }
+#climate-story .section-card-65 { margin-top: 0; padding-top: 0; }
+
+/* Sector chips: all pastel */
+#climate-story .sector-chip:nth-child(1) { background: #D5D3F2; }
+#climate-story .sector-chip:nth-child(2) { background: #F6E3C4; }
+#climate-story .sector-chip:nth-child(3) { background: #F2CFC2; }
+#climate-story .sector-chip:nth-child(4) { background: #D3E5EC; }
+#climate-story .sector-chip:nth-child(5) { background: #CFDAC3; }
+#climate-story .sector-chip:nth-child(6) { background: #E3DDF3; }
+#climate-story .sector-chip { color: var(--text-color) !important; }
+
+/* Row 2 right column: no inset, so it aligns with row 3 */
+#climate-story .row-2 .right-col { padding-left: 0; }
+
+/* 4.1 lifecycle: compact so header and cards fit one screen */
+#climate-story .section-card-41 { padding: 1rem 0; gap: 20px; }
+#climate-story .header-41 { gap: 8px; padding: 14px 22px; }
+#climate-story .cards-grid-41 { gap: 18px; }
+#climate-story .card-41 { padding: 18px 22px; gap: 12px; }
+#climate-story .stat-big-41 { font-size: 52px; }
+#climate-story .stat-sublabel-41 { font-size: 12px; }
+#climate-story .card-desc-41 { font-size: 14px; line-height: 1.45; letter-spacing: 0.2px; }
+#climate-story .sub-callout-41 { padding: 10px 14px; }
+#climate-story .callout-val-41 { font-size: 20px; }
+
+/* 6.2 indicator cards: shorter, same text size across all three */
+#climate-story .metric-card-62 { height: 190px; padding: 18px 22px; }
+#climate-story .card-stat-62, #climate-story .card-title-62 { font-size: 28px !important; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
+#climate-story .card-tag-62 { font-size: 13px; }
+#climate-story .card-subtext-62 { font-size: 14px; }
+#climate-story .card-stat-62 { font-family: var(--font-display) !important; font-weight: 700 !important; }
+#climate-story .card-stat-62 { font-size: 44px !important; line-height: 1.05; }
+
+/* 6.5 case study: editorial layout with cut-out image and pastel callouts */
+#climate-story .section-card-65 { padding-bottom: 24px; }
+#climate-story .case-study-grid-65 { align-items: center; gap: 48px; }
+#climate-story .case-left-col-65 { gap: 18px; }
+#climate-story .kicker-wrapper-65 { display: inline-flex; align-self: flex-start; gap: 0; border-bottom: 2px solid var(--accent-color); padding-bottom: 6px; }
+#climate-story .kicker-dot-65 { display: none; }
+#climate-story .kicker-text-65 { font-family: var(--font-label); font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: var(--accent-color); }
+#climate-story .case-left-col-65 .divider-65 { display: none; }
+#climate-story .title-65 { font-size: clamp(26px, 3vw, 38px); }
+#climate-story .narrative-text-65 { font-size: 17px; line-height: 1.6; }
+#climate-story .callout-grid-65 { gap: 16px; }
+#climate-story .callout-card-65 { padding: 16px 18px; gap: 10px; border: 2px solid var(--text-color); box-shadow: 4px 4px 0 var(--accent-color); background: #D5D3F2; }
+#climate-story .callout-card-65:nth-child(2) { background: #F6E3C4; }
+#climate-story .badge-water-65, #climate-story .badge-food-65 { background: transparent !important; padding: 0 !important; }
+#climate-story .badge-text-65 { font-family: var(--font-label); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; }
+#climate-story .card-text-65 { font-size: 15px; line-height: 1.5; }
+#climate-story .hero-solar-img-65 { border: 2px solid var(--text-color); box-shadow: 8px 8px 0 var(--accent-color); transform: rotate(0.8deg); }
+#climate-story .case-right-col-65 { overflow: visible; padding: 0 10px 10px 0; }
+#climate-story .hero-solar-img-65 { width: auto; max-width: 100%; max-height: 400px; transform: none; box-shadow: 8px 8px 0 var(--accent-color); }
+#climate-story .hero-solar-img-65 { border: 0; box-shadow: none; }
+#climate-story .case-right-col-65 { padding: 0; }
+
+#climate-story h1 { max-width: none; }

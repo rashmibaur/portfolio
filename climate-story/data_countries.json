@@ -1,0 +1,1130 @@
+[
+  {
+    "name": "Afghanistan",
+    "value": 7.5,
+    "population": 41454761,
+    "vulnerability": 0.611631396660846
+  },
+  {
+    "name": "Albania",
+    "value": 78.1,
+    "population": 2745972,
+    "vulnerability": 0.416322992249691
+  },
+  {
+    "name": "Algeria",
+    "value": 60.2,
+    "population": 46164219,
+    "vulnerability": 0.429883579325037
+  },
+  {
+    "name": "Andorra",
+    "value": 86.7,
+    "population": 80856,
+    "vulnerability": 0.350781221558211
+  },
+  {
+    "name": "Angola",
+    "value": 8.7,
+    "population": 36749906,
+    "vulnerability": 0.527907173262356
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "value": 65.4,
+    "population": 93316,
+    "vulnerability": 0.484818895524531
+  },
+  {
+    "name": "Argentina",
+    "value": 65.9,
+    "population": 45538401,
+    "vulnerability": 0.407881465765316
+  },
+  {
+    "name": "Armenia",
+    "value": 49.2,
+    "population": 2964300,
+    "vulnerability": 0.393642365399574
+  },
+  {
+    "name": "Australia",
+    "value": 94.0,
+    "population": 26652777,
+    "vulnerability": 0.300140571857323
+  },
+  {
+    "name": "Austria",
+    "value": 100.0,
+    "population": 9131761,
+    "vulnerability": 0.32277793492033
+  },
+  {
+    "name": "Azerbaijan",
+    "value": 35.2,
+    "population": 10153958,
+    "vulnerability": 0.427502121495016
+  },
+  {
+    "name": "Bahamas",
+    "value": 49.1,
+    "population": 399440,
+    "vulnerability": 0.447497606278051
+  },
+  {
+    "name": "Bahrain",
+    "value": 86.4,
+    "population": 1577059,
+    "vulnerability": 0.498974724042067
+  },
+  {
+    "name": "Bangladesh",
+    "value": 22.0,
+    "population": 171466990,
+    "vulnerability": 0.543533510007927
+  },
+  {
+    "name": "Barbados",
+    "value": 56.7,
+    "population": 282336,
+    "vulnerability": 0.396989620041102
+  },
+  {
+    "name": "Belarus",
+    "value": 36.0,
+    "population": 9178298,
+    "vulnerability": 0.35456427179041
+  },
+  {
+    "name": "Belgium",
+    "value": 100.0,
+    "population": 11787423,
+    "vulnerability": 0.365557735107329
+  },
+  {
+    "name": "Belize",
+    "value": 32.0,
+    "population": 411106,
+    "vulnerability": 0.482829364848673
+  },
+  {
+    "name": "Benin",
+    "value": 8.4,
+    "population": 14111034,
+    "vulnerability": 0.583662682479402
+  },
+  {
+    "name": "Bhutan",
+    "value": 11.9,
+    "population": 786385,
+    "vulnerability": 0.52801539338826
+  },
+  {
+    "name": "Bolivia, Plurinational State of",
+    "value": 38.4,
+    "population": 12244159,
+    "vulnerability": 0.453168003737546
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "value": 54.5,
+    "population": 3185073,
+    "vulnerability": 0.380471274937269
+  },
+  {
+    "name": "Botswana",
+    "value": 13.5,
+    "population": 2480244,
+    "vulnerability": 0.484177412028985
+  },
+  {
+    "name": "Brazil",
+    "value": 71.2,
+    "population": 211140729,
+    "vulnerability": 0.366346352367594
+  },
+  {
+    "name": "Brunei Darussalam",
+    "value": 36.0,
+    "population": 458949,
+    "vulnerability": 0.424482746377342
+  },
+  {
+    "name": "Bulgaria",
+    "value": 82.8,
+    "population": 6446596,
+    "vulnerability": 0.361049975261115
+  },
+  {
+    "name": "Burkina Faso",
+    "value": 9.7,
+    "population": 23025776,
+    "vulnerability": 0.522513365133152
+  },
+  {
+    "name": "Burundi",
+    "value": 16.1,
+    "population": 13689450,
+    "vulnerability": 0.610409619844343
+  },
+  {
+    "name": "Cambodia",
+    "value": 20.8,
+    "population": 17423880,
+    "vulnerability": 0.472346602660018
+  },
+  {
+    "name": "Cameroon",
+    "value": 10.0,
+    "population": 28372687,
+    "vulnerability": 0.47761377739775
+  },
+  {
+    "name": "Canada",
+    "value": 95.6,
+    "population": 40083484,
+    "vulnerability": 0.28242526681381
+  },
+  {
+    "name": "Cape Verde",
+    "value": 60.3,
+    "population": 522331,
+    "vulnerability": 0.477880174984703
+  },
+  {
+    "name": "Central African Republic",
+    "value": 3.5,
+    "population": 5152421,
+    "vulnerability": 0.588267161763796
+  },
+  {
+    "name": "Chad",
+    "value": 2.5,
+    "population": 19319064,
+    "vulnerability": 0.637829601475467
+  },
+  {
+    "name": "Chile",
+    "value": 75.3,
+    "population": 19658835,
+    "vulnerability": 0.346583112469936
+  },
+  {
+    "name": "China",
+    "value": 75.6,
+    "population": 1410710000,
+    "vulnerability": 0.394127021337838
+  },
+  {
+    "name": "Colombia",
+    "value": 54.3,
+    "population": 52321152,
+    "vulnerability": 0.40667956463587
+  },
+  {
+    "name": "Comoros",
+    "value": 3.1,
+    "population": 850387,
+    "vulnerability": 0.490113253246172
+  },
+  {
+    "name": "Congo, the Democratic Republic o",
+    "value": 5.2,
+    "population": 105789731,
+    "vulnerability": 0.570653651365249
+  },
+  {
+    "name": "Costa Rica",
+    "value": 59.8,
+    "population": 5105525,
+    "vulnerability": 0.387068930111985
+  },
+  {
+    "name": "Cote d'Ivoire",
+    "value": 12.1,
+    "population": 31165654,
+    "vulnerability": 0.487551450812507
+  },
+  {
+    "name": "Croatia",
+    "value": 81.4,
+    "population": 3859686,
+    "vulnerability": 0.398597553548534
+  },
+  {
+    "name": "Cuba",
+    "value": 63.9,
+    "population": 11019931,
+    "vulnerability": 0.457075951798497
+  },
+  {
+    "name": "Cyprus",
+    "value": 98.8,
+    "population": 1344976,
+    "vulnerability": 0.354660330841481
+  },
+  {
+    "name": "Czech Republic",
+    "value": 78.9,
+    "population": 10864042,
+    "vulnerability": 0.305117504592286
+  },
+  {
+    "name": "Denmark",
+    "value": 100.0,
+    "population": 5946952,
+    "vulnerability": 0.341581596937965
+  },
+  {
+    "name": "Djibouti",
+    "value": 12.3,
+    "population": 1152944,
+    "vulnerability": 0.598361572476778
+  },
+  {
+    "name": "Dominica",
+    "value": 53.2,
+    "population": 66510,
+    "vulnerability": 0.442460718799105
+  },
+  {
+    "name": "Dominican Republic",
+    "value": 61.0,
+    "population": 11331265,
+    "vulnerability": 0.469902300602134
+  },
+  {
+    "name": "Ecuador",
+    "value": 46.8,
+    "population": 17980083,
+    "vulnerability": 0.47601951334325
+  },
+  {
+    "name": "Egypt",
+    "value": 36.6,
+    "population": 114535772,
+    "vulnerability": 0.468995783671781
+  },
+  {
+    "name": "El Salvador",
+    "value": 18.8,
+    "population": 6309624,
+    "vulnerability": 0.45173058771027
+  },
+  {
+    "name": "Equatorial Guinea",
+    "value": 5.2,
+    "population": 1847549,
+    "vulnerability": 0.449854852679219
+  },
+  {
+    "name": "Eritrea",
+    "value": 8.4,
+    "population": 3470390,
+    "vulnerability": 0.628631763174002
+  },
+  {
+    "name": "Estonia",
+    "value": 97.0,
+    "population": 1370286,
+    "vulnerability": 0.3605983790192
+  },
+  {
+    "name": "Ethiopia",
+    "value": 7.4,
+    "population": 128691692,
+    "vulnerability": 0.507933731799742
+  },
+  {
+    "name": "Fiji",
+    "value": 65.6,
+    "population": 924145,
+    "vulnerability": 0.488745940494656
+  },
+  {
+    "name": "Finland",
+    "value": 100.0,
+    "population": 5583911,
+    "vulnerability": 0.305513983672894
+  },
+  {
+    "name": "France",
+    "value": 99.4,
+    "population": 68287487,
+    "vulnerability": 0.321209947161785
+  },
+  {
+    "name": "Gambia",
+    "value": 6.5,
+    "population": 2697845,
+    "vulnerability": 0.551328104364644
+  },
+  {
+    "name": "Georgia",
+    "value": 94.6,
+    "population": 3715483,
+    "vulnerability": 0.413219260379206
+  },
+  {
+    "name": "Germany",
+    "value": 100.0,
+    "population": 83901923,
+    "vulnerability": 0.295589152589316
+  },
+  {
+    "name": "Ghana",
+    "value": 25.2,
+    "population": 33787914,
+    "vulnerability": 0.454633705517705
+  },
+  {
+    "name": "Greece",
+    "value": 84.6,
+    "population": 10405588,
+    "vulnerability": 0.355585279739415
+  },
+  {
+    "name": "Grenada",
+    "value": 54.3,
+    "population": 117081,
+    "vulnerability": 0.424655148195556
+  },
+  {
+    "name": "Guatemala",
+    "value": 12.1,
+    "population": 18124838,
+    "vulnerability": 0.455432679166548
+  },
+  {
+    "name": "Guinea",
+    "value": 3.7,
+    "population": 14405468,
+    "vulnerability": 0.473598046098685
+  },
+  {
+    "name": "Guinea-Bissau",
+    "value": 2.5,
+    "population": 2153339,
+    "vulnerability": 0.621615559058244
+  },
+  {
+    "name": "Guyana",
+    "value": 100.0,
+    "population": 826353,
+    "vulnerability": 0.46666353595074
+  },
+  {
+    "name": "Haiti",
+    "value": 6.6,
+    "population": 11637398,
+    "vulnerability": 0.5344937638164
+  },
+  {
+    "name": "Honduras",
+    "value": 30.1,
+    "population": 10644851,
+    "vulnerability": 0.47093910103503
+  },
+  {
+    "name": "Hungary",
+    "value": 89.0,
+    "population": 9592186,
+    "vulnerability": 0.380366757382679
+  },
+  {
+    "name": "Iceland",
+    "value": 81.9,
+    "population": 393349,
+    "vulnerability": 0.31480615888223
+  },
+  {
+    "name": "India",
+    "value": 64.3,
+    "population": 1438069596,
+    "vulnerability": 0.474859584632094
+  },
+  {
+    "name": "Indonesia",
+    "value": 54.3,
+    "population": 281190067,
+    "vulnerability": 0.430901880625814
+  },
+  {
+    "name": "Iran, Islamic Republic of",
+    "value": 100.0,
+    "population": 90608707,
+    "vulnerability": 0.428648407980709
+  },
+  {
+    "name": "Iraq",
+    "value": 41.7,
+    "population": 45074049,
+    "vulnerability": 0.496947333807058
+  },
+  {
+    "name": "Ireland",
+    "value": 100.0,
+    "population": 5307600,
+    "vulnerability": 0.317435771967295
+  },
+  {
+    "name": "Israel",
+    "value": 100.0,
+    "population": 9849000,
+    "vulnerability": 0.344488030960562
+  },
+  {
+    "name": "Italy",
+    "value": 88.8,
+    "population": 58993475,
+    "vulnerability": 0.357393597123316
+  },
+  {
+    "name": "Jamaica",
+    "value": 32.6,
+    "population": 2839786,
+    "vulnerability": 0.451296671461053
+  },
+  {
+    "name": "Japan",
+    "value": 94.6,
+    "population": 124516650,
+    "vulnerability": 0.35311478817066
+  },
+  {
+    "name": "Jordan",
+    "value": 28.8,
+    "population": 11439213,
+    "vulnerability": 0.428631907247517
+  },
+  {
+    "name": "Kazakhstan",
+    "value": 94.3,
+    "population": 20330104,
+    "vulnerability": 0.355038964494091
+  },
+  {
+    "name": "Kenya",
+    "value": 9.0,
+    "population": 55339003,
+    "vulnerability": 0.481851096061834
+  },
+  {
+    "name": "Kiribati",
+    "value": 21.0,
+    "population": 132530,
+    "vulnerability": 0.527603833992109
+  },
+  {
+    "name": "Korea, Republic of",
+    "value": 80.2,
+    "population": 51712619,
+    "vulnerability": 0.355877385957679
+  },
+  {
+    "name": "Kuwait",
+    "value": 18.2,
+    "population": 4853420,
+    "vulnerability": 0.435111126092237
+  },
+  {
+    "name": "Kyrgyzstan",
+    "value": 42.9,
+    "population": 7099750,
+    "vulnerability": 0.343801369205769
+  },
+  {
+    "name": "Lao People's Democratic Republic",
+    "value": 15.5,
+    "population": 7664993,
+    "vulnerability": 0.451550049940917
+  },
+  {
+    "name": "Latvia",
+    "value": 99.4,
+    "population": 1877445,
+    "vulnerability": 0.386768735501481
+  },
+  {
+    "name": "Lebanon",
+    "value": 20.0,
+    "population": 5773493,
+    "vulnerability": 0.45461976128072
+  },
+  {
+    "name": "Lesotho",
+    "value": 11.7,
+    "population": 2311472,
+    "vulnerability": 0.50679701506504
+  },
+  {
+    "name": "Liberia",
+    "value": 6.2,
+    "population": 5493031,
+    "vulnerability": 0.581511731241774
+  },
+  {
+    "name": "Libyan Arab Jamahiriya",
+    "value": 66.1,
+    "population": 7305659,
+    "vulnerability": 0.49006927814624
+  },
+  {
+    "name": "Liechtenstein",
+    "value": 92.0,
+    "population": 39850,
+    "vulnerability": 0.0
+  },
+  {
+    "name": "Lithuania",
+    "value": 99.9,
+    "population": 2871585,
+    "vulnerability": 0.373763903778594
+  },
+  {
+    "name": "Luxembourg",
+    "value": 100.0,
+    "population": 666430,
+    "vulnerability": 0.341472020693569
+  },
+  {
+    "name": "Macedonia",
+    "value": 50.5,
+    "population": 1827816,
+    "vulnerability": 0.409887518457299
+  },
+  {
+    "name": "Madagascar",
+    "value": 15.4,
+    "population": 31195932,
+    "vulnerability": 0.550272383098899
+  },
+  {
+    "name": "Malawi",
+    "value": 19.9,
+    "population": 21104482,
+    "vulnerability": 0.566603043418741
+  },
+  {
+    "name": "Malaysia",
+    "value": 29.2,
+    "population": 35126298,
+    "vulnerability": 0.365348909963364
+  },
+  {
+    "name": "Maldives",
+    "value": 30.1,
+    "population": 525994,
+    "vulnerability": 0.534238663759645
+  },
+  {
+    "name": "Mali",
+    "value": 12.6,
+    "population": 23769127,
+    "vulnerability": 0.584660315585995
+  },
+  {
+    "name": "Malta",
+    "value": 86.7,
+    "population": 552747,
+    "vulnerability": 0.351138702400051
+  },
+  {
+    "name": "Marshall Islands",
+    "value": 25.2,
+    "population": 38827,
+    "vulnerability": 0.498858371100596
+  },
+  {
+    "name": "Mauritania",
+    "value": 11.2,
+    "population": 5022441,
+    "vulnerability": 0.655125155055334
+  },
+  {
+    "name": "Mauritius",
+    "value": 74.7,
+    "population": 1261041,
+    "vulnerability": 0.454642684656149
+  },
+  {
+    "name": "Mexico",
+    "value": 80.8,
+    "population": 129739759,
+    "vulnerability": 0.412118258967016
+  },
+  {
+    "name": "Micronesia, Federated States of",
+    "value": 20.0,
+    "population": 112630,
+    "vulnerability": 0.621437120156525
+  },
+  {
+    "name": "Moldova, Republic of",
+    "value": 47.5,
+    "population": 2457783,
+    "vulnerability": 0.45043767587263
+  },
+  {
+    "name": "Monaco",
+    "value": 54.6,
+    "population": 38956,
+    "vulnerability": 0.390358227788071
+  },
+  {
+    "name": "Mongolia",
+    "value": 93.5,
+    "population": 3481145,
+    "vulnerability": 0.395970761446559
+  },
+  {
+    "name": "Montenegro",
+    "value": 72.2,
+    "population": 623529,
+    "vulnerability": 0.421169073444813
+  },
+  {
+    "name": "Morocco",
+    "value": 42.6,
+    "population": 37712505,
+    "vulnerability": 0.449760924509321
+  },
+  {
+    "name": "Mozambique",
+    "value": 6.0,
+    "population": 33635160,
+    "vulnerability": 0.511197695255677
+  },
+  {
+    "name": "Myanmar",
+    "value": 6.3,
+    "population": 54133798,
+    "vulnerability": 0.487602195757458
+  },
+  {
+    "name": "Namibia",
+    "value": 52.1,
+    "population": 2963095,
+    "vulnerability": 0.510721560030414
+  },
+  {
+    "name": "Nauru",
+    "value": 65.8,
+    "population": 11875,
+    "vulnerability": 0.502089896559704
+  },
+  {
+    "name": "Nepal",
+    "value": 21.0,
+    "population": 29694614,
+    "vulnerability": 0.504183206999263
+  },
+  {
+    "name": "Netherlands",
+    "value": 100.0,
+    "population": 17877117,
+    "vulnerability": 0.371475012358381
+  },
+  {
+    "name": "New Zealand",
+    "value": 100.0,
+    "population": 5245000,
+    "vulnerability": 0.296718167249517
+  },
+  {
+    "name": "Nicaragua",
+    "value": 15.3,
+    "population": 6823613,
+    "vulnerability": 0.422829301286107
+  },
+  {
+    "name": "Niger",
+    "value": 20.6,
+    "population": 26159867,
+    "vulnerability": 0.586889314258958
+  },
+  {
+    "name": "Nigeria",
+    "value": 14.8,
+    "population": 227882945,
+    "vulnerability": 0.489551018255141
+  },
+  {
+    "name": "Norway",
+    "value": 99.3,
+    "population": 5519594,
+    "vulnerability": 0.263479129443056
+  },
+  {
+    "name": "Oman",
+    "value": 21.8,
+    "population": 5049269,
+    "vulnerability": 0.450114443436123
+  },
+  {
+    "name": "Pakistan",
+    "value": 20.2,
+    "population": 247504495,
+    "vulnerability": 0.525114836028279
+  },
+  {
+    "name": "Palau",
+    "value": 93.2,
+    "population": 17727,
+    "vulnerability": 0.48155554653438
+  },
+  {
+    "name": "Panama",
+    "value": 66.1,
+    "population": 4458759,
+    "vulnerability": 0.42805997376676
+  },
+  {
+    "name": "Papua New Guinea",
+    "value": 9.1,
+    "population": 10389635,
+    "vulnerability": 0.549283680495628
+  },
+  {
+    "name": "Paraguay",
+    "value": 36.1,
+    "population": 6844146,
+    "vulnerability": 0.379546029884011
+  },
+  {
+    "name": "Peru",
+    "value": 25.1,
+    "population": 33845617,
+    "vulnerability": 0.417779188042438
+  },
+  {
+    "name": "Philippines",
+    "value": 34.9,
+    "population": 114891199,
+    "vulnerability": 0.430001326203024
+  },
+  {
+    "name": "Poland",
+    "value": 84.2,
+    "population": 36687353,
+    "vulnerability": 0.314307112750078
+  },
+  {
+    "name": "Portugal",
+    "value": 100.0,
+    "population": 10578174,
+    "vulnerability": 0.352331044146868
+  },
+  {
+    "name": "Qatar",
+    "value": 4.1,
+    "population": 2656032,
+    "vulnerability": 0.418018229695923
+  },
+  {
+    "name": "Romania",
+    "value": 79.8,
+    "population": 19059479,
+    "vulnerability": 0.39820979866064
+  },
+  {
+    "name": "Russian Federation",
+    "value": 95.4,
+    "population": 143826130,
+    "vulnerability": 0.3098257268424
+  },
+  {
+    "name": "Rwanda",
+    "value": 7.7,
+    "population": 13954471,
+    "vulnerability": 0.609511202843651
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "value": 90.2,
+    "population": 46758,
+    "vulnerability": 0.472847290328961
+  },
+  {
+    "name": "Saint Lucia",
+    "value": 40.1,
+    "population": 179285,
+    "vulnerability": 0.344941795256938
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "value": 52.0,
+    "population": 101323,
+    "vulnerability": 0.417671995635368
+  },
+  {
+    "name": "Samoa",
+    "value": 20.2,
+    "population": 216663,
+    "vulnerability": 0.537949032096937
+  },
+  {
+    "name": "San Marino",
+    "value": 88.7,
+    "population": 33860,
+    "vulnerability": 0.0
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "value": 22.1,
+    "population": 230871,
+    "vulnerability": 0.526573760980068
+  },
+  {
+    "name": "Saudi Arabia",
+    "value": 64.0,
+    "population": 33702731,
+    "vulnerability": 0.471292133183345
+  },
+  {
+    "name": "Senegal",
+    "value": 19.9,
+    "population": 18077573,
+    "vulnerability": 0.528878387104357
+  },
+  {
+    "name": "Serbia",
+    "value": 65.4,
+    "population": 6623183,
+    "vulnerability": 0.469822390844807
+  },
+  {
+    "name": "Seychelles",
+    "value": 61.2,
+    "population": 119773,
+    "vulnerability": 0.427958230503949
+  },
+  {
+    "name": "Sierra Leone",
+    "value": 4.4,
+    "population": 8460512,
+    "vulnerability": 0.601974331532953
+  },
+  {
+    "name": "Singapore",
+    "value": 100.0,
+    "population": 5917648,
+    "vulnerability": 0.379490531900278
+  },
+  {
+    "name": "Slovakia",
+    "value": 93.1,
+    "population": 5426740,
+    "vulnerability": 0.366808796798146
+  },
+  {
+    "name": "Slovenia",
+    "value": 97.0,
+    "population": 2120461,
+    "vulnerability": 0.344064686795972
+  },
+  {
+    "name": "Solomon Islands",
+    "value": 17.2,
+    "population": 800005,
+    "vulnerability": 0.62242457189267
+  },
+  {
+    "name": "Somalia",
+    "value": 0.0,
+    "population": 18358615,
+    "vulnerability": 0.638285337505113
+  },
+  {
+    "name": "South Africa",
+    "value": 63.4,
+    "population": 63212384,
+    "vulnerability": 0.436239815065598
+  },
+  {
+    "name": "Spain",
+    "value": 78.1,
+    "population": 48347910,
+    "vulnerability": 0.323034973499402
+  },
+  {
+    "name": "Sri Lanka",
+    "value": 41.3,
+    "population": 22037000,
+    "vulnerability": 0.435967030467049
+  },
+  {
+    "name": "Sudan",
+    "value": 10.4,
+    "population": 50042791,
+    "vulnerability": 0.629158346222797
+  },
+  {
+    "name": "Suriname",
+    "value": 33.6,
+    "population": 628886,
+    "vulnerability": 0.441658609170938
+  },
+  {
+    "name": "Swaziland",
+    "value": 36.1,
+    "population": 1230506,
+    "vulnerability": 0.482046438211589
+  },
+  {
+    "name": "Sweden",
+    "value": 100.0,
+    "population": 10536632,
+    "vulnerability": 0.323148191850965
+  },
+  {
+    "name": "Switzerland",
+    "value": 100.0,
+    "population": 8888093,
+    "vulnerability": 0.296346485664518
+  },
+  {
+    "name": "Tajikistan",
+    "value": 29.8,
+    "population": 10389799,
+    "vulnerability": 0.367038597338355
+  },
+  {
+    "name": "Tanzania, United Republic of",
+    "value": 11.4,
+    "population": 66617606,
+    "vulnerability": 0.50548838457689
+  },
+  {
+    "name": "Thailand",
+    "value": 70.1,
+    "population": 71702435,
+    "vulnerability": 0.443413767667469
+  },
+  {
+    "name": "Timor-Leste",
+    "value": 23.6,
+    "population": 1384286,
+    "vulnerability": 0.545449817565224
+  },
+  {
+    "name": "Togo",
+    "value": 38.7,
+    "population": 9304337,
+    "vulnerability": 0.508814332883552
+  },
+  {
+    "name": "Tonga",
+    "value": 28.2,
+    "population": 104597,
+    "vulnerability": 0.594873276299833
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "value": 57.2,
+    "population": 1367510,
+    "vulnerability": 0.386030305300588
+  },
+  {
+    "name": "Tunisia",
+    "value": 53.8,
+    "population": 12200431,
+    "vulnerability": 0.440625999654821
+  },
+  {
+    "name": "Turkey",
+    "value": 64.0,
+    "population": 85325965,
+    "vulnerability": 0.39576210822062
+  },
+  {
+    "name": "Turkmenistan",
+    "value": 42.7,
+    "population": 7364438,
+    "vulnerability": 0.447624356197373
+  },
+  {
+    "name": "Tuvalu",
+    "value": 4.5,
+    "population": 9816,
+    "vulnerability": 0.572510899488948
+  },
+  {
+    "name": "Uganda",
+    "value": 3.1,
+    "population": 48656601,
+    "vulnerability": 0.536277668889937
+  },
+  {
+    "name": "Ukraine",
+    "value": 73.0,
+    "population": 37732836,
+    "vulnerability": 0.384692832175473
+  },
+  {
+    "name": "United Arab Emirates",
+    "value": 4.1,
+    "population": 10483751,
+    "vulnerability": 0.416309791298487
+  },
+  {
+    "name": "United Kingdom",
+    "value": 93.6,
+    "population": 68492000,
+    "vulnerability": 0.28150875662824
+  },
+  {
+    "name": "United States",
+    "value": 78.8,
+    "population": 336806231,
+    "vulnerability": 0.316878152294868
+  },
+  {
+    "name": "Uruguay",
+    "value": 95.0,
+    "population": 3388081,
+    "vulnerability": 0.394090646693043
+  },
+  {
+    "name": "Uzbekistan",
+    "value": 56.0,
+    "population": 35652307,
+    "vulnerability": 0.392824302560207
+  },
+  {
+    "name": "Vanuatu",
+    "value": 57.4,
+    "population": 320409,
+    "vulnerability": 0.546767558936559
+  },
+  {
+    "name": "Venezuela, Bolivarian Republic o",
+    "value": 30.8,
+    "population": 28300854,
+    "vulnerability": 0.386097378830989
+  },
+  {
+    "name": "Viet Nam",
+    "value": 38.3,
+    "population": 100352192,
+    "vulnerability": 0.498956687021145
+  },
+  {
+    "name": "Yemen",
+    "value": 7.0,
+    "population": 39390799,
+    "vulnerability": 0.629403026758848
+  },
+  {
+    "name": "Zambia",
+    "value": 30.3,
+    "population": 20723965,
+    "vulnerability": 0.492172412803817
+  },
+  {
+    "name": "Zimbabwe",
+    "value": 16.4,
+    "population": 16340822,
+    "vulnerability": 0.511050170650953
+  }
+]

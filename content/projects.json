@@ -233,6 +233,26 @@
     "progress": true
   },
   {
+    "slug": "climate-vulnerability",
+    "title": "Data story - Climate vulnerability & social protection",
+    "desc": "Mapping where climate risk and gaps in social protection collide, and why universal protection is climate action.",
+    "tags": [
+      "Data visualisation",
+      "Interactive data story",
+      "Data analysis"
+    ],
+    "meta": {
+      "Time": "1 week",
+      "Team": "Individual",
+      "Tools": "Claude, Excel, Flourish, Figma, Procreate"
+    },
+    "accent": "#3730A3",
+    "tint": "#F7F4EC",
+    "video": true,
+    "dark": "#3730A3",
+    "progress": false
+  },
+  {
     "slug": "farming-futures",
     "title": "Lorem ipsum dolor sit amet",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",

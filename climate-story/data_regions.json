@@ -1,0 +1,1348 @@
+{
+  "Asia and the Pacific": {
+    "total_pop": 4419503956.0,
+    "weighted_cov": 61.79191959537641,
+    "countries": [
+      {
+        "country": "India",
+        "population": 1438069596.0,
+        "social_coverage": 64.3,
+        "population_share": 0.3253916299922416,
+        "contribution": 20.92268180850113
+      },
+      {
+        "country": "China",
+        "population": 1410710000.0,
+        "social_coverage": 75.6,
+        "population_share": 0.31920098138724234,
+        "contribution": 24.131594192875518
+      },
+      {
+        "country": "Indonesia",
+        "population": 281190067.0,
+        "social_coverage": 54.3,
+        "population_share": 0.06362480264742182,
+        "contribution": 3.4548267837550046
+      },
+      {
+        "country": "Pakistan",
+        "population": 247504495.0,
+        "social_coverage": 20.2,
+        "population_share": 0.05600277711347748,
+        "contribution": 1.131256097692245
+      },
+      {
+        "country": "Bangladesh",
+        "population": 171466990.0,
+        "social_coverage": 22.0,
+        "population_share": 0.03879779081704707,
+        "contribution": 0.8535513979750355
+      },
+      {
+        "country": "Japan",
+        "population": 124516650.0,
+        "social_coverage": 94.6,
+        "population_share": 0.028174349709757338,
+        "contribution": 2.665293482543044
+      },
+      {
+        "country": "Philippines",
+        "population": 114891199.0,
+        "social_coverage": 34.9,
+        "population_share": 0.02599640143867766,
+        "contribution": 0.9072744102098502
+      },
+      {
+        "country": "Vietnam",
+        "population": 100352192.0,
+        "social_coverage": 38.3,
+        "population_share": 0.022706664141291244,
+        "contribution": 0.8696652366114546
+      },
+      {
+        "country": "Iran, Islamic Republic of",
+        "population": 90608707.0,
+        "social_coverage": 100.0,
+        "population_share": 0.020502008348015608,
+        "contribution": 2.050200834801561
+      },
+      {
+        "country": "Thailand",
+        "population": 71702435.0,
+        "social_coverage": 70.1,
+        "population_share": 0.016224091145490536,
+        "contribution": 1.1373087892988865
+      },
+      {
+        "country": "Myanmar",
+        "population": 54133798.0,
+        "social_coverage": 6.3,
+        "population_share": 0.012248840263284969,
+        "contribution": 0.0771676936586953
+      },
+      {
+        "country": "Korea, Republic of",
+        "population": 51712619.0,
+        "social_coverage": 80.2,
+        "population_share": 0.011701000726516829,
+        "contribution": 0.9384202582666498
+      },
+      {
+        "country": "North Korea",
+        "population": 51712619.0,
+        "social_coverage": 80.2,
+        "population_share": 0.011701000726516829,
+        "contribution": 0.9384202582666498
+      },
+      {
+        "country": "Afghanistan",
+        "population": 41454761.0,
+        "social_coverage": 7.5,
+        "population_share": 0.009379957889554608,
+        "contribution": 0.07034968417165956
+      },
+      {
+        "country": "Malaysia",
+        "population": 35126298.0,
+        "social_coverage": 29.2,
+        "population_share": 0.007948018227772347,
+        "contribution": 0.23208213225095253
+      },
+      {
+        "country": "Nepal",
+        "population": 29694614.0,
+        "social_coverage": 21.0,
+        "population_share": 0.006718992514914721,
+        "contribution": 0.14109884281320914
+      },
+      {
+        "country": "Australia",
+        "population": 26652777.0,
+        "social_coverage": 94.0,
+        "population_share": 0.006030716855409915,
+        "contribution": 0.566887384408532
+      },
+      {
+        "country": "Sri Lanka",
+        "population": 22037000.0,
+        "social_coverage": 41.3,
+        "population_share": 0.004986306205265902,
+        "contribution": 0.20593444627748173
+      },
+      {
+        "country": "Cambodia",
+        "population": 17423880.0,
+        "social_coverage": 20.8,
+        "population_share": 0.0039424967538144225,
+        "contribution": 0.08200393247933999
+      },
+      {
+        "country": "Papua New Guinea",
+        "population": 10389635.0,
+        "social_coverage": 9.1,
+        "population_share": 0.0023508599841606296,
+        "contribution": 0.02139282585586173
+      },
+      {
+        "country": "Lao People's Democratic Republic",
+        "population": 7664993.0,
+        "social_coverage": 15.5,
+        "population_share": 0.001734355954041825,
+        "contribution": 0.02688251728764829
+      },
+      {
+        "country": "Singapore",
+        "population": 5917648.0,
+        "social_coverage": 100.0,
+        "population_share": 0.0013389846595716001,
+        "contribution": 0.13389846595716
+      },
+      {
+        "country": "New Zealand",
+        "population": 5245000.0,
+        "social_coverage": 100.0,
+        "population_share": 0.0011867847731823595,
+        "contribution": 0.11867847731823594
+      },
+      {
+        "country": "Mongolia",
+        "population": 3481145.0,
+        "social_coverage": 93.5,
+        "population_share": 0.0007876777653460257,
+        "contribution": 0.0736478710598534
+      },
+      {
+        "country": "Timor-Leste",
+        "population": 1384286.0,
+        "social_coverage": 23.6,
+        "population_share": 0.00031322202984356825,
+        "contribution": 0.007392039904308211
+      },
+      {
+        "country": "Fiji",
+        "population": 924145.0,
+        "social_coverage": 65.6,
+        "population_share": 0.00020910604656103175,
+        "contribution": 0.013717356654403682
+      },
+      {
+        "country": "Solomon Islands",
+        "population": 800005.0,
+        "social_coverage": 17.2,
+        "population_share": 0.00018101692134790342,
+        "contribution": 0.003113491047183939
+      },
+      {
+        "country": "Bhutan",
+        "population": 786385.0,
+        "social_coverage": 11.9,
+        "population_share": 0.00017793512752316677,
+        "contribution": 0.0021174280175256847
+      },
+      {
+        "country": "Maldives",
+        "population": 525994.0,
+        "social_coverage": 30.1,
+        "population_share": 0.00011901652430605948,
+        "contribution": 0.0035823973816123903
+      },
+      {
+        "country": "Brunei Darussalam",
+        "population": 458949.0,
+        "social_coverage": 36.0,
+        "population_share": 0.00010384626975543768,
+        "contribution": 0.0037384657111957566
+      },
+      {
+        "country": "Vanuatu",
+        "population": 320409.0,
+        "social_coverage": 57.4,
+        "population_share": 7.249886032232347e-05,
+        "contribution": 0.004161434582501367
+      },
+      {
+        "country": "Samoa",
+        "population": 216663.0,
+        "social_coverage": 20.2,
+        "population_share": 4.902428013575015e-05,
+        "contribution": 0.000990290458742153
+      },
+      {
+        "country": "Kiribati",
+        "population": 132530.0,
+        "social_coverage": 21.0,
+        "population_share": 2.9987528310745106e-05,
+        "contribution": 0.0006297380945256472
+      },
+      {
+        "country": "Micronesia, Federated States of",
+        "population": 112630.0,
+        "social_coverage": 20.0,
+        "population_share": 2.5484760534514613e-05,
+        "contribution": 0.0005096952106902923
+      },
+      {
+        "country": "Tonga",
+        "population": 104597.0,
+        "social_coverage": 28.2,
+        "population_share": 2.3667135733184985e-05,
+        "contribution": 0.0006674132276758165
+      },
+      {
+        "country": "Marshall Islands",
+        "population": 38827.0,
+        "social_coverage": 25.2,
+        "population_share": 8.785375097874446e-06,
+        "contribution": 0.00022139145246643602
+      },
+      {
+        "country": "Palau",
+        "population": 17727.0,
+        "social_coverage": 93.2,
+        "population_share": 4.011083636645126e-06,
+        "contribution": 0.00037383299493532574
+      },
+      {
+        "country": "Nauru",
+        "population": 11875.0,
+        "social_coverage": 65.8,
+        "population_share": 2.6869531328008613e-06,
+        "contribution": 0.00017680151613829666
+      },
+      {
+        "country": "Tuvalu",
+        "population": 9816.0,
+        "social_coverage": 4.5,
+        "population_share": 2.2210637432903795e-06,
+        "contribution": 9.994786844806707e-06
+      }
+    ]
+  },
+  "Europe and Central Asia": {
+    "total_pop": 914898768.0,
+    "weighted_cov": 85.12451412449602,
+    "countries": [
+      {
+        "country": "Russian Federation",
+        "population": 143826130.0,
+        "social_coverage": 95.4,
+        "population_share": 0.15720441980090194,
+        "contribution": 14.997301649006046
+      },
+      {
+        "country": "Turkey",
+        "population": 85325965.0,
+        "social_coverage": 64.0,
+        "population_share": 0.09326273898753354,
+        "contribution": 5.9688152952021465
+      },
+      {
+        "country": "Germany",
+        "population": 83901923.0,
+        "social_coverage": 100.0,
+        "population_share": 0.09170623672760263,
+        "contribution": 9.170623672760263
+      },
+      {
+        "country": "United Kingdom",
+        "population": 68492000.0,
+        "social_coverage": 93.6,
+        "population_share": 0.07486292734848234,
+        "contribution": 7.007169999817946
+      },
+      {
+        "country": "France",
+        "population": 68287487.0,
+        "social_coverage": 99.4,
+        "population_share": 0.0746393911419061,
+        "contribution": 7.419155479505466
+      },
+      {
+        "country": "Italy",
+        "population": 58993475.0,
+        "social_coverage": 88.8,
+        "population_share": 0.06448087707994378,
+        "contribution": 5.725901884699008
+      },
+      {
+        "country": "Spain",
+        "population": 48347910.0,
+        "social_coverage": 78.1,
+        "population_share": 0.052845092474755634,
+        "contribution": 4.127201722278414
+      },
+      {
+        "country": "Ukraine",
+        "population": 37732836.0,
+        "social_coverage": 73.0,
+        "population_share": 0.04124263505402381,
+        "contribution": 3.0107123589437386
+      },
+      {
+        "country": "Poland",
+        "population": 36687353.0,
+        "social_coverage": 84.2,
+        "population_share": 0.04009990425519952,
+        "contribution": 3.3764119382877995
+      },
+      {
+        "country": "Uzbekistan",
+        "population": 35652307.0,
+        "social_coverage": 56.0,
+        "population_share": 0.038968581275868545,
+        "contribution": 2.1822405514486385
+      },
+      {
+        "country": "Kazakhstan",
+        "population": 20330104.0,
+        "social_coverage": 94.3,
+        "population_share": 0.022221151356933515,
+        "contribution": 2.0954545729588303
+      },
+      {
+        "country": "Netherlands",
+        "population": 17877117.0,
+        "social_coverage": 100.0,
+        "population_share": 0.019539994615010783,
+        "contribution": 1.9539994615010783
+      },
+      {
+        "country": "Belgium",
+        "population": 11787423.0,
+        "social_coverage": 100.0,
+        "population_share": 0.01288385492721529,
+        "contribution": 1.288385492721529
+      },
+      {
+        "country": "Czech Republic",
+        "population": 10864042.0,
+        "social_coverage": 78.9,
+        "population_share": 0.011874583702576371,
+        "contribution": 0.9369046541332757
+      },
+      {
+        "country": "Portugal",
+        "population": 10578174.0,
+        "social_coverage": 100.0,
+        "population_share": 0.011562125089668937,
+        "contribution": 1.1562125089668938
+      },
+      {
+        "country": "Sweden",
+        "population": 10536632.0,
+        "social_coverage": 100.0,
+        "population_share": 0.011516718973218685,
+        "contribution": 1.1516718973218685
+      },
+      {
+        "country": "Greece",
+        "population": 10405588.0,
+        "social_coverage": 84.6,
+        "population_share": 0.011373485640107452,
+        "contribution": 0.9621968851530904
+      },
+      {
+        "country": "Tajikistan",
+        "population": 10389799.0,
+        "social_coverage": 29.8,
+        "population_share": 0.011356227993084366,
+        "contribution": 0.33841559419391415
+      },
+      {
+        "country": "Azerbaijan",
+        "population": 10153958.0,
+        "social_coverage": 35.2,
+        "population_share": 0.011098449746737444,
+        "contribution": 0.39066543108515805
+      },
+      {
+        "country": "Israel",
+        "population": 9849000.0,
+        "social_coverage": 100.0,
+        "population_share": 0.010765125437353305,
+        "contribution": 1.0765125437353305
+      },
+      {
+        "country": "Hungary",
+        "population": 9592186.0,
+        "social_coverage": 89.0,
+        "population_share": 0.010484423343326657,
+        "contribution": 0.9331136775560724
+      },
+      {
+        "country": "Belarus",
+        "population": 9178298.0,
+        "social_coverage": 36.0,
+        "population_share": 0.010032036681024365,
+        "contribution": 0.36115332051687715
+      },
+      {
+        "country": "Austria",
+        "population": 9131761.0,
+        "social_coverage": 100.0,
+        "population_share": 0.009981170944149747,
+        "contribution": 0.9981170944149748
+      },
+      {
+        "country": "Switzerland",
+        "population": 8888093.0,
+        "social_coverage": 100.0,
+        "population_share": 0.009714837652945665,
+        "contribution": 0.9714837652945665
+      },
+      {
+        "country": "Turkmenistan",
+        "population": 7364438.0,
+        "social_coverage": 42.7,
+        "population_share": 0.00804945668043571,
+        "contribution": 0.3437118002546048
+      },
+      {
+        "country": "Kyrgyz Republic",
+        "population": 7099750.0,
+        "social_coverage": 42.9,
+        "population_share": 0.007760148169748109,
+        "contribution": 0.33291035648219386
+      },
+      {
+        "country": "Serbia",
+        "population": 6623183.0,
+        "social_coverage": 65.4,
+        "population_share": 0.007239252288511115,
+        "contribution": 0.47344709966862697
+      },
+      {
+        "country": "Bulgaria",
+        "population": 6446596.0,
+        "social_coverage": 82.8,
+        "population_share": 0.0070462396775246286,
+        "contribution": 0.5834286452990393
+      },
+      {
+        "country": "Denmark",
+        "population": 5946952.0,
+        "social_coverage": 100.0,
+        "population_share": 0.006500120240625354,
+        "contribution": 0.6500120240625353
+      },
+      {
+        "country": "Finland",
+        "population": 5583911.0,
+        "social_coverage": 100.0,
+        "population_share": 0.006103310218907192,
+        "contribution": 0.6103310218907192
+      },
+      {
+        "country": "Norway",
+        "population": 5519594.0,
+        "social_coverage": 99.3,
+        "population_share": 0.006033010637959455,
+        "contribution": 0.5990779563493739
+      },
+      {
+        "country": "Slovak Republic",
+        "population": 5426740.0,
+        "social_coverage": 93.1,
+        "population_share": 0.0059315196279726545,
+        "contribution": 0.5522244773642541
+      },
+      {
+        "country": "Ireland",
+        "population": 5307600.0,
+        "social_coverage": 100.0,
+        "population_share": 0.0058012975704433345,
+        "contribution": 0.5801297570443334
+      },
+      {
+        "country": "Croatia",
+        "population": 3859686.0,
+        "social_coverage": 81.4,
+        "population_share": 0.0042187028062540795,
+        "contribution": 0.3434024084290821
+      },
+      {
+        "country": "Georgia",
+        "population": 3715483.0,
+        "social_coverage": 94.6,
+        "population_share": 0.004061086461097956,
+        "contribution": 0.3841787792198666
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "population": 3185073.0,
+        "social_coverage": 54.5,
+        "population_share": 0.003481339260039314,
+        "contribution": 0.1897329896721426
+      },
+      {
+        "country": "Armenia",
+        "population": 2964300.0,
+        "social_coverage": 49.2,
+        "population_share": 0.0032400305953849532,
+        "contribution": 0.1594095052929397
+      },
+      {
+        "country": "Lithuania",
+        "population": 2871585.0,
+        "social_coverage": 99.9,
+        "population_share": 0.0031386915147753264,
+        "contribution": 0.3135552823260551
+      },
+      {
+        "country": "Albania",
+        "population": 2745972.0,
+        "social_coverage": 78.1,
+        "population_share": 0.0030013943575449213,
+        "contribution": 0.23440889932425835
+      },
+      {
+        "country": "Moldova",
+        "population": 2457783.0,
+        "social_coverage": 47.5,
+        "population_share": 0.0026863988519438033,
+        "contribution": 0.12760394546733064
+      },
+      {
+        "country": "Slovenia",
+        "population": 2120461.0,
+        "social_coverage": 97.0,
+        "population_share": 0.0023177001370713398,
+        "contribution": 0.22481691329591996
+      },
+      {
+        "country": "Latvia",
+        "population": 1877445.0,
+        "social_coverage": 99.4,
+        "population_share": 0.0020520794930177456,
+        "contribution": 0.20397670160596393
+      },
+      {
+        "country": "Macedonia",
+        "population": 1827816.0,
+        "social_coverage": 50.5,
+        "population_share": 0.0019978341472638205,
+        "contribution": 0.10089062443682294
+      },
+      {
+        "country": "Estonia",
+        "population": 1370286.0,
+        "social_coverage": 97.0,
+        "population_share": 0.0014977460325971278,
+        "contribution": 0.1452813651619214
+      },
+      {
+        "country": "Cyprus",
+        "population": 1344976.0,
+        "social_coverage": 98.8,
+        "population_share": 0.0014700817697461364,
+        "contribution": 0.14524407885091828
+      },
+      {
+        "country": "Luxembourg",
+        "population": 666430.0,
+        "social_coverage": 100.0,
+        "population_share": 0.0007284193872693028,
+        "contribution": 0.07284193872693027
+      },
+      {
+        "country": "Montenegro",
+        "population": 623529.0,
+        "social_coverage": 72.2,
+        "population_share": 0.0006815278605774666,
+        "contribution": 0.04920631153369309
+      },
+      {
+        "country": "Malta",
+        "population": 552747.0,
+        "social_coverage": 86.7,
+        "population_share": 0.0006041619240654612,
+        "contribution": 0.05238083881647548
+      },
+      {
+        "country": "Iceland",
+        "population": 393349.0,
+        "social_coverage": 81.9,
+        "population_share": 0.00042993718404482536,
+        "contribution": 0.0352118553732712
+      },
+      {
+        "country": "Andorra",
+        "population": 80856.0,
+        "social_coverage": 86.7,
+        "population_share": 8.837699079730317e-05,
+        "contribution": 0.007662285102126185
+      },
+      {
+        "country": "Liechtenstein",
+        "population": 39850.0,
+        "social_coverage": 92.0,
+        "population_share": 4.355673151370994e-05,
+        "contribution": 0.004007219299261315
+      },
+      {
+        "country": "Monaco",
+        "population": 38956.0,
+        "social_coverage": 54.6,
+        "population_share": 4.257957422454415e-05,
+        "contribution": 0.0023248447526601104
+      },
+      {
+        "country": "San Marino",
+        "population": 33860.0,
+        "social_coverage": 88.7,
+        "population_share": 3.700955907287876e-05,
+        "contribution": 0.0032827478897643463
+      }
+    ]
+  },
+  "Africa": {
+    "total_pop": 1353033104.0,
+    "weighted_cov": 19.777458846269294,
+    "countries": [
+      {
+        "country": "Nigeria",
+        "population": 227882945.0,
+        "social_coverage": 14.8,
+        "population_share": 0.1684237764222508,
+        "contribution": 2.4926718910493117
+      },
+      {
+        "country": "Ethiopia",
+        "population": 128691692.0,
+        "social_coverage": 7.4,
+        "population_share": 0.09511348363875656,
+        "contribution": 0.7038397789267986
+      },
+      {
+        "country": "Egypt, Arab Republic of",
+        "population": 114535772.0,
+        "social_coverage": 36.6,
+        "population_share": 0.08465112321449897,
+        "contribution": 3.0982311096506625
+      },
+      {
+        "country": "Tanzania",
+        "population": 66617606.0,
+        "social_coverage": 11.4,
+        "population_share": 0.049235754692961306,
+        "contribution": 0.5612876034997589
+      },
+      {
+        "country": "South Africa",
+        "population": 63212384.0,
+        "social_coverage": 63.4,
+        "population_share": 0.046719022478551274,
+        "contribution": 2.961986025140151
+      },
+      {
+        "country": "Kenya",
+        "population": 55339003.0,
+        "social_coverage": 9.0,
+        "population_share": 0.04089996234120226,
+        "contribution": 0.3680996610708203
+      },
+      {
+        "country": "Sudan",
+        "population": 50042791.0,
+        "social_coverage": 10.4,
+        "population_share": 0.03698563682740463,
+        "contribution": 0.3846506230050082
+      },
+      {
+        "country": "Uganda",
+        "population": 48656601.0,
+        "social_coverage": 3.1,
+        "population_share": 0.03596113122151666,
+        "contribution": 0.11147950678670165
+      },
+      {
+        "country": "Algeria",
+        "population": 46164219.0,
+        "social_coverage": 60.2,
+        "population_share": 0.034119060992317006,
+        "contribution": 2.053967471737484
+      },
+      {
+        "country": "Morocco",
+        "population": 37712505.0,
+        "social_coverage": 42.6,
+        "population_share": 0.027872566375877823,
+        "contribution": 1.1873713276123954
+      },
+      {
+        "country": "Angola",
+        "population": 36749906.0,
+        "social_coverage": 8.7,
+        "population_share": 0.02716112849815388,
+        "contribution": 0.23630181793393873
+      },
+      {
+        "country": "Ghana",
+        "population": 33787914.0,
+        "social_coverage": 25.2,
+        "population_share": 0.0249719788082879,
+        "contribution": 0.6292938659688551
+      },
+      {
+        "country": "Mozambique",
+        "population": 33635160.0,
+        "social_coverage": 6.0,
+        "population_share": 0.024859081348832985,
+        "contribution": 0.14915448809299792
+      },
+      {
+        "country": "Madagascar",
+        "population": 31195932.0,
+        "social_coverage": 15.4,
+        "population_share": 0.02305629618948333,
+        "contribution": 0.3550669613180433
+      },
+      {
+        "country": "Cote d'Ivoire",
+        "population": 31165654.0,
+        "social_coverage": 12.1,
+        "population_share": 0.02303391831867552,
+        "contribution": 0.27871041165597377
+      },
+      {
+        "country": "Cameroon",
+        "population": 28372687.0,
+        "social_coverage": 10.0,
+        "population_share": 0.020969691662473915,
+        "contribution": 0.20969691662473916
+      },
+      {
+        "country": "Niger",
+        "population": 26159867.0,
+        "social_coverage": 20.6,
+        "population_share": 0.019334240176875968,
+        "contribution": 0.398285347643645
+      },
+      {
+        "country": "Mali",
+        "population": 23769127.0,
+        "social_coverage": 12.6,
+        "population_share": 0.017567291539084175,
+        "contribution": 0.2213478733924606
+      },
+      {
+        "country": "Burkina Faso",
+        "population": 23025776.0,
+        "social_coverage": 9.7,
+        "population_share": 0.01701789552075882,
+        "contribution": 0.16507358655136053
+      },
+      {
+        "country": "Malawi",
+        "population": 21104482.0,
+        "social_coverage": 19.9,
+        "population_share": 0.015597905134477775,
+        "contribution": 0.3103983121761077
+      },
+      {
+        "country": "Zambia",
+        "population": 20723965.0,
+        "social_coverage": 30.3,
+        "population_share": 0.015316672547577225,
+        "contribution": 0.4640951781915899
+      },
+      {
+        "country": "Chad",
+        "population": 19319064.0,
+        "social_coverage": 2.5,
+        "population_share": 0.014278338011750524,
+        "contribution": 0.03569584502937631
+      },
+      {
+        "country": "Somalia",
+        "population": 18358615.0,
+        "social_coverage": 0.0,
+        "population_share": 0.013568489156492952,
+        "contribution": 0.0
+      },
+      {
+        "country": "Senegal",
+        "population": 18077573.0,
+        "social_coverage": 19.9,
+        "population_share": 0.013360776574170206,
+        "contribution": 0.2658794538259871
+      },
+      {
+        "country": "Zimbabwe",
+        "population": 16340822.0,
+        "social_coverage": 16.4,
+        "population_share": 0.012077178268359648,
+        "contribution": 0.1980657236010982
+      },
+      {
+        "country": "Guinea",
+        "population": 14405468.0,
+        "social_coverage": 3.7,
+        "population_share": 0.010646796414228754,
+        "contribution": 0.03939314673264639
+      },
+      {
+        "country": "Benin",
+        "population": 14111034.0,
+        "social_coverage": 8.4,
+        "population_share": 0.010429186069641057,
+        "contribution": 0.08760516298498489
+      },
+      {
+        "country": "Rwanda",
+        "population": 13954471.0,
+        "social_coverage": 7.7,
+        "population_share": 0.010313473453639905,
+        "contribution": 0.07941374559302727
+      },
+      {
+        "country": "Burundi",
+        "population": 13689450.0,
+        "social_coverage": 16.1,
+        "population_share": 0.010117601675472383,
+        "contribution": 0.1628933869751054
+      },
+      {
+        "country": "Tunisia",
+        "population": 12200431.0,
+        "social_coverage": 53.8,
+        "population_share": 0.009017097189959071,
+        "contribution": 0.485119828819798
+      },
+      {
+        "country": "Togo",
+        "population": 9304337.0,
+        "social_coverage": 38.7,
+        "population_share": 0.0068766514082274815,
+        "contribution": 0.26612640949840355
+      },
+      {
+        "country": "Sierra Leone",
+        "population": 8460512.0,
+        "social_coverage": 4.4,
+        "population_share": 0.006252997044187619,
+        "contribution": 0.027513186994425527
+      },
+      {
+        "country": "Libya",
+        "population": 7305659.0,
+        "social_coverage": 66.1,
+        "population_share": 0.005399468038440543,
+        "contribution": 0.3569048373409199
+      },
+      {
+        "country": "Liberia",
+        "population": 5493031.0,
+        "social_coverage": 6.2,
+        "population_share": 0.004059790543010986,
+        "contribution": 0.025170701366668113
+      },
+      {
+        "country": "Central African Republic",
+        "population": 5152421.0,
+        "social_coverage": 3.5,
+        "population_share": 0.0038080524303269374,
+        "contribution": 0.013328183506144281
+      },
+      {
+        "country": "Mauritania",
+        "population": 5022441.0,
+        "social_coverage": 11.2,
+        "population_share": 0.0037119867837320853,
+        "contribution": 0.041574251977799355
+      },
+      {
+        "country": "Eritrea",
+        "population": 3470390.0,
+        "social_coverage": 8.4,
+        "population_share": 0.00256489659398607,
+        "contribution": 0.02154513138948299
+      },
+      {
+        "country": "Namibia",
+        "population": 2963095.0,
+        "social_coverage": 52.1,
+        "population_share": 0.0021899648953452363,
+        "contribution": 0.11409717104748682
+      },
+      {
+        "country": "Gambia, The",
+        "population": 2697845.0,
+        "social_coverage": 6.5,
+        "population_share": 0.0019939238678080414,
+        "contribution": 0.01296050514075227
+      },
+      {
+        "country": "Botswana",
+        "population": 2480244.0,
+        "social_coverage": 13.5,
+        "population_share": 0.0018330992735267177,
+        "contribution": 0.02474684019261069
+      },
+      {
+        "country": "Lesotho",
+        "population": 2311472.0,
+        "social_coverage": 11.7,
+        "population_share": 0.0017083632271572271,
+        "contribution": 0.019987849757739557
+      },
+      {
+        "country": "Guinea-Bissau",
+        "population": 2153339.0,
+        "social_coverage": 2.5,
+        "population_share": 0.0015914902552155146,
+        "contribution": 0.0039787256380387865
+      },
+      {
+        "country": "Equatorial Guinea",
+        "population": 1847549.0,
+        "social_coverage": 5.2,
+        "population_share": 0.0013654869156845108,
+        "contribution": 0.007100531961559456
+      },
+      {
+        "country": "Mauritius",
+        "population": 1261041.0,
+        "social_coverage": 74.7,
+        "population_share": 0.0009320104558210425,
+        "contribution": 0.06962118104983188
+      },
+      {
+        "country": "Swaziland",
+        "population": 1230506.0,
+        "social_coverage": 36.1,
+        "population_share": 0.0009094426413974864,
+        "contribution": 0.03283087935444926
+      },
+      {
+        "country": "Djibouti",
+        "population": 1152944.0,
+        "social_coverage": 12.3,
+        "population_share": 0.0008521181016129817,
+        "contribution": 0.010481052649839676
+      },
+      {
+        "country": "Comoros",
+        "population": 850387.0,
+        "social_coverage": 3.1,
+        "population_share": 0.0006285042084232701,
+        "contribution": 0.0019483630461121374
+      },
+      {
+        "country": "Cabo Verde",
+        "population": 522331.0,
+        "social_coverage": 60.3,
+        "population_share": 0.0003860445087823956,
+        "contribution": 0.023278483879578454
+      },
+      {
+        "country": "Sao Tome and Principe",
+        "population": 230871.0,
+        "social_coverage": 22.1,
+        "population_share": 0.00017063218875981026,
+        "contribution": 0.003770971371591807
+      },
+      {
+        "country": "Seychelles",
+        "population": 119773.0,
+        "social_coverage": 61.2,
+        "population_share": 8.852185482078198e-05,
+        "contribution": 0.0054175375150318575
+      }
+    ]
+  },
+  "Americas": {
+    "total_pop": 1030707025.0,
+    "weighted_cov": 67.91802949388067,
+    "countries": [
+      {
+        "country": "United States of America",
+        "population": 336806231.0,
+        "social_coverage": 78.8,
+        "population_share": 0.3267720339831777,
+        "contribution": 25.749636277874405
+      },
+      {
+        "country": "Brazil",
+        "population": 211140729.0,
+        "social_coverage": 71.2,
+        "population_share": 0.20485038316295553,
+        "contribution": 14.585347281202434
+      },
+      {
+        "country": "Mexico",
+        "population": 129739759.0,
+        "social_coverage": 80.8,
+        "population_share": 0.12587452675991997,
+        "contribution": 10.170661762201533
+      },
+      {
+        "country": "Colombia",
+        "population": 52321152.0,
+        "social_coverage": 54.3,
+        "population_share": 0.05076239002057835,
+        "contribution": 2.756397778117404
+      },
+      {
+        "country": "Argentina",
+        "population": 45538401.0,
+        "social_coverage": 65.9,
+        "population_share": 0.04418171206313452,
+        "contribution": 2.9115748249605655
+      },
+      {
+        "country": "Canada",
+        "population": 40083484.0,
+        "social_coverage": 95.6,
+        "population_share": 0.03888930901581854,
+        "contribution": 3.717817941912252
+      },
+      {
+        "country": "Peru",
+        "population": 33845617.0,
+        "social_coverage": 25.1,
+        "population_share": 0.032837281767823405,
+        "contribution": 0.8242157723723675
+      },
+      {
+        "country": "Venezuela, Republica Bolivariana de",
+        "population": 28300854.0,
+        "social_coverage": 30.8,
+        "population_share": 0.027457709430087567,
+        "contribution": 0.8456974504466971
+      },
+      {
+        "country": "Chile",
+        "population": 19658835.0,
+        "social_coverage": 75.3,
+        "population_share": 0.019073155148040248,
+        "contribution": 1.4362085826474307
+      },
+      {
+        "country": "Guatemala",
+        "population": 18124838.0,
+        "social_coverage": 12.1,
+        "population_share": 0.017584859286274877,
+        "contribution": 0.212776797363926
+      },
+      {
+        "country": "Ecuador",
+        "population": 17980083.0,
+        "social_coverage": 46.8,
+        "population_share": 0.01744441685550751,
+        "contribution": 0.8163987088377513
+      },
+      {
+        "country": "Bolivia",
+        "population": 12244159.0,
+        "social_coverage": 38.4,
+        "population_share": 0.011879378623620034,
+        "contribution": 0.45616813914700927
+      },
+      {
+        "country": "Haiti",
+        "population": 11637398.0,
+        "social_coverage": 6.6,
+        "population_share": 0.011290694365840768,
+        "contribution": 0.07451858281454907
+      },
+      {
+        "country": "Dominican Republic",
+        "population": 11331265.0,
+        "social_coverage": 61.0,
+        "population_share": 0.010993681739968737,
+        "contribution": 0.670614586138093
+      },
+      {
+        "country": "Cuba",
+        "population": 11019931.0,
+        "social_coverage": 63.9,
+        "population_share": 0.01069162306330453,
+        "contribution": 0.6831947137451595
+      },
+      {
+        "country": "Honduras",
+        "population": 10644851.0,
+        "social_coverage": 30.1,
+        "population_share": 0.010327717519922792,
+        "contribution": 0.3108642973496761
+      },
+      {
+        "country": "Paraguay",
+        "population": 6844146.0,
+        "social_coverage": 36.1,
+        "population_share": 0.006640243865612539,
+        "contribution": 0.23971280354861266
+      },
+      {
+        "country": "Nicaragua",
+        "population": 6823613.0,
+        "social_coverage": 15.3,
+        "population_share": 0.006620322588758915,
+        "contribution": 0.1012909356080114
+      },
+      {
+        "country": "El Salvador",
+        "population": 6309624.0,
+        "social_coverage": 18.8,
+        "population_share": 0.006121646449436007,
+        "contribution": 0.11508695324939694
+      },
+      {
+        "country": "Costa Rica",
+        "population": 5105525.0,
+        "social_coverage": 59.8,
+        "population_share": 0.004953420202021035,
+        "contribution": 0.2962145280808579
+      },
+      {
+        "country": "Panama",
+        "population": 4458759.0,
+        "social_coverage": 66.1,
+        "population_share": 0.0043259227810152935,
+        "contribution": 0.28594349582511086
+      },
+      {
+        "country": "Uruguay",
+        "population": 3388081.0,
+        "social_coverage": 95.0,
+        "population_share": 0.003287142629109373,
+        "contribution": 0.31227854976539043
+      },
+      {
+        "country": "Jamaica",
+        "population": 2839786.0,
+        "social_coverage": 32.6,
+        "population_share": 0.0027551825408388964,
+        "contribution": 0.08981895083134803
+      },
+      {
+        "country": "Trinidad and Tobago",
+        "population": 1367510.0,
+        "social_coverage": 57.2,
+        "population_share": 0.0013267688749865657,
+        "contribution": 0.07589117964923156
+      },
+      {
+        "country": "Guyana",
+        "population": 826353.0,
+        "social_coverage": 100.0,
+        "population_share": 0.0008017341300259402,
+        "contribution": 0.08017341300259402
+      },
+      {
+        "country": "Suriname",
+        "population": 628886.0,
+        "social_coverage": 33.6,
+        "population_share": 0.00061015010545795,
+        "contribution": 0.020501043543387124
+      },
+      {
+        "country": "Belize",
+        "population": 411106.0,
+        "social_coverage": 32.0,
+        "population_share": 0.0003988582497533671,
+        "contribution": 0.012763463992107748
+      },
+      {
+        "country": "Bahamas, The",
+        "population": 399440.0,
+        "social_coverage": 49.1,
+        "population_share": 0.0003875398055038967,
+        "contribution": 0.01902820445024133
+      },
+      {
+        "country": "Barbados",
+        "population": 282336.0,
+        "social_coverage": 56.7,
+        "population_share": 0.00027392459074391195,
+        "contribution": 0.015531524295179807
+      },
+      {
+        "country": "Saint Lucia",
+        "population": 179285.0,
+        "social_coverage": 40.1,
+        "population_share": 0.00017394370626318376,
+        "contribution": 0.006975142621153669
+      },
+      {
+        "country": "Grenada",
+        "population": 117081.0,
+        "social_coverage": 54.3,
+        "population_share": 0.00011359289998047699,
+        "contribution": 0.006168094468939901
+      },
+      {
+        "country": "Saint Vincent and the Grenadines",
+        "population": 101323.0,
+        "social_coverage": 52.0,
+        "population_share": 9.830436539423024e-05,
+        "contribution": 0.005111827000499973
+      },
+      {
+        "country": "Antigua and Barbuda",
+        "population": 93316.0,
+        "social_coverage": 65.4,
+        "population_share": 9.053591150210701e-05,
+        "contribution": 0.0059210486122377995
+      },
+      {
+        "country": "Dominica",
+        "population": 66510.0,
+        "social_coverage": 53.2,
+        "population_share": 6.452852108968598e-05,
+        "contribution": 0.0034329173219712944
+      },
+      {
+        "country": "Saint Kitts and Nevis",
+        "population": 46758.0,
+        "social_coverage": 90.2,
+        "population_share": 4.536497653152214e-05,
+        "contribution": 0.004091920883143297
+      }
+    ]
+  },
+  "Arab States": {
+    "total_pop": 179059295.0,
+    "weighted_cov": 37.23180723458115,
+    "countries": [
+      {
+        "country": "Iraq",
+        "population": 45074049.0,
+        "social_coverage": 41.7,
+        "population_share": 0.25172694330110035,
+        "contribution": 10.497013535655885
+      },
+      {
+        "country": "Yemen, Republic of",
+        "population": 39390799.0,
+        "social_coverage": 7.0,
+        "population_share": 0.21998745722750668,
+        "contribution": 1.5399122005925467
+      },
+      {
+        "country": "Saudi Arabia",
+        "population": 33702731.0,
+        "social_coverage": 64.0,
+        "population_share": 0.1882210638660227,
+        "contribution": 12.046148087425452
+      },
+      {
+        "country": "Romania",
+        "population": 19059479.0,
+        "social_coverage": 79.8,
+        "population_share": 0.10644227656542488,
+        "contribution": 8.494093669920904
+      },
+      {
+        "country": "Jordan",
+        "population": 11439213.0,
+        "social_coverage": 28.8,
+        "population_share": 0.0638850555063338,
+        "contribution": 1.8398895985824135
+      },
+      {
+        "country": "United Arab Emirates",
+        "population": 10483751.0,
+        "social_coverage": 4.1,
+        "population_share": 0.05854904656024698,
+        "contribution": 0.2400510908970126
+      },
+      {
+        "country": "Lebanon",
+        "population": 5773493.0,
+        "social_coverage": 20.0,
+        "population_share": 0.03224346996339955,
+        "contribution": 0.644869399267991
+      },
+      {
+        "country": "Oman",
+        "population": 5049269.0,
+        "social_coverage": 21.8,
+        "population_share": 0.028198865632750314,
+        "contribution": 0.6147352707939568
+      },
+      {
+        "country": "Kuwait",
+        "population": 4853420.0,
+        "social_coverage": 18.2,
+        "population_share": 0.02710509945881335,
+        "contribution": 0.49331281015040296
+      },
+      {
+        "country": "Qatar",
+        "population": 2656032.0,
+        "social_coverage": 4.1,
+        "population_share": 0.01483325397880071,
+        "contribution": 0.0608163413130829
+      },
+      {
+        "country": "Bahrain",
+        "population": 1577059.0,
+        "social_coverage": 86.4,
+        "population_share": 0.008807467939600678,
+        "contribution": 0.7609652299814986
+      }
+    ]
+  }
+}
