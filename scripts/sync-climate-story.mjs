@@ -44,6 +44,25 @@ body = body
 const left = [...body.matchAll(/(?:fetch\(|src=|href=)['"`](?!https?:|\/|#|mailto)[^'"`]+['"`]/g)].map((m) => m[0]);
 if (left.length) console.warn("relative paths left:", left);
 
+// The story creates its pins from async callbacks, so on a slow load a later pin can be created above an earlier one and
+// nothing re-measures in page order: the bubble chart then pinned ~1800px early. Measure top to bottom, after every create and once fonts are in.
+// The portfolio's sticky top bar would also cover the pinned chart titles, so it scrolls away on this page.
+const fixes = `<style>.bar{position:static}</style>
+<script>
+(() => {
+  let t;
+  const refresh = () => { clearTimeout(t); t = setTimeout(() => ScrollTrigger.refresh(), 250); };
+  const create = ScrollTrigger.create;
+  // pins must be measured top to bottom, whatever order they were created in
+  ScrollTrigger.create = (v, ...a) => {
+    const el = gsap.utils.toArray(v.trigger)[0];
+    if (el) v.refreshPriority = 1e6 - [...document.querySelectorAll("*")].indexOf(el);
+    const r = create.call(ScrollTrigger, v, ...a); refresh(); return r;
+  };
+  document.fonts.ready.then(refresh);
+  window.addEventListener("load", refresh);
+})();
+</script>`;
 fs.writeFileSync(path.join(root, "content/climate-vulnerability.html"),
-  `${fonts}\n<link rel="stylesheet" href="${BASE}css/story.css?v=${Date.now()}">\n${libs.join("\n")}\n<div id="climate-story">${body}</div>\n`);
+  `${fonts}\n<link rel="stylesheet" href="${BASE}css/story.css?v=${Date.now()}">\n${libs.join("\n")}\n${fixes}\n<div id="climate-story">${body}</div>\n`);
 console.log("synced", data.length, "data files,", pngs.length, "images");
