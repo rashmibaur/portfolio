@@ -17,9 +17,12 @@
     },
     "accent": "#2b35e6",
     "tint": "#f5f0e8",
-    "video": true,
+    "video": false,
     "progress": true,
-    "dark": "#3e63bf"
+    "dark": "#3e63bf",
+    "media": {
+      "video": "/f/assets/pJK59eY7dfhDx1iZgfwIPutC6eU.mp4"
+    }
   },
   {
     "slug": "metro",
@@ -39,7 +42,7 @@
     "accent": "#b52f20",
     "tint": "#fdf6cd",
     "dark": "#cf5c5c",
-    "video": true,
+    "video": false,
     "impact": [
       [
         "80%",
@@ -58,7 +61,11 @@
         "NPS"
       ]
     ],
-    "progress": true
+    "progress": true,
+    "media": {
+      "video": "/f/assets/J6HBkrWAooIjITN8XO0kydxElzU.mp4",
+      "poster": "/f/images/0e9QluadMEdb2UmW2EYzsJX0irw.png"
+    }
   },
   {
     "slug": "shell",
@@ -101,7 +108,15 @@
         "NPS"
       ]
     ],
-    "progress": true
+    "progress": true,
+    "media": {
+      "slides": [
+        "/f/images/R7mnfXW7Juau5MO3GCQ5v6VwDFc.png",
+        "/f/images/8WyfI3vgO89RcL7XlCOv4alwuE.png",
+        "/f/images/G8hzCOfg7WxDj6m8g4JPKPJ9Egc.png",
+        "/f/images/lO1WssE9TswT5K9DU3SY4f9Gbzs.png"
+      ]
+    }
   },
   {
     "slug": "kenvue",
@@ -120,7 +135,7 @@
     },
     "accent": "#0e3b22",
     "tint": "#e5ddf1",
-    "video": true,
+    "video": false,
     "dark": "#445f52",
     "impact": [
       [
@@ -145,7 +160,11 @@
       ]
     ],
     "impact_note": "Figures are for the wider supply chain dashboard that this table builder is part of.",
-    "progress": true
+    "progress": true,
+    "media": {
+      "video": "/f/assets/1x5F45cNmXMmyCc0g7RrbL4e8o.mp4",
+      "poster": "/f/images/LVQgTG3Em4iIGNRACRoZtwqKbw.png"
+    }
   },
   {
     "slug": "women-in-politics",
@@ -175,7 +194,15 @@
         "gender equality data sources analysed with Noah"
       ]
     ],
-    "progress": true
+    "progress": true,
+    "media": {
+      "slides": [
+        "/f/images/CTf7nfkkiJlsSjAB7Ssk4RbHY.png",
+        "/f/images/GPtsdSFWCjsxyDUFYQhf8aF9Fc.png",
+        "/f/images/dePSOzeWF6FsxxQy4xwdQMrcPU.png",
+        "/f/images/yNwnSRLJxJFob3Bbuc0uuEmMA.png"
+      ]
+    }
   },
   {
     "slug": "fx-story",
@@ -194,7 +221,7 @@
     },
     "accent": "#27546b",
     "tint": "#fcf9cb",
-    "video": true,
+    "video": false,
     "dark": "#27546b",
     "impact": [
       [
@@ -210,7 +237,11 @@
         "faster design timelines with the BI visualisation framework"
       ]
     ],
-    "progress": true
+    "progress": true,
+    "media": {
+      "video": "/f/assets/BMXb921RIxRmKPMXNOJXbw2aE.mp4",
+      "poster": "/f/images/PIRzg7vcQo4ibiE1HEhzGc491w.png"
+    }
   },
   {
     "slug": "electoral-bonds",
@@ -230,7 +261,11 @@
     "tint": "#fdf0c4",
     "video": false,
     "dark": "#3e6574",
-    "progress": true
+    "progress": true,
+    "media": {
+      "video": "/f/assets/JzT1JCmpA0g6GuOnL2WmqfU8Gs.mp4",
+      "poster": "/f/images/5S3jwz5HTfKlPEQCOCAN1rs9TU.png"
+    }
   },
   {
     "slug": "climate-vulnerability",
@@ -266,7 +301,11 @@
     "tint": "#f4f3ef",
     "video": false,
     "dark": "#2a2a2a",
-    "progress": true
+    "progress": true,
+    "media": {
+      "video": "/f/assets/6C4Hq29JCHsoQWqS95QjjRoMEg.mp4",
+      "poster": "/f/images/z4idOS0hHa3eGVD3HVW8mboRI.png"
+    }
   },
   {
     "slug": "bosch",
@@ -300,7 +339,22 @@
         "data points synthesised"
       ]
     ],
-    "progress": true
+    "progress": true,
+    "media": {
+      "slides": [
+        "/f/images/CTmod7MpdRMoyVwhKpwpmg7xevE.png",
+        "/f/images/7K2gvwo3e1t3Yeaugs8LZG9WfhU.png",
+        "/f/images/HYn24ymbgxq6uU3dLSwzZdXPH0.png",
+        "/f/images/NqzS7CF17cZu0Ucbw9k4MuXjZ0.png",
+        "/f/images/xrn6LW8sHF5icJLs5bOJs7ixfs.png",
+        "/f/images/L58x0e2XEovNrKghgkqyCJZT0k.png",
+        "/f/images/l7n9F0tqDzADMr6BqYfg7pmAs7U.png",
+        "/f/images/v8L9rcaBKEjvpBOrpCwmYi1Jg.png",
+        "/f/images/Z0ZO1EogYFXSXknlDLpH5yUbKQ.png",
+        "/f/images/BqJwbGGXn4V0OOQXNrEIqYCgPXs.png",
+        "/f/images/XvQmIevvsR5dgXteYU537NE1kY.png"
+      ]
+    }
   },
   {
     "slug": "kinetrack",
@@ -318,9 +372,13 @@
     },
     "accent": "#0a1d3a",
     "tint": "#fdf3e9",
-    "video": true,
+    "video": false,
     "dark": "#0a1d3a",
-    "progress": true
+    "progress": true,
+    "media": {
+      "video": "/f/assets/5VrmMxAJn95rDpGVkqkuhvEG574.mp4",
+      "poster": "/f/images/L4RRFCmJc9FysWWsV4icxDyQKEg.png"
+    }
   },
   {
     "slug": "mbti",
@@ -338,9 +396,13 @@
     },
     "accent": "#0b1f3a",
     "tint": "#fdfb9d",
-    "video": true,
+    "video": false,
     "dark": "#0b1f3a",
-    "progress": true
+    "progress": true,
+    "media": {
+      "video": "/f/assets/2lkJmw5OcMSxtbW3nK462LpbZI0.mp4",
+      "poster": "/f/images/T0G2r9hvT7ZkMVvUtdJ2yiyICs.png"
+    }
   },
   {
     "slug": "smart-bulb",
