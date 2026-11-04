@@ -443,19 +443,33 @@
   },
   {
     "slug": "philips",
-    "title": "Healthcare service KPI dashboard",
-    "desc": "A single workspace for service leaders to see which KPIs are off target, why, and where to act, with AI-written summaries, drilldowns by zone, business unit and site, and an alert queue for equipment issues.",
+    "title": "Healthcare service operations and intelligence platform",
+    "desc": "One cockpit for 12 service KPIs, with structured AI root cause analysis to prevent SLA breaches.",
     "tags": [
       "Predictive Health Operations",
       "HealthTech & MedTech"
     ],
     "meta": {
-      "Tools": "Figma, React, TypeScript, Tailwind CSS, Recharts, Enterprise Design Systems, Claude Code"
+      "Role": "Lead experience designer",
+      "Platform": "B2B SaaS, desktop web",
+      "Scope": "12 KPIs, 100+ data points",
+      "Audience": "Service heads, managers, field engineers",
+      "Tools": "Figma, React, Claude Code"
     },
-    "accent": "#2a2a2a",
-    "tint": "#f4f3ef",
+    "accent": "#122C4F",
+    "tint": "#FBF9E4",
     "video": false,
-    "dark": "#2a2a2a",
-    "progress": true
+    "dark": "#5B88B2",
+    "progress": true,
+    "impact": [
+      [
+        "50%",
+        "less decision time"
+      ],
+      [
+        "10/10",
+        "pilot NPS"
+      ]
+    ]
   }
 ]
