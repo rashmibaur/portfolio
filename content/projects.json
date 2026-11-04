@@ -443,14 +443,14 @@
   },
   {
     "slug": "philips",
-    "title": "Predictive operations dashboard for medical devices",
-    "desc": "Consolidating multi-stream machine telemetry and AI-driven root-cause analytics into a proactive operational workspace for hospital equipment managers.",
+    "title": "Healthcare service KPI dashboard",
+    "desc": "A single workspace for service leaders to see which KPIs are off target, why, and where to act, with AI-written summaries, drilldowns by zone, business unit and site, and an alert queue for equipment issues.",
     "tags": [
       "Predictive Health Operations",
       "HealthTech & MedTech"
     ],
     "meta": {
-      "Tools": "Figma, Custom Web Portal, Enterprise Design Systems, Data Dictionaries, Claude Code"
+      "Tools": "Figma, React, TypeScript, Tailwind CSS, Recharts, Enterprise Design Systems, Claude Code"
     },
     "accent": "#2a2a2a",
     "tint": "#f4f3ef",

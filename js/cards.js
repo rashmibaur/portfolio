@@ -50,12 +50,15 @@ function decorate(a, slug) {
 
 const DESC = {"kapsy-ai": "Connecting learners and coaches through craft-specific mobile practice labs and automated class management tools to close the feedback loop between sessions.", "philips": "Consolidating multi-stream machine telemetry and AI-driven root-cause analytics into a proactive operational workspace for hospital equipment managers."};
 
+const HIDDEN = ["kapsy-ai", "philips"];   // kept in the page and in the layout list, just not displayed. Remove a slug here to show it again
+const BONUS = { "bias-ai": -20, "shell": 0 };   // extra rows (2px each) for the row a card sits in
+
 // homepage layout: rows of [slug, columns]; all rows are three columns wide
 const LAYOUT = [
   [["bias-ai", 2], ["metro", 1]],
+  [["fx-story", 1], ["climate-vulnerability", 1], ["women-in-politics", 1]],
   [["kenvue", 1], ["kapsy-ai", 2]],
   [["philips", 1], ["shell", 1], ["bosch", 1]],
-  [["fx-story", 1], ["climate-vulnerability", 1], ["women-in-politics", 1]],
   [["electoral-bonds", 1], ["kinetrack", 1], ["mbti", 1]],
 ];
 
@@ -91,16 +94,19 @@ function fit() {
   if (!g.dataset.rowh) { g.dataset.rowh = 1; g.style.gridTemplateRows = "none"; g.style.gridAutoRows = step + "px"; g.style.rowGap = "0px"; }
   g.style.gridAutoFlow = "row";
   let start = 1, idx = 0;
-  const BONUS = [-50, 0, 50, 0, 0];   // extra rows (2px each) per layout row; row 1 is 100px shorter and row 3 is 100px taller
-  LAYOUT.forEach((row, ri) => {
-    const cards = row.map(([slug, w]) => [cardOf(slug), w]).filter(([a]) => a && a.style.display !== "none");
-    const n = Math.max(0, ...cards.map(([a]) => need(a, step, gap))) + BONUS[ri];   // the row is as tall as its tallest card, so the whole grid stays a rectangle
+  // visible cards, in layout order, packed into rows of three columns so hiding a card leaves no gap
+  const vis = LAYOUT.flat().map(([slug, w]) => [cardOf(slug), w, slug]).filter(([a]) => a && a.style.display !== "none");
+  const rows = []; let cur = [], used = 0;
+  vis.forEach((c) => { if (used + c[1] > 3) { rows.push(cur); cur = []; used = 0; } cur.push(c); used += c[1]; });
+  if (cur.length) rows.push(cur);
+  rows.forEach((row) => {
+    const n = Math.max(0, ...row.map(([a]) => need(a, step, gap))) + Math.max(0, ...row.map(([, , slug]) => BONUS[slug] || 0)) + Math.min(0, ...row.map(([, , slug]) => BONUS[slug] || 0));   // the row is as tall as its tallest card, so the whole grid stays a rectangle
     let col = 1;
-    cards.forEach(([a, w]) => {
+    row.forEach(([a, w]) => {
       a.style.order = idx++; a.style.gridColumn = `${col} / span ${w}`; col += w;
       a.style.gridRow = `${start} / span ${n}`; a.style.height = `${n * step - gap}px`;   // minus the gap, so cards do not touch the row below
       const v = a.querySelector("video"), holder = v && v.closest("[data-framer-name='Metro Media Holder']");
-      if (v && ASPECT[(a.getAttribute("href") || "").replace("./", "")]) {   // media takes whatever height the row gives it, the video sits whole inside
+      if (v && ASPECT[(a.getAttribute("href") || "").replace("./", "")]) {   // media takes whatever height the row gives it, the video fills it
         holder.style.flex = "1 1 0"; holder.style.minHeight = "0";
         v.parentElement.style.aspectRatio = "auto"; v.parentElement.style.height = "100%";
       }
@@ -109,12 +115,11 @@ function fit() {
   });
   // image sliders: scale the strip so its height fills the media box, cropping the sides
   LAYOUT.flat().forEach(([slug]) => {
-    const a = cardOf(slug), sl = a && slider(a); if (!sl) return;
+    const a = cardOf(slug), sl = a && a.style.display !== "none" && slider(a); if (!sl) return;
     sl.holder.style.flex = "1 1 0"; sl.holder.style.height = ""; sl.holder.style.minHeight = "0";
     requestAnimationFrame(() => {
       const hh = sl.holder.clientHeight, ww = sl.holder.clientWidth, h0 = Math.round(sl.t.getBoundingClientRect().height / (parseFloat((sl.t.style.transform.match(/scale\(([\d.]+)\)/) || [0, 1])[1]) || 1)) || 101, k = hh / h0;
-      Object.assign(sl.t.style, { width: ww + "px",   // the strip stays as wide as the box, so its looping copies still cover the part that is visible
-         height: h0 + "px", transformOrigin: "0 0", transform: `scale(${k})`, alignSelf: "flex-start", flex: "none" });
+      Object.assign(sl.t.style, { width: ww + "px", height: h0 + "px", transformOrigin: "0 0", transform: `scale(${k})`, alignSelf: "flex-start", flex: "none" });   // the strip stays as wide as the box, so its looping copies still cover the visible part
     });
   });
   // Biases in AI: the bottom of its video is blank, so when the box is shorter than the video only that bottom part is cropped
@@ -145,6 +150,7 @@ function init() {
     g.appendChild(c);
   });
   Object.keys(META).forEach((slug) => { const a = cardOf(slug); if (a) decorate(a, slug); });
+  HIDDEN.forEach((slug) => { const a = cardOf(slug); if (a) a.style.display = "none"; });
   const align = () => fit();
   align(); grow(); setTimeout(() => { align(); grow(); }, 600); addEventListener("resize", () => setTimeout(align, 150));
   return true;
