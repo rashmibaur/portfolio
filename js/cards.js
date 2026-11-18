@@ -13,21 +13,21 @@ new MutationObserver(scan).observe(document.body, { childList: true, subtree: tr
 const META = {
   "bias-ai": ["Enterprise AI & Model Governance", "AI Infrastructure & Governance", ["MLOps", "Explainable AI (XAI)", "Fairness Metrics Auditing"], ["ai"]],
   "metro": ["Prescriptive Decision SaaS", "Retail & Fashion Tech", ["Demand Forecasting", "Trend Intelligence", "Merchandising Analytics"], ["ai"]],
-  "shell": ["Predictive Analytics BI", "Energy & Industrial B2B", ["Churn Prediction", "Prescriptive Account Retention", "B2B Operational Analytics"], ["ai", "bi"]],
+  "shell": ["Predictive Analytics BI", "Energy & Industrial B2B", ["Churn Prediction", "Prescriptive Retention", "B2B Operational Analytics"], ["ai", "bi"]],
   "kenvue": ["Data-Dense Enterprise SaaS", "Supply Chain & Logistics", ["High-Density Data Grids", "Table Builders", "Logistics Planning"], ["ai"]],
   "women-in-politics": ["Editorial Information Design", "Civic Tech & Public Policy", ["Data Storytelling", "Data Journalism", "Gender Representation"], ["civic"]],
   "fx-story": ["Scrollytelling & Internal BI", "Enterprise People Analytics", ["Executive Storytelling", "Workforce Utilization", "Interactive Narrative"], ["bi"]],
   "electoral-bonds": ["Investigative Data Story", "Civic Tech & FinTech", ["Campaign Finance", "Political Transparency", "Network Graph Visualization"], ["civic"]],
   "climate-vulnerability": ["Geospatial Data Visualization", "ClimateTech & Sustainability", ["ESG Analytics", "Climate Risk Mapping", "Geospatial Analysis"], ["civic"]],
-  "bosch": ["Marketing Intelligence Dashboard", "Automotive & Mobility", ["B2B Marketing Analytics", "Performance Marketing BI", "Regional Lead Tracking"], ["bi"]],
+  "bosch": ["Marketing Intelligence Dashboard", "Automotive & Mobility", ["Marketing Analytics", "Campaign Performance", "Regional Lead Tracking"], ["bi"]],
   "kinetrack": ["Connected IoT Ecosystem", "Connected Health & IoT", ["Wearable UX", "Motion Sensor Telemetry", "Hardware-Software Sync"], ["iot"]],
   "mbti": ["Generative Art & Creative Tech", "Creative Tech & Digital Arts", ["Generative Design", "Creative Coding", "Algorithmic Art"], ["iot"]],
   "kapsy-ai": ["Multi-Platform Product (Web & Mobile)", "EdTech & Creator Economy", ["Asynchronous Video Feedback", "Dual-Sided Marketplace", "Automated Class Ops"], ["ai"], "AI platform for asynchronous coaching & practice"],
-  "philips": ["Predictive Health Operations", "HealthTech & MedTech", ["Hospital Asset Management", "Root Cause Analytics", "Predictive Maintenance"], ["ai", "bi"], "Predictive operations dashboard for medical devices"],
+  "philips": ["Predictive Health Operations", "HealthTech & MedTech", ["Asset Management", "Root Cause Analytics", "Predictive Maintenance"], ["ai", "bi"], "Healthcare service operations and intelligence platform"],
 };
 const GROUPS = [["all", "All"], ["ai", "Enterprise AI & SaaS"], ["bi", "Business Intelligence (BI)"], ["civic", "Data Storytelling & Civic Tech"], ["iot", "Creative Tech & IoT"]];
 const css = document.createElement("style");
-css.textContent = `a[href^="./"] [data-framer-name="Metro Media Holder"]{padding:0!important;border-radius:18px!important;overflow:hidden!important;background:transparent!important}a[href$="./kapsy-ai"] [data-framer-name="Metro Media Holder"],a[href$="./philips"] [data-framer-name="Metro Media Holder"]{background:#f3f3f1!important;position:relative}.rb-soon{visibility:visible!important;z-index:2;position:absolute;inset:0;display:grid;place-items:center;font:500 16px/1 "Instrument Sans",sans-serif;letter-spacing:.04em;color:rgba(17,17,17,.45)}a[href^="./"] [data-framer-name="Metro Media Holder"] .ticker-item *{border-radius:0!important}a[href^="./"] [data-framer-name="Metro Media Holder"]>div{border-radius:0!important}a[href^="./"] video{object-fit:cover!important;object-position:50% 50%!important;background:transparent!important}a[href$="./smart-bulb"]{display:none!important}.rb-tags{display:flex;flex-wrap:wrap;gap:8px}.rb-tags span{padding:5px 10px;border-radius:99px;border:1px solid rgba(17,17,17,.25);font:12px/1 Numans,sans-serif;color:rgba(17,17,17,.66);white-space:nowrap}.rb-sub{font:600 17px/1.3 "Instrument Sans",sans-serif;color:#6f6f6f;margin:-2px 0 4px}a[href^="./"] [data-framer-name="Metro Work One Liner"] p{--framer-font-size:15px!important;font-size:15px!important;line-height:1.4!important}
+css.textContent = `a[href^="./"] [data-framer-name="Metro Media Holder"]{padding:0!important;border-radius:18px!important;overflow:hidden!important;background:transparent!important}a[href$="./kapsy-ai"] [data-framer-name="Metro Media Holder"],a[href$="./philips"] [data-framer-name="Metro Media Holder"]{background:#f3f3f1!important;position:relative}.rb-soon{visibility:visible!important;z-index:2;position:absolute;inset:0;display:grid;place-items:center;font:500 16px/1 "Instrument Sans",sans-serif;letter-spacing:.04em;color:rgba(17,17,17,.45)}a[href^="./"] [data-framer-name="Metro Media Holder"] .ticker-item *{border-radius:0!important}a[href^="./"] [data-framer-name="Metro Media Holder"]>div{border-radius:0!important}a[href^="./"] video{object-fit:cover!important;object-position:50% 50%!important;background:transparent!important}a[href$="./smart-bulb"]{display:none!important}a[href^="./"] [data-framer-name="Metro Media Holder"] ul{gap:0!important}a[href^="./"] [data-framer-name="Metro Media Holder"]{clip-path:inset(0 round 18px)}.rb-tags{display:flex;flex-wrap:wrap;gap:6px}.rb-tags span{padding:5px 9px;border-radius:99px;border:1px solid rgba(17,17,17,.25);font:12px/1 Numans,sans-serif;color:rgba(17,17,17,.66);white-space:nowrap}.rb-sub{font:italic 500 14px/1.4 Inter,sans-serif;color:#6f6f6f;margin:-2px 0 4px}.rb-sub.two div::before{content:"\u2022";margin-right:8px}a[href^="./"] [data-framer-name="Metro Work One Liner"] p{--framer-font-size:15px!important;font-size:15px!important;line-height:1.4!important}
 .rb-chips{display:flex;flex-wrap:wrap;gap:10px}.rb-chips button{padding:10px 18px;border-radius:99px;border:1px solid rgba(17,17,17,.35);background:transparent;font:500 15px/1 "Instrument Sans",sans-serif;color:#111;cursor:pointer;transition:background .2s,color .2s}.rb-chips button:hover{background:rgba(17,17,17,.08)}.rb-chips button.on{background:#fff;color:#111;border-color:#fff}`;
 document.head.appendChild(css);
 
@@ -45,25 +45,29 @@ function decorate(a, slug) {
   m[2].forEach((x) => { const s = document.createElement("span"); s.textContent = x; t.appendChild(s); });
   holder.after(t);
   const title = a.querySelector("[data-framer-name='Metro Work Title']");   // category and industry read as a subheading under the title
-  if (title) { const sub = document.createElement("div"); sub.className = "rb-sub"; sub.textContent = `${m[0]} \u00b7 ${m[1]}`; title.after(sub); }
+  if (title) { const sub = document.createElement("div"); sub.className = "rb-sub";
+    const wide = (LAYOUT.flat().find(([x]) => x === slug) || [0, 1])[1] > 1;   // 1-column cards stack category and industry on two dotted lines
+    if (wide) sub.textContent = `${m[0]} \u00b7 ${m[1]}`;
+    else { sub.classList.add("two"); [m[0], m[1]].forEach((x) => { const d = document.createElement("div"); d.textContent = x; sub.appendChild(d); }); } title.after(sub); }
 }
 
-const DESC = {"kapsy-ai": "Connecting learners and coaches through craft-specific mobile practice labs and automated class management tools to close the feedback loop between sessions.", "philips": "Consolidating multi-stream machine telemetry and AI-driven root-cause analytics into a proactive operational workspace for hospital equipment managers."};
+const DESC = {"kapsy-ai": "Connecting learners and coaches through craft-specific mobile practice labs and automated class management tools to close the feedback loop between sessions.", "philips": "One cockpit for 12 service KPIs, with structured AI root cause analysis to prevent SLA breaches."};
 
-const HIDDEN = ["kapsy-ai", "philips"];   // kept in the page and in the layout list, just not displayed. Remove a slug here to show it again
-const BONUS = { "bias-ai": -20, "shell": 0 };   // extra rows (2px each) for the row a card sits in
+const HIDDEN = ["kapsy-ai"];   // kept in the page and in the layout list, just not displayed. Remove a slug here to show it again
+const BONUS = { "bias-ai": -35, "kenvue": -20, "fx-story": -36 };   // extra rows (2px each) for the row a card sits in
 
 // homepage layout: rows of [slug, columns]; all rows are three columns wide
 const LAYOUT = [
-  [["bias-ai", 2], ["metro", 1]],
-  [["fx-story", 1], ["climate-vulnerability", 1], ["women-in-politics", 1]],
-  [["kenvue", 1], ["kapsy-ai", 2]],
-  [["philips", 1], ["shell", 1], ["bosch", 1]],
+  [["bias-ai", 2], ["philips", 1]],
+  [["kenvue", 1], ["metro", 2]],
+  [["shell", 1], ["bosch", 1], ["fx-story", 1]],
+  [["climate-vulnerability", 2], ["women-in-politics", 1]],
   [["electoral-bonds", 1], ["kinetrack", 1], ["mbti", 1]],
+  [["kapsy-ai", 2]],   // hidden for now (see HIDDEN)
 ];
 
 // video shapes (width / height), so each card's media box matches its video and nothing is cropped
-const ASPECT = { "bias-ai": 1440 / 892, "metro": 1440 / 698, "kenvue": 1440 / 966, "fx-story": 1440 / 1068, "electoral-bonds": 1440 / 1092, "climate-vulnerability": 1440 / 660, "kinetrack": 1440 / 870, "mbti": 960 / 434 };
+const ASPECT = { "bias-ai": 1440 / 892, "metro": 1440 / 698, "kenvue": 1440 / 966, "fx-story": 1440 / 1068, "electoral-bonds": 1440 / 1092, "climate-vulnerability": 1440 / 660, "kinetrack": 1440 / 870, "mbti": 960 / 434, "philips": 1600 / 742 };
 
 // image-slider cards (a Framer ticker): find the media box and the strip that scrolls inside it
 function slider(a) {
@@ -117,10 +121,11 @@ function fit() {
   LAYOUT.flat().forEach(([slug]) => {
     const a = cardOf(slug), sl = a && a.style.display !== "none" && slider(a); if (!sl) return;
     sl.holder.style.flex = "1 1 0"; sl.holder.style.height = ""; sl.holder.style.minHeight = "0";
-    requestAnimationFrame(() => {
-      const hh = sl.holder.clientHeight, ww = sl.holder.clientWidth, h0 = Math.round(sl.t.getBoundingClientRect().height / (parseFloat((sl.t.style.transform.match(/scale\(([\d.]+)\)/) || [0, 1])[1]) || 1)) || 101, k = hh / h0;
-      Object.assign(sl.t.style, { width: ww + "px", height: h0 + "px", transformOrigin: "0 0", transform: `scale(${k})`, alignSelf: "flex-start", flex: "none" });   // the strip stays as wide as the box, so its looping copies still cover the visible part
+    const apply = () => requestAnimationFrame(() => {
+      const hh = sl.holder.clientHeight, ww = sl.holder.clientWidth, h0 = Math.round(sl.t.getBoundingClientRect().height / (parseFloat(sl.t.style.scale) || 1)) || 101, liW = (sl.t.querySelector("li") || {}).offsetWidth || 0, k = Math.max(hh / h0, liW ? ww / liW : 0);   // never smaller than one picture across the box, so no white shows to its right
+      Object.assign(sl.t.style, { width: ww / Math.min(k, 1) + 600 + "px", height: h0 + "px", transformOrigin: "0 0", scale: String(k), transform: "", overflow: "visible", borderRadius: "", alignSelf: "flex-start", flex: "none" });   // the strip stays as wide as the box, so its looping copies still cover the visible part
     });
+    apply();
   });
   // Biases in AI: the bottom of its video is blank, so when the box is shorter than the video only that bottom part is cropped
   const bv = cardOf("bias-ai") && cardOf("bias-ai").querySelector("video");
@@ -135,7 +140,7 @@ function grow() {   // Framer fixes the heights around the grid; let them follow
 function init() {
   const g = grid(); if (!g || !cardOf("smart-bulb")) return false;
   // placeholder cards: clone the plain lorem card, then give it its own title/link
-  [["kapsy-ai", "AI platform for asynchronous coaching & practice"], ["philips", "Predictive operations dashboard for medical devices"]].forEach(([slug, title]) => {
+  [["kapsy-ai", "AI platform for asynchronous coaching & practice"], ["philips", "Healthcare service operations and intelligence platform"]].forEach(([slug, title]) => {
     if (cardOf(slug)) return;
     const c = cardOf("smart-bulb").cloneNode(true);
     c.dataset.slug = slug; delete c.dataset.rb;
@@ -146,13 +151,16 @@ function init() {
     const h = c.querySelector("[data-framer-name='Metro Work Tags']");
     if (h) h.style.display = slug === "github-writing" ? "none" : "";
     if (slug === "github-writing") { c.removeAttribute("href"); c.style.pointerEvents = "none"; c.style.cursor = "default"; }   // no page behind it yet
-    const mh = c.querySelector("[data-framer-name='Metro Media Holder']"); if (mh) { const t = document.createElement("div"); t.className = "rb-soon"; t.textContent = "Coming soon"; mh.appendChild(t); }
+    const mh = c.querySelector("[data-framer-name='Metro Media Holder']");
+    if (mh && slug === "philips") {   // the prototype walkthrough plays on the card, like the other case studies
+      mh.innerHTML = '<div style="width:100%;height:100%;flex:0 0 auto;visibility:visible"><video src="/f/assets/philips-proto.mp4" loop preload="none" poster="/f/images/philips-proto.webp" muted playsinline style="cursor:auto;width:100%;height:100%;border-radius:0;display:block;object-fit:cover;background-color:rgba(0,0,0,0);object-position:50% 50%;visibility:visible"></video></div>';
+    } else if (mh) { const t = document.createElement("div"); t.className = "rb-soon"; t.textContent = "Coming soon"; mh.appendChild(t); }
     g.appendChild(c);
   });
   Object.keys(META).forEach((slug) => { const a = cardOf(slug); if (a) decorate(a, slug); });
   HIDDEN.forEach((slug) => { const a = cardOf(slug); if (a) a.style.display = "none"; });
   const align = () => fit();
-  align(); grow(); setTimeout(() => { align(); grow(); }, 600); addEventListener("resize", () => setTimeout(align, 150));
+  align(); grow(); setTimeout(() => { align(); grow(); }, 600); [2000, 4500].forEach((ms) => setTimeout(align, ms));   // late re-fit: videos and images finish loading after the first passes and can change the box heights addEventListener("resize", () => setTimeout(align, 150));
   return true;
 }
 let tries = 0; const iv = setInterval(() => { if (init() || ++tries > 80) clearInterval(iv); }, 150);
