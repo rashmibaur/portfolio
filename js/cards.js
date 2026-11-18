@@ -185,7 +185,7 @@ function grow() {   // Framer fixes the heights around the grid; let them follow
 
 function init() {
   const g = grid(); if (!g || !cardOf("smart-bulb")) return false;
-  // placeholder cards: clone the plain lorem card, then give it its own title/link
+  // placeholder cards: clone the plain template card, then give it its own title/link
   [["kapsy-ai", "AI platform for asynchronous coaching & practice"], ["philips", "Healthcare service operations and intelligence platform"]].forEach(([slug, title]) => {
     if (cardOf(slug)) return;
     const c = cardOf("smart-bulb").cloneNode(true);

@@ -1,0 +1,30 @@
+{
+  "default": [
+    "bias-ai",
+    "philips",
+    "kenvue",
+    "metro",
+    "shell",
+    "bosch",
+    "fx-story",
+    "climate-vulnerability",
+    "women-in-politics",
+    "electoral-bonds",
+    "kinetrack",
+    "mbti"
+  ],
+  "datastorytelling": [
+    "bias-ai",
+    "fx-story",
+    "women-in-politics",
+    "climate-vulnerability",
+    "electoral-bonds",
+    "philips",
+    "mbti",
+    "kenvue",
+    "metro",
+    "shell",
+    "bosch",
+    "kinetrack"
+  ]
+}

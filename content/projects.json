@@ -293,26 +293,6 @@
     }
   },
   {
-    "slug": "farming-futures",
-    "title": "Lorem ipsum dolor sit amet",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-    "tags": [
-      "Lorem ipsum",
-      "Dolor sit",
-      "Amet elit"
-    ],
-    "meta": {},
-    "accent": "#2a2a2a",
-    "tint": "#f4f3ef",
-    "video": false,
-    "dark": "#2a2a2a",
-    "progress": true,
-    "media": {
-      "video": "/f/assets/6C4Hq29JCHsoQWqS95QjjRoMEg.mp4",
-      "poster": "/f/images/z4idOS0hHa3eGVD3HVW8mboRI.png"
-    }
-  },
-  {
     "slug": "bosch",
     "title": "BI dashboard for mobility marketing",
     "desc": "Designing a single source of truth for marketing teams to track, analyze, and optimize automotive campaigns.",
@@ -410,38 +390,6 @@
     }
   },
   {
-    "slug": "smart-bulb",
-    "title": "Lorem ipsum dolor sit amet",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-    "tags": [
-      "Lorem ipsum",
-      "Dolor sit"
-    ],
-    "meta": {},
-    "accent": "#173039",
-    "tint": "#e9f4f7",
-    "video": false,
-    "dark": "#173039",
-    "progress": true
-  },
-  {
-    "slug": "kapsy-ai",
-    "title": "AI platform for asynchronous coaching & practice",
-    "desc": "Connecting learners and coaches through craft-specific mobile practice labs and automated class management tools to close the feedback loop between sessions.",
-    "tags": [
-      "Multi-Platform Product (Web & Mobile)",
-      "EdTech & Creator Economy"
-    ],
-    "meta": {
-      "Tools": "Figma, Flutter / React Native (Mobile), Next.js / Tailwind (Desktop Web), Claude Code"
-    },
-    "accent": "#2a2a2a",
-    "tint": "#f4f3ef",
-    "video": false,
-    "dark": "#2a2a2a",
-    "progress": true
-  },
-  {
     "slug": "philips",
     "title": "Healthcare service operations and intelligence platform",
     "desc": "One cockpit for 12 service KPIs, with structured AI root cause analysis to prevent SLA breaches.",
@@ -470,6 +418,11 @@
         "10/10",
         "pilot NPS"
       ]
-    ]
+    ],
+    "media": {
+      "video": "/f/assets/philips-proto.mp4",
+      "poster": "/f/images/philips-proto.webp",
+      "ar": "2836/1316"
+    }
   }
 ]
