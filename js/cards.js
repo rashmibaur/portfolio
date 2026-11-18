@@ -54,10 +54,55 @@ function decorate(a, slug) {
 const DESC = {"kapsy-ai": "Connecting learners and coaches through craft-specific mobile practice labs and automated class management tools to close the feedback loop between sessions.", "philips": "One cockpit for 12 service KPIs, with structured AI root cause analysis to prevent SLA breaches."};
 
 const HIDDEN = ["kapsy-ai"];   // kept in the page and in the layout list, just not displayed. Remove a slug here to show it again
-const BONUS = { "bias-ai": -35, "kenvue": -20, "fx-story": -36 };   // extra rows (2px each) for the row a card sits in
+
+// ---- views: the same page with its own card order and hero text. /datastorytelling redirects to /?view=datastorytelling; the choice is kept for the tab so case-study back links stay in the view ----
+const VIEW = (() => {
+  let v = new URLSearchParams(location.search).get("view");
+  try { if (v) sessionStorage.setItem("rb-view", v); else v = sessionStorage.getItem("rb-view"); } catch (e) {}
+  return v === "default" ? null : v;
+})();
+const VIEWS = {
+  datastorytelling: {
+    layout: [
+      [["bias-ai", 2], ["fx-story", 1]],
+      [["women-in-politics", 1], ["climate-vulnerability", 2]],
+      [["electoral-bonds", 1], ["philips", 1], ["mbti", 1]],
+      [["kenvue", 1], ["metro", 2]],
+      [["shell", 1], ["bosch", 1], ["kinetrack", 1]],
+      [["kapsy-ai", 2]],   // hidden for now (see HIDDEN)
+    ],
+    bonus: { "fx-story": -36, "kenvue": -20 },
+    headline: ["Informati", "on"],   // "Information" in the 10 letter boxes of "Experience", so the animated headline keeps its element count
+    pills: { "Prototyping": "Scrollytelling", "AI-first products": "Information design" },
+    blurb: ["years as an information designer translating ", "complex datasets, civic research", ", and ", "algorithms into visual stories."],
+  },
+};
+const CFG = VIEWS[VIEW] || null;
+
+// hero text is rewritten in place (text values only, no nodes added or removed) because Framer re-renders and would undo or choke on anything else; this re-applies after each re-render
+function patchHero() {
+  if (!CFG) return;
+  const set = (n, t) => { if (n && n.nodeValue !== t) n.nodeValue = t; };
+  const h1 = document.querySelector("[data-framer-name='Hero Headline'] h1");
+  if (h1) {
+    const words = [...h1.children];   // word 1 is "Experience": 10 letter spans
+    const letters = words[0] ? [...words[0].children] : [];
+    if (letters.length === 10) {
+      const t = CFG.headline[0].split("").concat(CFG.headline[1]);
+      letters.forEach((l, i) => set(l.firstChild, t[i]));
+    }
+  }
+  document.querySelectorAll("p").forEach((p) => {   // the pills are named differently per pill, so match on their text
+    const n = p.firstChild, k = n && n.nodeType === 3 && n.nodeValue;
+    if (k && CFG.pills[k]) set(n, CFG.pills[k]);
+  });
+  const b = [...document.querySelectorAll("[data-framer-name='Experience Copy'] p")].find((p) => /years as a/.test(p.textContent));
+  if (b) { const parts = [b.childNodes[0].firstChild, b.childNodes[1], b.childNodes[2].firstChild, b.childNodes[3]]; if (parts.every(Boolean)) parts.forEach((n, i) => set(n, CFG.blurb[i])); }
+}
+if (CFG) { patchHero(); new MutationObserver(patchHero).observe(document.documentElement, { childList: true, subtree: true, characterData: true }); }
 
 // homepage layout: rows of [slug, columns]; all rows are three columns wide
-const LAYOUT = [
+const LAYOUT = CFG ? CFG.layout : [
   [["bias-ai", 2], ["philips", 1]],
   [["kenvue", 1], ["metro", 2]],
   [["shell", 1], ["bosch", 1], ["fx-story", 1]],
@@ -65,6 +110,7 @@ const LAYOUT = [
   [["electoral-bonds", 1], ["kinetrack", 1], ["mbti", 1]],
   [["kapsy-ai", 2]],   // hidden for now (see HIDDEN)
 ];
+const BONUS = CFG ? CFG.bonus : { "bias-ai": -35, "kenvue": -20, "fx-story": -36 };   // extra rows (2px each) for the row a card sits in
 
 // video shapes (width / height), so each card's media box matches its video and nothing is cropped
 const ASPECT = { "bias-ai": 1440 / 892, "metro": 1440 / 698, "kenvue": 1440 / 966, "fx-story": 1440 / 1068, "electoral-bonds": 1440 / 1092, "climate-vulnerability": 1440 / 660, "kinetrack": 1440 / 870, "mbti": 960 / 434, "philips": 1600 / 742 };

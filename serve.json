@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/datastorytelling",
+      "destination": "/?view=datastorytelling",
+      "type": 302
+    }
+  ]
+}

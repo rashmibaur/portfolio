@@ -1,5 +1,12 @@
 {
   "buildCommand": "echo 'site is pre-built and committed'",
   "installCommand": "echo 'no dependencies to install'",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/datastorytelling",
+      "destination": "/?view=datastorytelling",
+      "permanent": false
+    }
+  ]
 }
