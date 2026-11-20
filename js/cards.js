@@ -100,6 +100,10 @@ function patchHero() {
   const b = [...document.querySelectorAll("[data-framer-name='Experience Copy'] p")].find((p) => /years as a/.test(p.textContent));
   if (b) { const parts = [b.childNodes[0].firstChild, b.childNodes[1], b.childNodes[2].firstChild, b.childNodes[3]]; if (parts.every(Boolean)) parts.forEach((n, i) => set(n, CFG.blurb[i])); }
 }
+if (CFG) document.addEventListener("click", (e) => {   // Framer resets the href on hydration, so redirect the click itself
+  const a = e.target.closest && e.target.closest('a[href*="rashmi%20resume"], a[href*="rashmi resume"]');
+  if (a) { e.preventDefault(); e.stopPropagation(); window.open("/media/rashmi-resume-data-storytelling.pdf", "_blank"); }
+}, true);
 if (CFG) { patchHero(); new MutationObserver(patchHero).observe(document.documentElement, { childList: true, subtree: true, characterData: true }); }
 
 // homepage layout: rows of [slug, columns]; all rows are three columns wide
