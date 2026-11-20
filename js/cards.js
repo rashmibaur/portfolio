@@ -92,6 +92,7 @@ function patchHero() {
       letters.forEach((l, i) => set(l.firstChild, t[i]));
     }
   }
+  document.querySelectorAll('a[href*="rashmi%20resume"]').forEach((a) => a.setAttribute("href", "/media/rashmi-resume-data-storytelling.pdf"));
   document.querySelectorAll("p").forEach((p) => {   // the pills are named differently per pill, so match on their text
     const n = p.firstChild, k = n && n.nodeType === 3 && n.nodeValue;
     if (k && CFG.pills[k]) set(n, CFG.pills[k]);
